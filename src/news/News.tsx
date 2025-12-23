@@ -14,37 +14,37 @@ type FeedItem = {
 };
 
 const FEEDS = [
-  { name: "Press Releases", key: "press_releases", url: "/rss_press_releases" },
-  { name: "Engineering", key: "engineering", url: "/rss_engineering" },
+  { name: "Press Releases", key: "press_releases", url: "rss_press_releases" },
+  { name: "Engineering", key: "engineering", url: "rss_engineering" },
   {
     name: "Applied Math & Stats",
     key: "applied_math_stats",
-    url: "/rss_applied_math_stats",
+    url: "rss_applied_math_stats",
   },
   {
     name: "Biomolecular Engineering",
     key: "biomolecular_engineering",
-    url: "/rss_biomolecular_engineering",
+    url: "rss_biomolecular_engineering",
   },
   {
     name: "Computer Engineering",
     key: "computer_engineering",
-    url: "/rss_computer_engineering",
+    url: "rss_computer_engineering",
   },
   {
     name: "Computer Science",
     key: "computer_science",
-    url: "/rss_computer_science",
+    url: "rss_computer_science",
   },
   {
     name: "Electrical Engineering",
     key: "electrical_engineering",
-    url: "/rss_electrical_engineering",
+    url: "rss_electrical_engineering",
   },
   {
     name: "Tech & Info Management",
     key: "tech_info_mgmt",
-    url: "/rss_technology_and_information_management",
+    url: "rss_technology_and_information_management",
   },
 ];
 
