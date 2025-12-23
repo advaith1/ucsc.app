@@ -6,6 +6,7 @@ import DetailedView from "./DetailedView";
 import Search from './Search.tsx';
 import './Courses.css';
 import Filters from "./Filters.tsx";
+import { BASE_API_URL } from "../constants.ts";
 
 const useMediaQuery = (query: string) => {
 	const [matches, setMatches] = useState(window.matchMedia(query).matches);
@@ -60,7 +61,7 @@ export default function Courses() {
 		try {
 			setLoading(true);
 			console.log("loading with", inputData)
-			const response = await fetch(`https://api.ucsc.info/courses?term=${term}&regStatus=all&department=${inputData.dept}&catalogNum=${inputData.catalogNum}&ge=${ge}&regStatus=${status}&meetingTimes=${time}`);
+			const response = await fetch(`${BASE_API_URL}/courses?term=${term}&regStatus=all&department=${inputData.dept}&catalogNum=${inputData.catalogNum}&ge=${ge}&regStatus=${status}&meetingTimes=${time}`);
 			const data = await response.json();
 			setCourseData(data);
 		} catch (error) {

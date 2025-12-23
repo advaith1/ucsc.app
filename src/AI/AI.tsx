@@ -5,6 +5,7 @@ import { TopBar as DesktopTopBar } from "../dashboard/desktop/TopBar.tsx";
 import "./FuturisticAI.css";
 import "./AI-InterestCard.css";
 import DiningInsights from "../menu/MenuAI.tsx";
+import { BASE_API_URL } from "../constants.ts";
 
 interface Message {
   role: "user" | "assistant";
@@ -57,7 +58,7 @@ const FEEDS = [
   },
 ];
 
-const API_URL = "https://api.ucsc.info/generate_content";
+const API_URL = `${BASE_API_URL}/generate_content`;
 
 const AIComponent: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([INITIAL_MESSAGE]);
@@ -161,7 +162,7 @@ const AIComponent: React.FC = () => {
         const activeFeeds = FEEDS.filter((f) => selectedFeeds.includes(f.key));
         const responses = await Promise.all(
           activeFeeds.map((feed) =>
-            fetch(`https://api.ucsc.info${feed.url}`).then((res) => res.json())
+            fetch(`${BASE_API_URL}/${feed.url}`).then((res) => res.json())
           )
         );
 

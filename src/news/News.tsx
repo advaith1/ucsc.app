@@ -4,6 +4,7 @@ import { TopBar as MobileTopBar } from "../dashboard/mobile/TopBar";
 import { TopBar as DesktopTopBar } from "../dashboard/desktop/TopBar";
 import "./News.css";
 import {Error} from "../Loading";
+import { BASE_API_URL } from "../constants";
 
 type FeedItem = {
   title: string;
@@ -84,7 +85,7 @@ const RssFeed = () => {
       try {
         const results = await Promise.all(
           FEEDS.filter((f) => selectedFeeds.includes(f.key)).map((feed) =>
-            fetch(`https://api.ucsc.info${feed.url}`).then((res) => res.json())
+            fetch(`${BASE_API_URL}/${feed.url}`).then((res) => res.json())
           )
         );
 

@@ -130,4 +130,25 @@ def queryPisa(
     # print(f"Data written to data.json with {len(data)} classes")
     
 
-# queryPisa("2252")
+queryPisa(
+    "2252", 
+    "O",
+    "", 
+    "contains", 
+    "", 
+    "",
+    "=",
+    "",
+    "",
+    "=",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "A",
+    "H",
+    "S",
+    "P"
+)

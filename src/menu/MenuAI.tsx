@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { getAllLocationMenus, type Menu } from './api';
+import { BASE_API_URL } from '../constants';
 
 interface SummaryResponse {
   text: string;
 }
 
-const API_URL = "https://api.ucsc.info/generate_dh_summaries";
+const API_URL = `${BASE_API_URL}/generate_dh_summaries`;
 
 export default function DiningInsights() {
   const [summaries, setSummaries] = useState<Record<string, string>>({});

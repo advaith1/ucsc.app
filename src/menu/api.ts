@@ -1,4 +1,4 @@
-const BASE_URL = 'https://api.ucsc.info'
+import { BASE_API_URL } from "../constants"
 
 export enum Location {
     CowellStevenson = 'Cowell/Stevenson',
@@ -26,7 +26,7 @@ export type Menu = Record<string, Meal>
 
 export async function getMenu(location: string, day_offset: number = 0): Promise<Menu> {
     const startTime = new Date();
-    const result = await fetch(BASE_URL + '/menu?location=' + location + '&day_offset=' + day_offset).then((response) => {
+    const result = await fetch(`${BASE_API_URL}/menu?location=${location}&day_offset=${day_offset}`).then((response) => {
         if (!response.ok) {
             throw new Error('Failed to fetch menu: ' + response.statusText);
         }
@@ -87,7 +87,7 @@ export async function getAllLocationMenus(day_offset: number = 0): Promise<Recor
     }
     console.log('Date string:', dateString);
 
-    const locationMenus: Record<string, Menu> = await fetch(BASE_URL + '/all_menus?day_offset=' + day_offset).then(async (response) => {
+    const locationMenus: Record<string, Menu> = await fetch(BASE_API_URL + '/all_menus?day_offset=' + day_offset).then(async (response) => {
         if (!response.ok) {
             throw new Error('Failed to fetch menu: ' + response.statusText);
         }
