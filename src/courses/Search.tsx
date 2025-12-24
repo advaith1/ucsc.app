@@ -2,12 +2,11 @@ import './Search.css';
 import { useState } from 'react';
 
 interface SearchProps {
-	onSearchBoxInput: (query: string) => void;
-	onGoButtonPressed: () => void;
+	onSearch: (query: string) => void;
 }
 
-const Search: React.FC<SearchProps> = ({ onSearchBoxInput, onGoButtonPressed }) => {
-	const [searchText, setSearchText] = useState<string>("");
+const Search: React.FC<SearchProps> = ({ onSearch }) => {
+	const [searchText, setSearchText] = useState('');
 
 	return (
 		<div className="searchContainer">
@@ -42,18 +41,19 @@ const Search: React.FC<SearchProps> = ({ onSearchBoxInput, onGoButtonPressed }) 
 					}}
 					onKeyDown={(e) => {
 						if (e.key === 'Enter') {
-							// console.log("Search submitted:", searchText);
-							onSearchBoxInput(searchText)
+							onSearch(searchText);
 						}
 					}}
 				/>
 				<button 
 					style={{
-						padding: '12px 20px 13px 20px', 
-						backgroundColor: "#4f6fff", 
+						padding: '11.5px 20px', 
+						backgroundColor: "#768fffff", 
 						borderRadius: '0 8px 8px 0'
 					}}
-					onClick={onGoButtonPressed}
+					onClick={() => {
+						onSearch(searchText);
+					}}
 				>
 					Go
 				</button>

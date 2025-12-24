@@ -13,7 +13,7 @@ export default function Filters({ selectedTerm, setTerm, setGE, setStatus, setTi
 
 
     return (
-        <div className="filters" style={{ width: '100%', paddingLeft: '10px', display: 'flex', flexDirection: 'row', gap: '4px' }}>
+        <div className="filters" style={{ width: '97.5%', paddingLeft: '10px', display: 'flex', flexDirection: 'row', gap: '4px' }}>
                     
             {/* Quarter select */}
             <select

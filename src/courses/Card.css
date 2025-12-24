@@ -2,18 +2,19 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-
+    margin-top: 10px;
     color: var(--text-color);
 }
 
 .card {
     background-color: var(--card-bg);
+    border: 1px solid transparent;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 75%;
-    max-width: 500px;
-    transition: transform 0.3s;
+    width: 95%;
+    /* max-width: 500px; */
+    transition: 0.3s ease-in-out;
     cursor: pointer;
     line-height: 23px;
 }
@@ -29,11 +30,13 @@
 .classInfo {
     display: flex;
     flex-direction: column;
+    gap: 6px;
 }
 
 .card:hover {
-	transform: scale(1.02);
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-	border: 1px solid var(--link-hover);
+    transform: translateY(-2.5px);
+    /* transform: scale(1.02); */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--link-hover);
     z-index: 5;
 }

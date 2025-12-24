@@ -1,6 +1,6 @@
 import React from "react"
 import './DetailedView.css';
-import { statusEmoji } from './Card.tsx';
+import {statusEmoji} from "./StatusEmoji";
 import ExternalLinkIcon from '/icons/external-link.svg';
 import BackIcon from '/icons/back-arrow.svg';
 

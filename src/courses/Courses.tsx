@@ -7,6 +7,20 @@ import Search from './Search.tsx';
 import './Courses.css';
 import Filters from "./Filters.tsx";
 import { BASE_API_URL } from "../constants.ts";
+import {Loading} from "../Loading.tsx";
+
+interface Course {
+	status: string;
+	link: string;
+	name: string;
+	class_number: string;
+	enrolled: string;
+	instructor: string;
+	location: string;
+	modality: string;
+	summer_session: string | null;
+	time: string;
+}
 
 const useMediaQuery = (query: string) => {
 	const [matches, setMatches] = useState(window.matchMedia(query).matches);
@@ -41,13 +55,13 @@ function parseInput(query: string) {
 }
 
 export default function Courses() {
-	const [courseData, setCourseData] = useState<any[]>([]);
-	const [loading, setLoading] = useState(true);
+	const [courseData, setCourseData] = useState<Course[]>([]);
+	const [loading, setLoading] = useState(false);
 	const isMobile = useMediaQuery("(max-width: 768px)");
 	const [detailedData, setDetailedData] = useState<any>(null);
 	const [selectedClassModality, setSelectedClassModality] = useState<string>("");
 	const [selectedClassLink, setSelectedClassLink] = useState<string>("");
-	const [inputData, setInputData] = useState<{ dept: string; catalogNum: string }>({ dept: "", catalogNum: "" });
+	// const [inputData, setInputData] = useState<{ dept: string; catalogNum: string }>({ dept: "", catalogNum: "" });
 	const [showDetails, setShowDetails] = useState(false);
 	const [isFirstLoad, setFirstLoad] = useState<boolean>(true)
 
@@ -57,10 +71,10 @@ export default function Courses() {
 	const [status, setStatus] = useState<string>("all");
 	const [time, setTimes] = useState<string>("");
 
-	async function fetchCourses() {
+	async function fetchCourses(inputData: any) {
 		try {
 			setLoading(true);
-			console.log("loading with", inputData)
+
 			const response = await fetch(`${BASE_API_URL}/courses?term=${term}&regStatus=all&department=${inputData.dept}&catalogNum=${inputData.catalogNum}&ge=${ge}&regStatus=${status}&meetingTimes=${time}`);
 			const data = await response.json();
 			setCourseData(data);
@@ -83,12 +97,10 @@ export default function Courses() {
 	const onSearch = (query: string) => {
 		if (isFirstLoad) setFirstLoad(false);
 		
-		setInputData(parseInput(query));
-	}
+		const inputData = parseInput(query);
 
-	useEffect(() => {
-		fetchCourses();
-	}, [inputData]);
+		fetchCourses(inputData);
+	}
 
 	const spacer = (<div style={{ height: '0px', margin: '30px 0' }}></div>)
 
@@ -106,21 +118,21 @@ export default function Courses() {
 						padding: isMobile ? '10px 0' : '10px'
 					}}
 				>
-					{spacer}
-
 					<div className="search-wrapper" style={{ 
-						width: isMobile ? '90%' : '83%',
+						width: isMobile ? '90%' : '100%',
 						boxSizing: 'border-box',
-						paddingRight: isMobile ? '0' : '23px',
-						maxWidth: '100%'
+						paddingRight: isMobile ? '0' : '0px',
+						maxWidth: '100%',
+						marginTop: 60
 					}}>
-						<Search onSearchBoxInput={onSearch} onGoButtonPressed={fetchCourses} />
+						<Search onSearch={onSearch}/>
 						<Filters isMobile={isMobile} selectedTerm={term} setTerm={setTerm} setGE={setGE} setTimes={setTimes} setStatus={setStatus} />
 					</div>
-					<div className="courseList" style={{ marginTop: isMobile ? '20px' : '50px' }}>
-						{isFirstLoad ? <p>Search for a course to get started</p> :
-						loading ? <p>Loading courses...</p> :
-							courseData.map((course: any, index: number) => (
+					{loading && <Loading />}
+					<div className="courseList" style={{ marginTop: isMobile ? '20px' : '30px' }}>
+						{isFirstLoad ? <h3>Search for a course to get started</h3> :
+						!courseData || courseData.length === 0 ? <h3>No results found</h3> :
+						courseData.map((course: Course, index: number) => (
 								<Card
 									key={index}
 									classStatus={course.status}
@@ -147,12 +159,12 @@ export default function Courses() {
 					style={{ 
 						display: (isMobile && !showDetails) ? 'none' : 'block',
 						height: isMobile ? 'auto' : 'calc(100vh - 60px)',
-						minHeight: isMobile ? 'calc(100vh - 60px)' : 'auto'
+						minHeight: isMobile ? 'calc(100vh - 60px)' : 'auto',
 					}}
 				>
 					{spacer}
 					{detailedData ? <DetailedView details={detailedData} modality={selectedClassModality} link={selectedClassLink} isMobile={isMobile} handleBack={() => {setShowDetails(false)}} /> :
-						<div style={{ backgroundColor: '#2a2a2a', width: '100%', height: '100%' }}></div>
+						<div style={{ width: '100%', height: 'calc(100% - 30px)', backgroundColor: 'var(--detailed-class-info-color)' }}></div>
 					}
 				</div>
 			</div>

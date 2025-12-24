@@ -17,7 +17,7 @@ import SunIconDarkMode from '/icons/sun-dark-mode.svg';
 
 
 import { Icon } from "../components/Icon";
-import {statusEmoji} from "./StatusEmoji";
+import { statusEmoji } from "./StatusEmoji";
 
 interface CardProps {
     classStatus: string,
