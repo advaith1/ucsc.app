@@ -15,6 +15,10 @@ import ClockIconDarkMode from '/icons/clock-dark-mode.svg'
 import SunIconLightMode from '/icons/sun-light-mode.svg';
 import SunIconDarkMode from '/icons/sun-dark-mode.svg';
 
+
+import { Icon } from "../components/Icon";
+import {statusEmoji} from "./StatusEmoji";
+
 interface CardProps {
     classStatus: string,
     className: string,
@@ -28,28 +32,6 @@ interface CardProps {
     term: string,
     classID: string,
     onCardClick: (term: string, classID: string) => void
-}
-
-export function statusEmoji(status: string) {
-    switch (status) {
-        case "Open": return "🟢";
-        case "Closed": return "🟦";
-        default: return "⚠️";
-    }
-}
-
-function Icon({ svg, data }: { svg: any, data: string }) {
-    return (
-        <div style={{alignContent: "left", display: "flex"}}>
-            <p style={{ margin: '-2px 0' }}>
-                <img
-                    src={svg}
-                    style={{ verticalAlign: 'bottom' }}>
-                </img>
-                {' ' + data}
-            </p>
-        </div>
-    )
 }
 
 const Card: React.FC<CardProps> = ({ classStatus, className, instructor, location, time, enrollment, summerSession, term, classID, onCardClick }) => {
