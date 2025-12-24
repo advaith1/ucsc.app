@@ -105,8 +105,8 @@ async def UpdateFeed():
     for f in ["arts-culture", "climate-sustainability", 'earth-space', 'health', 'social-justice-community', 'student-experience', 'technology']:
         feed[f] = await getRSSFeedWithScraping(f)
         
-    for f in ["newsletter", "be-news"]:
-        feed[f] = await getRSSFeed(f)
+    feed["newsletter"] = await getRSSFeed('https://undergrad.engineering.ucsc.edu/rss')
+    feed["be-news"] = await getRSSFeed('https://engineering.ucsc.edu/topics/news/rss')
         
     feed["campus-news"] = await getCampusNewsFeed()
     global cacheControl

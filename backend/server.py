@@ -1,10 +1,7 @@
-from fastapi import FastAPI, Request, HTTPException
+from fastapi import FastAPI
 import scraper
-import urllib.parse
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
 import news, AI
-from typing import Optional
 import menu
 from contextlib import asynccontextmanager
 from datetime import datetime
