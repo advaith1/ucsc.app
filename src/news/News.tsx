@@ -14,37 +14,46 @@ type FeedItem = {
 };
 
 const FEEDS = [
-  { name: "Press Releases", key: "press_releases", url: "rss_press_releases" },
-  { name: "Engineering", key: "engineering", url: "rss_engineering" },
-  {
-    name: "Applied Math & Stats",
+  { name: "Campus News", key: "press_releases", url: "campus-news" },
+  { name: "Arts & Culture", key: "engineering", url: "arts-culture" },
+  { name: "Climate & Sustainability",
     key: "applied_math_stats",
-    url: "rss_applied_math_stats",
+    url: "climate-sustainability",
   },
   {
-    name: "Biomolecular Engineering",
+    name: "Earth & Space",
     key: "biomolecular_engineering",
-    url: "rss_biomolecular_engineering",
+    url: "earth-space",
   },
   {
-    name: "Computer Engineering",
+    name: "Health",
     key: "computer_engineering",
-    url: "rss_computer_engineering",
+    url: "health",
   },
   {
-    name: "Computer Science",
+    name: "Social Justice & Community",
     key: "computer_science",
-    url: "rss_computer_science",
+    url: "social-justice-community",
   },
   {
-    name: "Electrical Engineering",
+    name: "Student Experience",
     key: "electrical_engineering",
-    url: "rss_electrical_engineering",
+    url: "student-experience",
   },
   {
-    name: "Tech & Info Management",
+    name: "Technology",
     key: "tech_info_mgmt",
-    url: "rss_technology_and_information_management",
+    url: "technology",
+  },
+  {
+    name: "Baskin Undergrad Newsletter",
+    key: "tech_info_mgmt1",
+    url: "newsletter",
+  },
+  {
+    name: "Baskin Community News",
+    key: "tech_info_mgmt2",
+    url: "be-news",
   },
 ];
 
@@ -85,17 +94,18 @@ const RssFeed = () => {
       try {
         const results = await Promise.all(
           FEEDS.filter((f) => selectedFeeds.includes(f.key)).map((feed) =>
-            fetch(`${BASE_API_URL}/${feed.url}`).then((res) => res.json())
+            fetch(`${BASE_API_URL}/rss/${feed.url}`).then((res) => res.json())
           )
         );
 
-        const allItems: FeedItem[] = results.flatMap((r) => r.feed || []);
+        const allItems: FeedItem[] = [].concat(...results);
         allItems.sort(
           (a, b) =>
             new Date(b.published).getTime() - new Date(a.published).getTime()
         );
 
         setItems(allItems);
+		console.log(allItems)
       } catch (error) {
         setError(true);
         console.error("Failed to fetch feeds:", error);
@@ -142,7 +152,8 @@ const RssFeed = () => {
                 {item.title}
               </a>
               <p className="date">
-                {new Date(item.published).toLocaleString("en-US", {
+				{item.published}
+                {/* {new Date(item.published).toLocaleString("en-US", {
                   weekday: "short",
                   month: "short",
                   day: "numeric",
@@ -150,9 +161,12 @@ const RssFeed = () => {
                   hour: "numeric",
                   minute: "2-digit",
                   hour12: true,
-                })}
+                })} */}
               </p>
-              <div dangerouslySetInnerHTML={{ __html: item.summary }} />
+              {/* <div dangerouslySetInnerHTML={{ __html: item.summary }} /> */}
+			  <p>
+				{item.summary}
+			  </p>
             </div>
           ))}
         </div>}

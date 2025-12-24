@@ -6,11 +6,17 @@ from pydantic import BaseModel
 import news, AI
 from typing import Optional
 import menu
-# from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
 from datetime import datetime
 import uvicorn
 
-api: FastAPI = FastAPI()
+# this function runs on startup
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+	await news.UpdateFeed()
+	yield
+
+api = FastAPI(lifespan=lifespan)
 api.add_middleware(
     CORSMiddleware, 
     allow_origins=["*"], 
@@ -18,7 +24,6 @@ api.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 
 @api.get("/courses")

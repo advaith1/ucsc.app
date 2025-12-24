@@ -1,20 +1,13 @@
-# src/backend/news.py
-import feedparser
-from fastapi import APIRouter
-
-from fastapi import FastAPI, Request, HTTPException
-import urllib.parse
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from typing import Optional
+import feedparser, requests, bs4
+from fastapi import APIRouter, BackgroundTasks
 from datetime import datetime
-import requests, bs4
 
 
 router = APIRouter()
+cacheControl: datetime = datetime.now()
+feed: dict = {}
 
 """
-new
 Campus News                             https://news.ucsc.edu/rss  or https://news.ucsc.edu/wp-json/wp/v2/posts/
 Arts & Culture                          https://news.ucsc.edu/topics/arts-culture/rss              https://news.ucsc.edu/?_topics=arts-culture
 Climate & Sustainability                https://news.ucsc.edu/topics/climate-sustainability/rss    https://news.ucsc.edu/?_topics=climate-sustainability
@@ -90,46 +83,7 @@ async def getRSSFeed(url: str):
         for entry in feed.entries
     ]
 
-
-    
-@router.get("/rss/artsculture")
-async def getRSSArtsCulture():
-    return await getRSSFeedWithScraping('arts-culture')
-
-@router.get("/rss/climate-sustainability")
-async def getRSSClimateSustainability():
-    return await getRSSFeedWithScraping('climate-sustainability')
-
-@router.get("/rss/earth-space")
-async def getRSSEarthSpace():
-    return await getRSSFeedWithScraping('earth-space')
-
-@router.get("/rss/health")
-async def getRSSHealth():
-    return await getRSSFeedWithScraping('health')
-
-@router.get("/rss/social-justice-community")
-async def getRSSSocialJusticeCommunity():
-    return await getRSSFeedWithScraping('social-justice-community')
-
-@router.get("/rss/student-experience")
-async def getRSSStudentExperience():
-    return await getRSSFeedWithScraping('student-experience')
-
-@router.get("/rss/technology")
-async def getRSSTechnology():
-    return await getRSSFeedWithScraping('technology')
-
-@router.get("/rss/newsletter")
-async def getNewsLetter():
-    return await getRSSFeed('https://undergrad.engineering.ucsc.edu/rss')
-
-@router.get("/rss/be-news")
-async def getBENews():
-    return await getRSSFeed('https://engineering.ucsc.edu/topics/news/rss')
-
-@router.get("/rss/campus-news")
-async def getCampusNews():
+async def getCampusNewsFeed():
     # this endpoint returns a list of the latest posts on the webpage
     # category 1 is "campus news" (see https://news.ucsc.edu/wp-json/wp/v2/categories)
     # filter out all news that isnt in that category
@@ -145,3 +99,95 @@ async def getCampusNews():
         }
         for entry in campusNews
     ]
+
+async def UpdateFeed():
+    print('updating cache')
+    for f in ["arts-culture", "climate-sustainability", 'earth-space', 'health', 'social-justice-community', 'student-experience', 'technology']:
+        feed[f] = await getRSSFeedWithScraping(f)
+        
+    for f in ["newsletter", "be-news"]:
+        feed[f] = await getRSSFeed(f)
+        
+    feed["campus-news"] = await getCampusNewsFeed()
+    global cacheControl
+    cacheControl = datetime.now()
+
+    
+@router.get("/rss/arts-culture")
+async def getRSSArtsCulture(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400: 
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['arts-culture']
+
+
+@router.get("/rss/climate-sustainability")
+async def getRSSClimateSustainability(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400:
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['climate-sustainability']
+
+
+@router.get("/rss/earth-space")
+async def getRSSEarthSpace(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400:
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['earth-space']
+
+
+@router.get("/rss/health")
+async def getRSSHealth(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400:
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['health']
+
+
+@router.get("/rss/social-justice-community")
+async def getRSSSocialJusticeCommunity(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400:
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['social-justice-community']
+
+
+@router.get("/rss/student-experience")
+async def getRSSStudentExperience(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400:
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['student-experience']
+
+
+@router.get("/rss/technology")
+async def getRSSTechnology(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400:
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['technology']
+
+
+@router.get("/rss/newsletter")
+async def getNewsLetter(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400:
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['newsletter']
+
+
+@router.get("/rss/be-news")
+async def getBENews(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400:
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['be-news']
+
+
+@router.get("/rss/campus-news")
+async def getCampusNews(bgTasks: BackgroundTasks):
+    if (datetime.now() - cacheControl).seconds > 86400:
+        bgTasks.add_task(UpdateFeed)
+
+    return feed['campus-news']
