@@ -5,7 +5,10 @@ from datetime import datetime
 
 router = APIRouter()
 cacheControl: datetime = datetime.now()
-feed: dict = {}
+tagToName: dict = {}
+nameToTag: dict = {}
+feed: list = []
+authorCache: dict = {}
 
 """
 Campus News                             https://news.ucsc.edu/rss  or https://news.ucsc.edu/wp-json/wp/v2/posts/
@@ -21,173 +24,149 @@ BE Community News                       https://engineering.ucsc.edu/topics/news
 
 the news.ucsc.edu rss feeds have the title, link, summary but not the date
 the date is only accessible in the ?_topic= api response. For those sites, use both to get the api.
+
+
+update: https://news.ucsc.edu/wp-json/wp/v2/posts?per_page=100
+https://news.ucsc.edu/wp-json/wp/v2/categories
 """
-
-async def getRSSFeedWithScraping(topic: str) -> list[dict]:
-    # make a request to the topic page, and extract the title and dates
-    response: requests.Response = requests.post(
-        'https://news.ucsc.edu/wp-json/facetwp/v1/refresh',
-        headers={
-            'Referer': f'https://news.ucsc.edu/?_topics={topic}',
-            'content-type': 'application/json',
-        },
-        json={
-            "action": "facetwp_refresh",
-            "data": {
-                "facets": {"topics": [topic]},
-                "frozen_facets": {},
-                "http_params": {"get": {"_topics": topic}, "uri": "", "url_vars": []},
-                "template": "explore_stories",
-                "extras": {"sort": "default", "per_page": 100},
-                "soft_refresh": 0,
-                "is_bfcache": 1,
-                "first_load": 0,
-                "paged": 1
-            }
-        }
-    )
-    
-    api_data = response.json()
-    soup: bs4.BeautifulSoup = bs4.BeautifulSoup(api_data["template"], 'lxml')
-
-    resultArticles = soup.find_all(class_='fwpl-result')
-    articleToDate: dict[str, str] = {}
-    for article in resultArticles:
-        title: str = article.find(class_='ucsc-explore-stories__title').get_text(strip=True)
-        date: str = article.find(class_='ucsc-explore-stories__date').get_text(strip=True)
-        
-        articleToDate[title] = date
-
-   
-    # extract stuff out of the rss feed
-    feed = feedparser.parse(f'https://news.ucsc.edu/topics/{topic}/rss')
-    return [
-        {
-            "title": entry.title,
-            "link": entry.link,
-            "summary": entry.summary,
-            "published": articleToDate[entry.title]
-        }
-        for entry in feed.entries if entry.title in articleToDate
-    ]
-
-async def getRSSFeed(url: str):
-    feed = feedparser.parse(url)
-    return [
-        {
-            "title": entry.title,
-            "link": entry.link,
-            "summary": bs4.BeautifulSoup(entry.summary, 'lxml').get_text(strip=True).replace(' ...Read more', '...'),
-            "published": entry.published
-        }
-        for entry in feed.entries
-    ]
-
-async def getCampusNewsFeed():
-    # this endpoint returns a list of the latest posts on the webpage
-    # category 1 is "campus news" (see https://news.ucsc.edu/wp-json/wp/v2/categories)
-    # filter out all news that isnt in that category
-    response: requests.Response = requests.get('https://news.ucsc.edu/wp-json/wp/v2/posts/')
-    apiData = response.json()
-    campusNews = list(filter(lambda x: 1 in x["categories"], apiData))
-    return [
-        {
-            "title": entry["title"]["rendered"],
-            "link": entry["link"],
-            "summary": bs4.BeautifulSoup(entry["excerpt"]["rendered"], 'lxml').get_text(strip=True),
-            "published": entry["date"]
-        }
-        for entry in campusNews
-    ]
 
 async def UpdateFeed():
     print('updating cache')
-    for f in ["arts-culture", "climate-sustainability", 'earth-space', 'health', 'social-justice-community', 'student-experience', 'technology']:
-        feed[f] = await getRSSFeedWithScraping(f)
-        
-    feed["newsletter"] = await getRSSFeed('https://undergrad.engineering.ucsc.edu/rss')
-    feed["be-news"] = await getRSSFeed('https://engineering.ucsc.edu/topics/news/rss')
-        
-    feed["campus-news"] = await getCampusNewsFeed()
+    await GetTagMap()
+    await GetArticles()
     global cacheControl
     cacheControl = datetime.now()
 
+def GetTextFromRendered(rendered: str) -> str:
+    return bs4.BeautifulSoup(rendered, 'lxml').get_text(strip=True)
+
+async def GetTagMap() -> None:
+    response: requests.Response = requests.get('https://news.ucsc.edu/wp-json/wp/v2/categories')
+    apiData: dict = response.json()
+    global tagToName
+    tagToName.clear()
+    for category in apiData:
+        id, name = category["id"], category["name"].replace('&amp;', '&')
+        
+        tagToName[id] = name
+        nameToTag[name] = id
+
+async def GetAuthor(id: int) -> dict[str, str] | None:
+    global authorCache
+    if not id in authorCache:
+        response: requests.Response = requests.get(f'https://news.ucsc.edu/wp-json/wp/v2/users/{id}')
+        if not response.ok:
+            authorCache[id] = None
+        else:
+            apiData: dict = response.json()
+            authorCache[id] = {
+                "name": apiData["name"],
+                "pfp": apiData["avatar_urls"]["96"]
+            }
     
-@router.get("/rss/arts-culture")
-async def getRSSArtsCulture(bgTasks: BackgroundTasks):
+    return authorCache[id]
+
+async def GetArticles() -> None:
+    response: requests.Response = requests.get('https://news.ucsc.edu/wp-json/wp/v2/posts?per_page=100')
+    apiData: dict = response.json()
+    feed.clear()
+    for articleInfo in apiData:
+        feed.append({
+            "title": GetTextFromRendered(articleInfo["title"]["rendered"]),
+            "link": articleInfo["link"],
+            "summary": GetTextFromRendered(articleInfo["excerpt"]["rendered"]),
+            "published": articleInfo["date_gmt"],
+            "categories": list(map(lambda x: tagToName[x], articleInfo["categories"])),
+            "author": await GetAuthor(articleInfo["author"])
+        })
+
+def FilterArticles(category: str) -> list:
+    return list(filter(lambda x: category in x["categories"], feed))
+
+@router.get("/rss")
+async def getAll(bgTasks: BackgroundTasks):
     if (datetime.now() - cacheControl).seconds > 86400: 
         bgTasks.add_task(UpdateFeed)
 
-    return feed['arts-culture']
+    global feed
+    return feed
 
 
-@router.get("/rss/climate-sustainability")
-async def getRSSClimateSustainability(bgTasks: BackgroundTasks):
-    if (datetime.now() - cacheControl).seconds > 86400:
-        bgTasks.add_task(UpdateFeed)
+# @router.get("/rss/arts-culture")
+# async def getRSSArtsCulture(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400: 
+#         bgTasks.add_task(UpdateFeed)
 
-    return feed['climate-sustainability']
-
-
-@router.get("/rss/earth-space")
-async def getRSSEarthSpace(bgTasks: BackgroundTasks):
-    if (datetime.now() - cacheControl).seconds > 86400:
-        bgTasks.add_task(UpdateFeed)
-
-    return feed['earth-space']
+#     return FilterArticles("Arts & Culture")
 
 
-@router.get("/rss/health")
-async def getRSSHealth(bgTasks: BackgroundTasks):
-    if (datetime.now() - cacheControl).seconds > 86400:
-        bgTasks.add_task(UpdateFeed)
+# @router.get("/rss/climate-sustainability")
+# async def getRSSClimateSustainability(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400: 
+#         bgTasks.add_task(UpdateFeed)
 
-    return feed['health']
-
-
-@router.get("/rss/social-justice-community")
-async def getRSSSocialJusticeCommunity(bgTasks: BackgroundTasks):
-    if (datetime.now() - cacheControl).seconds > 86400:
-        bgTasks.add_task(UpdateFeed)
-
-    return feed['social-justice-community']
+#     return FilterArticles("Climate & Sustainability")
 
 
-@router.get("/rss/student-experience")
-async def getRSSStudentExperience(bgTasks: BackgroundTasks):
-    if (datetime.now() - cacheControl).seconds > 86400:
-        bgTasks.add_task(UpdateFeed)
+# @router.get("/rss/earth-space")
+# async def getRSSEarthSpace(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400:
+#         bgTasks.add_task(UpdateFeed)
 
-    return feed['student-experience']
-
-
-@router.get("/rss/technology")
-async def getRSSTechnology(bgTasks: BackgroundTasks):
-    if (datetime.now() - cacheControl).seconds > 86400:
-        bgTasks.add_task(UpdateFeed)
-
-    return feed['technology']
+#     return FilterArticles("Earth & Space")
 
 
-@router.get("/rss/newsletter")
-async def getNewsLetter(bgTasks: BackgroundTasks):
-    if (datetime.now() - cacheControl).seconds > 86400:
-        bgTasks.add_task(UpdateFeed)
+# @router.get("/rss/health")
+# async def getRSSHealth(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400:
+#         bgTasks.add_task(UpdateFeed)
 
-    return feed['newsletter']
-
-
-@router.get("/rss/be-news")
-async def getBENews(bgTasks: BackgroundTasks):
-    if (datetime.now() - cacheControl).seconds > 86400:
-        bgTasks.add_task(UpdateFeed)
-
-    return feed['be-news']
+#     return FilterArticles("Health")
 
 
-@router.get("/rss/campus-news")
-async def getCampusNews(bgTasks: BackgroundTasks):
-    if (datetime.now() - cacheControl).seconds > 86400:
-        bgTasks.add_task(UpdateFeed)
+# @router.get("/rss/social-justice-community")
+# async def getRSSSocialJusticeCommunity(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400:
+#         bgTasks.add_task(UpdateFeed)
 
-    return feed['campus-news']
+#     return FilterArticles("Social Justice & Community")
+
+
+# @router.get("/rss/student-experience")
+# async def getRSSStudentExperience(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400:
+#         bgTasks.add_task(UpdateFeed)
+
+#     return FilterArticles("Student Experience")
+
+
+# @router.get("/rss/technology")
+# async def getRSSTechnology(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400:
+#         bgTasks.add_task(UpdateFeed)
+
+#     return FilterArticles("Technology")
+
+
+# @router.get("/rss/newsletter")
+# async def getNewsLetter(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400:
+#         bgTasks.add_task(UpdateFeed)
+
+#     return FilterArticles("Social Justice & Community")
+
+
+# @router.get("/rss/be-news")
+# async def getBENews(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400:
+#         bgTasks.add_task(UpdateFeed)
+
+#     return feed['be-news']
+
+
+# @router.get("/rss/campus-news")
+# async def getCampusNews(bgTasks: BackgroundTasks):
+#     if (datetime.now() - cacheControl).seconds > 86400:
+#         bgTasks.add_task(UpdateFeed)
+
+#     return feed['campus-news']

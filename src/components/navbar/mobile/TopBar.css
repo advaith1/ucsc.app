@@ -84,5 +84,5 @@
     opacity: 0;
 }
 .hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(-1px, 1px);
+    transform: rotate(-45deg) translate(-1px, 2px);
 }
