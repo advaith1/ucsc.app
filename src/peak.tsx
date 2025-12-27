@@ -1,6 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import viteLogo from "/favicon.ico";
 import "./App.css";
 
 import { TopBar as MobileTopBar } from "./dashboard/mobile/TopBar.tsx";
