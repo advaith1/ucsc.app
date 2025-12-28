@@ -14,7 +14,7 @@ export function Menu({children}: {children: Record<string, Menu>}) {
         <>
             {/* <div style={{}}> */}
             <Swiper slidesPerView={1} spaceBetween={0}
-                allowSlideNext={!contextValues?.drawer} allowSlidePrev={!contextValues?.drawer}
+                allowSlideNext={!contextValues?.isDrawerOpen} allowSlidePrev={!contextValues?.isDrawerOpen}
                 style={{top: '75px'}}
             >
                 {menuArrays.filter(([_, menu]) =>

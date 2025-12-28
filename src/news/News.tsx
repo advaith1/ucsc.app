@@ -12,51 +12,20 @@ type FeedItem = {
 	link: string;
 	published: string;
 	summary: string;
+	categories: string[];
 };
 
 const FEEDS = [
-	{ name: "Campus News", key: "press_releases", url: "campus-news" },
-	{ name: "Arts & Culture", key: "engineering", url: "arts-culture" },
-	{
-		name: "Climate & Sustainability",
-		key: "applied_math_stats",
-		url: "climate-sustainability",
-	},
-	{
-		name: "Earth & Space",
-		key: "biomolecular_engineering",
-		url: "earth-space",
-	},
-	{
-		name: "Health",
-		key: "computer_engineering",
-		url: "health",
-	},
-	{
-		name: "Social Justice & Community",
-		key: "computer_science",
-		url: "social-justice-community",
-	},
-	{
-		name: "Student Experience",
-		key: "electrical_engineering",
-		url: "student-experience",
-	},
-	{
-		name: "Technology",
-		key: "tech_info_mgmt",
-		url: "technology",
-	},
-	{
-		name: "Baskin Undergrad Newsletter",
-		key: "tech_info_mgmt1",
-		url: "newsletter",
-	},
-	{
-		name: "Baskin Community News",
-		key: "tech_info_mgmt2",
-		url: "be-news",
-	},
+	"Campus News",
+	"Arts & Culture",
+	"Climate & Sustainability",
+	"Earth & Space",
+	"Health",
+	"Social Justice & Community",
+	"Student Experience",
+	"Technology",
+	"Baskin Undergrad Newsletter",
+	"Baskin Community News",
 ];
 
 const RssFeed = () => {
@@ -67,49 +36,38 @@ const RssFeed = () => {
 		if (storedFeeds) {
 			return JSON.parse(storedFeeds);
 		}
-		return FEEDS.map((feed) => feed.key); // Default to all feeds selected'
+		return FEEDS; // Default to all feeds selected'
 	});
 
-	const [items, setItems] = useState<FeedItem[]>([]);
-
+	const [selectedItems, setSelectedItems] = useState<FeedItem[]>([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(false);
 	const toggleFeed = (key: string) => {
 		const selected = selectedFeeds.includes(key) ? selectedFeeds.filter((k) => k !== key) : [...selectedFeeds, key]
-		// setSelectedFeeds((prev) =>
-		//   prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
-		// );
 		setSelectedFeeds(selected);
 		localStorage.setItem("selectedFeeds", JSON.stringify(selected));
 	};
-
+	
 	useEffect(() => {
 		setLoading(true);
 		setError(false);
 
 		const fetchFeeds = async () => {
 			if (selectedFeeds.length === 0) {
-				setItems([]);
+				setSelectedItems([]);
 				setLoading(false);
 				return;
 			}
 
 			try {
-				// const results = await Promise.all(
-				// 	FEEDS.filter((f) => selectedFeeds.includes(f.key)).map((feed) =>
-				// 		fetch(`${BASE_API_URL}/rss/${feed.url}`).then((res) => res.json())
-				// 	)
-				// );
-				const results = await fetch(`${BASE_API_URL}/rss`).then(res => res.json())
+				const encodedCategories = selectedFeeds.map(f => encodeURIComponent(f)).join(',');
+				const results = await fetch(`${BASE_API_URL}/rss?categories=${encodedCategories}`).then(res => res.json())
 
 				const allItems: FeedItem[] = [].concat(...results);
-				allItems.sort(
-					(a, b) =>
-						new Date(b.published).getTime() - new Date(a.published).getTime()
-				);
+				allItems.sort((a, b) => new Date(b.published).getTime() - new Date(a.published).getTime());
 
-				setItems(allItems);
-				console.log(allItems)
+				// setAllItems(allItems);
+				setSelectedItems(allItems);
 			} catch (error) {
 				setError(true);
 				console.error("Failed to fetch feeds:", error);
@@ -128,14 +86,14 @@ const RssFeed = () => {
 				<div className="SideBar">
 					<h2>Categories</h2>
 					{FEEDS.map((feed) => (
-						<div key={feed.key} className="IndividualCheckBox">
+						<div key={feed} className="IndividualCheckBox">
 							<label>
 								<input
 									type="checkbox"
-									checked={selectedFeeds.includes(feed.key)}
-									onChange={() => toggleFeed(feed.key)}
+									checked={selectedFeeds.includes(feed)}
+									onChange={() => toggleFeed(feed)}
 								/>
-								{feed.name}
+								{feed}
 							</label>
 						</div>
 					))}
@@ -146,7 +104,7 @@ const RssFeed = () => {
 					<div className="RSS_Feed">
 						<h1>UCSC News</h1>
 						{loading && <div style={{ fontSize: 20, margin: 0, padding: 0 }}>Loading...</div>}
-						{items.map((item, i) => (
+						{selectedItems.map((item, i) => (
 							<NewsCard key={i} {...item} />
 						))}
 					</div>}

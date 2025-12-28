@@ -1,6 +1,7 @@
 import feedparser, requests, bs4
 from fastapi import APIRouter, BackgroundTasks
 from datetime import datetime
+from urllib.parse import unquote
 
 
 router = APIRouter()
@@ -68,11 +69,17 @@ def FilterArticles(category: str) -> list:
     return list(filter(lambda x: category in x["categories"], feed))
 
 @router.get("/rss")
-async def getAll(bgTasks: BackgroundTasks):
+async def getAll(bgTasks: BackgroundTasks, categories: str|None = None):
     if (datetime.now() - cacheControl).seconds > 86400: 
         bgTasks.add_task(UpdateFeed)
 
     global feed
+    if categories:
+        cList: set[str] = set([unquote(c.strip()) for c in categories.split(',')])
+        print(categories, cList)
+        return list(filter(lambda x: len(set(x["categories"]).intersection(cList)) > 0, feed))
+
+
     return feed
 
 
