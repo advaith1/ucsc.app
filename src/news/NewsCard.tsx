@@ -6,10 +6,7 @@ interface NewsCardProps {
 	summary: string;
 	published: string;
 	categories: string[],
-	author: {
-		name: string;
-		pfp: string;
-	}
+	key: number
 }
 
 function formatDate(date: string) {
@@ -28,7 +25,7 @@ export default function NewsCard(props: NewsCardProps) {
 	return (
 		<div
 			className="RSS_FeedItem"
-		// style={{ "--delay": `${i * 115}ms` } as React.CSSProperties}
+			style={{ "--delay": `${props.key * 115}ms` } as React.CSSProperties}
 		>
 			<a href={props.link} target="_blank" rel="noopener noreferrer">
 				{props.title}
@@ -38,7 +35,7 @@ export default function NewsCard(props: NewsCardProps) {
 				{props.categories.map(c => (<Tag name={c} />))}
 			</div>
 			<p className="date">{formatDate(props.published)}</p>
-			<p>{props.summary}</p>
+			<p style={{fontSize: '15px'}}>{props.summary}</p>
 		</div>
 	)
 }

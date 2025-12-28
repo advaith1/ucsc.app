@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import { useMediaQuery } from "@mantine/hooks";
+import { useEffect, useState, useContext } from "react";
 import { TopBar as MobileTopBar } from "../components/navbar/mobile/TopBar";
 import { TopBar as DesktopTopBar } from "../components/navbar/desktop/TopBar";
 import "./News.css";
 import { Error } from "../Loading";
 import { BASE_API_URL } from "../constants";
 import NewsCard from "./NewsCard";
+import { Context } from "../Context";
 
 type FeedItem = {
 	title: string;
@@ -60,6 +60,8 @@ const FEEDS = [
 ];
 
 const RssFeed = () => {
+	const ctx = useContext(Context);
+
 	const [selectedFeeds, setSelectedFeeds] = useState<string[]>(() => {
 		const storedFeeds = localStorage.getItem("selectedFeeds");
 		if (storedFeeds) {
@@ -69,7 +71,6 @@ const RssFeed = () => {
 	});
 
 	const [items, setItems] = useState<FeedItem[]>([]);
-	const mediaQueryMobile = useMediaQuery("(max-width: 600px)");
 
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(false);
@@ -121,7 +122,7 @@ const RssFeed = () => {
 
 	return (
 		<>
-			{mediaQueryMobile ? <MobileTopBar /> : <DesktopTopBar />}
+			{ctx!.mobile ? <MobileTopBar /> : <DesktopTopBar />}
 
 			<div className="RssFeedMain">
 				<div className="SideBar">

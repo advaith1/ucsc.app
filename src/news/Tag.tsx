@@ -1,7 +1,12 @@
+import { useContext } from "react";
+import { Context } from "../Context";
+
 export default function Tag({name}: {name: string}) {
+	const ctx = useContext(Context);
+
 	return (
 		<span style={{
-			background: '#9a9a00ff',
+			background: ctx!.theme == 'dark' ? '#9a9a00ff' : '#c3cd5bff',
 			marginRight: '2px',
 			color: '#000000',
 			borderRadius: '10px',

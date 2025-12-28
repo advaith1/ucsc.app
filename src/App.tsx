@@ -15,9 +15,17 @@ function App() {
 	const [mobile, setMobile] = useState(false);
 	const [drawerOpen, setDrawerOpen] = useState(false);
 	const [desktopMenuHeight, setDesktopMenuHeight] = useState(0);
+	const [theme, setTheme] = useState(() =>
+		localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+	);
 	useEffect(() => {
 		setMobile(window.innerWidth < 600);
 	}, []);
+	useEffect(() => {
+		document.documentElement.setAttribute("data-theme", theme);
+		localStorage.setItem("theme", theme);
+	}, [theme]);
+
 
 	const contextValues = {
 		mobile: mobile,
@@ -25,7 +33,10 @@ function App() {
 		setDrawerOpen: setDrawerOpen,
 
 		desktopMenuHeight: desktopMenuHeight,
-		setDesktopMenuHeight: setDesktopMenuHeight
+		setDesktopMenuHeight: setDesktopMenuHeight,
+
+		theme: theme,
+		setTheme: setTheme
 	}
 
 	return (

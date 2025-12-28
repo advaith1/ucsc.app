@@ -6,6 +6,8 @@ export interface ContextType {
     setDrawerOpen: (value: boolean) => void;
     desktopMenuHeight: number;
     setDesktopMenuHeight: (value: number) => void;
+	theme: string;
+	setTheme: (value: string | ((prev: string) => string)) => void;
 }
 
 export const Context = createContext<ContextType | null>(null);

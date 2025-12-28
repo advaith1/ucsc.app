@@ -51,21 +51,6 @@ async def GetTagMap() -> None:
         tagToName[id] = name
         nameToTag[name] = id
 
-async def GetAuthor(id: int) -> dict[str, str] | None:
-    global authorCache
-    if not id in authorCache:
-        response: requests.Response = requests.get(f'https://news.ucsc.edu/wp-json/wp/v2/users/{id}')
-        if not response.ok:
-            authorCache[id] = None
-        else:
-            apiData: dict = response.json()
-            authorCache[id] = {
-                "name": apiData["name"],
-                "pfp": apiData["avatar_urls"]["96"]
-            }
-    
-    return authorCache[id]
-
 async def GetArticles() -> None:
     response: requests.Response = requests.get('https://news.ucsc.edu/wp-json/wp/v2/posts?per_page=100')
     apiData: dict = response.json()
@@ -76,8 +61,7 @@ async def GetArticles() -> None:
             "link": articleInfo["link"],
             "summary": GetTextFromRendered(articleInfo["excerpt"]["rendered"]),
             "published": articleInfo["date_gmt"],
-            "categories": list(map(lambda x: tagToName[x], articleInfo["categories"])),
-            "author": await GetAuthor(articleInfo["author"])
+            "categories": list(map(lambda x: tagToName[x], articleInfo["categories"]))
         })
 
 def FilterArticles(category: str) -> list:
