@@ -95,10 +95,12 @@ export default function RssFeed() {
 
 				{error ? <Error>Error Loading News</Error> :
 					<div className="RSS_Feed">
-						<div style={{ textAlign: 'left' }}>
-							<h1 style={{marginBottom: '-33px'}}>UCSC News</h1>
-							{ctx!.mobile ? <NewsFilter {...{ FEEDS, selectedFeeds, toggleFeed }} /> : <></>}
-						</div>
+						{ctx!.mobile ? (
+							<div style={{ textAlign: 'left' }}>
+								<h1 style={{ marginBottom: '-33px' }}>UCSC News</h1>
+								<NewsFilter {...{ FEEDS, selectedFeeds, toggleFeed }} />
+							</div>
+						) : (<h1>UCSC News</h1>)}
 
 						{loading && <div style={{ fontSize: 20, margin: 0, padding: 0 }}>Loading...</div>}
 						{selectedItems.map((item, i) => (
