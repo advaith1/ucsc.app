@@ -1,5 +1,5 @@
 :root {
-  --color-bg1: rgb(108, 0, 162);
+  --color-bg1: rgb(90, 0, 135);
   --color-bg2: rgb(0, 17, 82);
   --color1: 18, 113, 255;
   --color2: 221, 74, 255;
@@ -23,7 +23,8 @@
 }
 
 /* Base Styles */
-html, body {
+html,
+body {
   font-family: 'Dongle', sans-serif;
   margin: 0;
   padding: 0;
@@ -34,7 +35,9 @@ html, body {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -99,7 +102,12 @@ html, body {
 }
 
 /* Gradient Elements */
-.g1, .g2, .g3, .g4, .g5, .interactive {
+.g1,
+.g2,
+.g3,
+.g4,
+.g5,
+.interactive {
   position: absolute;
   mix-blend-mode: var(--blending);
   border-radius: 50%;
@@ -315,7 +323,7 @@ html, body {
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(10px);
   border: 1px solid #ddd;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
   color: #1a1a1a;
 }
 
@@ -334,21 +342,45 @@ html, body {
 
 /* Animations */
 @keyframes moveInCircle {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(180deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes moveVertical {
-  0% { transform: translateY(-50%); }
-  50% { transform: translateY(50%); }
-  100% { transform: translateY(-50%); }
+  0% {
+    transform: translateY(-50%);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
 }
 
 @keyframes moveHorizontal {
-  0% { transform: translateX(-50%) translateY(-10%); }
-  50% { transform: translateX(50%) translateY(10%); }
-  100% { transform: translateX(-50%) translateY(-10%); }
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
 }
 
 /* Media Queries for different screen sizes */
@@ -368,11 +400,11 @@ html, body {
   :root {
     --circle-size: 100%;
   }
-  
+
   .chat-bubble {
     max-width: 85%;
   }
-  
+
   .AIPage {
     padding: var(--spacing-md) var(--spacing-sm);
     gap: var(--spacing-md);
@@ -384,22 +416,22 @@ html, body {
     max-width: 90%;
     padding: 0.875rem 1rem;
   }
-  
+
   .chat-input-bar {
     flex-direction: column;
     padding: var(--spacing-md) var(--spacing-sm);
   }
-  
+
   .chat-input-bar input,
   .chat-input-bar button {
     width: 100%;
   }
-  
+
   .AIOutput,
   .AIInput {
     padding: var(--spacing-md);
   }
-  
+
   .g3 {
     top: calc(50% - var(--circle-size) / 2 + 10vh);
     left: calc(50% - var(--circle-size) / 2 - 20vw);
@@ -412,7 +444,7 @@ html, body {
     --spacing-md: 0.75rem;
     --spacing-lg: 1rem;
   }
-  
+
   .chat-bubble {
     max-width: 95%;
     padding: 0.75rem;
@@ -423,11 +455,12 @@ html, body {
   :root {
     --circle-size: 70%;
   }
-  
-  .AIOutput, .AIInput {
+
+  .AIOutput,
+  .AIInput {
     max-width: 800px;
   }
-  
+
   .chat-container {
     max-width: 900px;
   }
@@ -435,11 +468,17 @@ html, body {
 
 /* For touch devices */
 @media (hover: none) {
-  .AIButton, .chat-input-bar button {
-    padding: 0.9rem 1.5rem; /* Larger touch targets */
+
+  .AIButton,
+  .chat-input-bar button {
+    padding: 0.9rem 1.5rem;
+    /* Larger touch targets */
   }
-  
-  input, button, textarea {
-    font-size: 16px; /* Prevent iOS zoom on focus */
+
+  input,
+  button,
+  textarea {
+    font-size: 16px;
+    /* Prevent iOS zoom on focus */
   }
 }

@@ -61,12 +61,11 @@ export default function Courses() {
 	const [detailedData, setDetailedData] = useState<any>(null);
 	const [selectedClassModality, setSelectedClassModality] = useState<string>("");
 	const [selectedClassLink, setSelectedClassLink] = useState<string>("");
-	// const [inputData, setInputData] = useState<{ dept: string; catalogNum: string }>({ dept: "", catalogNum: "" });
+
 	const [showDetails, setShowDetails] = useState(false);
 	const [isFirstLoad, setFirstLoad] = useState<boolean>(true)
 
-	//filter states
-	const [term, setTerm] = useState<string>("2252");
+	const [term, setTerm] = useState<string>("");
 	const [ge, setGE] = useState<string>("");
 	const [status, setStatus] = useState<string>("all");
 	const [time, setTimes] = useState<string>("");
@@ -125,7 +124,7 @@ export default function Courses() {
 						marginTop: 60
 					}}>
 						<Search onSearch={onSearch}/>
-						<Filters isMobile={isMobile} setTerm={setTerm} setGE={setGE} setTimes={setTimes} setStatus={setStatus} />
+						<Filters isMobile={isMobile} selectedTerm={term} setTerm={setTerm} setGE={setGE} setTimes={setTimes} setStatus={setStatus} />
 					</div>
 					{loading && <Loading />}
 					<div className="courseList" style={{ marginTop: isMobile ? '20px' : '30px' }}>

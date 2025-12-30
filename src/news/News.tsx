@@ -88,7 +88,7 @@ export default function RssFeed() {
 			{ctx!.mobile ? <MobileTopBar /> : <DesktopTopBar />}
 
 			<div className="RssFeedMain">
-				{!ctx!.mobile ? <NewsSidebar {...{ FEEDS, selectedFeeds, toggleFeed }} /> : <></>}
+				{!ctx!.mobile ? <NewsSidebar {...{ FEEDS, setSelectedFeeds, selectedFeeds, toggleFeed }} /> : <></>}
 
 				{error ? <Error>Error Loading News</Error> :
 					<div className="RSS_Feed">
