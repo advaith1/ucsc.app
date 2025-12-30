@@ -1,0 +1,41 @@
+<!-- source: https://github.com/orgs/community/discussions/50269#discussioncomment-5384077 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GitHub Pages Issue</title>
+    <script type="text/javascript">
+
+        var pathSegmentsToKeep = 0;
+        var validRoutes = ['/', '/3d-visualizer'];        
+        var l = window.location;
+        var currentPath = l.pathname;
+        
+        //check if the path is valid
+        var isValidRoute = validRoutes.some(function(route) {
+            return currentPath === route || 
+                   currentPath === route + '/' || 
+                   currentPath + '/' === route;
+        });
+        
+        if (isValidRoute) {
+            //only redirect if valid
+            l.replace(
+                l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+                l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+                l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+                (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+                l.hash
+            );
+        } else {
+            //redirect invalid paths back to home
+            window.location.href = '/';
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
