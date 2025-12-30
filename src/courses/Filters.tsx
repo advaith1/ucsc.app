@@ -5,6 +5,7 @@ import {BASE_API_URL} from "../constants";
 interface FilterProps {
     isMobile?: boolean,
 
+    selectedTerm: string,
     setTerm: (term: string) => void,
     setGE: (ge: string) => void,
     setStatus: (status: string) => void,
@@ -27,15 +28,23 @@ async function getTermOptions() {
     return latestQuarters;
 }
 
-export default function Filters({ setTerm, setGE, setStatus, setTimes }: FilterProps) {
+const fallbackTerms = [
+    { label: "2026 Winter", value: "2260" },
+    { label: "2025 Fall", value: "2258" },
+    { label: "2025 Summer", value: "2254" },
+    { label: "2025 Spring", value: "2252" },
+    
+];
 
-    const [termOptions, setTermOptions] = useState<Array<Record<string, string>>>([]);
-    const [selectedTerm, setSelectedTerm] = useState<string>("");
+export default function Filters({ selectedTerm, setTerm, setGE, setStatus, setTimes }: FilterProps) {
+
+    const [termOptions, setTermOptions] = useState<Array<Record<string, string>>>(fallbackTerms);
 
     useEffect(() => {
         (async () => {
             const options = await getTermOptions();
             setTermOptions(options);
+            setTerm(options[0].value);
         })();
 
     }, []);
@@ -51,17 +60,12 @@ export default function Filters({ setTerm, setGE, setStatus, setTimes }: FilterP
                 style={{ width: 'calc(30% - 3px)' }}
                 value={selectedTerm}
                 onChange={(e) => {
-                    setTerm(e.target.value); 
-                    setSelectedTerm(e.target.value);
+                    setTerm(e.target.value);
                 }}
             >
                 {termOptions.map((termOption: Record<string, string>, idx: number) => (
                     <option key={idx} value={termOption.value}>{termOption.label}</option>
                 ))}
-                {/* <option value="2254">Summer 2025</option>
-                <option value="2252">Spring 2025</option>
-                <option value="2250">Winter 2024</option>
-                <option value="2248">Fall 2024</option> */}
             </select>
 
             {/* GE type selection */}

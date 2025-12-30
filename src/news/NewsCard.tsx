@@ -31,7 +31,7 @@ export default function NewsCard(props: NewsCardProps) {
 				{props.title}
 			</a>
 			<br />
-			<div style={{display: 'flex', flexWrap: 'wrap'}}>
+			<div style={{display: 'flex', flexWrap: 'wrap', columnGap: '5px', rowGap: '2px'}}>
 				{props.categories.map(c => (<Tag name={c} />))}
 			</div>
 			<p className="date">{formatDate(props.published)}</p>
