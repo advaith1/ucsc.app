@@ -9,8 +9,6 @@ import './Menu.css'
 import '../components/loading/Loading.css';
 import {Error, Loading} from "../components/loading/Loading";
 import {useContext, useEffect, useState} from "react";
-import DateHeader from "./DateHeader";
-
 
 
 export default function MenuPage() {
