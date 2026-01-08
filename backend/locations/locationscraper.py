@@ -118,17 +118,22 @@ def getClassLocationsForTerm(term: int) -> None:
 			classData["location"].startswith("CoastBio") or
 			classData["location"].startswith("WestResearchPark") or
 			classData["location"].startswith("Lg Discovery")
-		): continue	
-
+		): continue
 
 		# get location
+		# some kresge classrooms and ming ong 108 are marked as "Inactive", remove that
+		classData["location"] = classData["location"].replace(" Inactive", "").replace(" - inactive", "")
+
 		roomMatches: re.Match | None = roomPattern.search(classData["location"])
-		classData["room"] = roomMatches[0].strip() if roomMatches else ""
-		classData["building"] = classData["location"].replace(classData["room"], "").strip()
+		classData["room"] = roomMatches[0].strip() if roomMatches else None
+		classData["building"] = classData["location"].replace(classData["room"] or "", "").strip()
 		
-		# remove random space in some listings
+		# fix some miscellaneous locations
 		if classData["building"] == "R Carson  Acad":
 			classData["building"] = "R Carson Acad"
+		if classData["building"] in ["Soc Sci 1 135 PC Lab", "Soc Sci 1 135 Mac Lab"]:
+			classData["building"] = "Soc Sci 1"
+			classData["room"] = "135"
 
 		# "The DO UPDATE SET locationString = locationString is a no-op that triggers the RETURNING clause even when there's a conflict."
 		cursor.execute('''
@@ -195,11 +200,11 @@ def getClassLocationsForTerm(term: int) -> None:
 
 
 if __name__ == "__main__":
-	# CURRENT_TERM: int = 2260
-	# for term in tqdm(range(2048, CURRENT_TERM + 2, 2)):
-	# 	getClassLocationsForTerm(term)
+	CURRENT_TERM: int = 2260
+	for term in tqdm(range(2048, CURRENT_TERM + 2, 2)):
+		getClassLocationsForTerm(term)
 	
-	getClassLocationsForTerm(2260)
+	# getClassLocationsForTerm(2260)
 
 
 '''
