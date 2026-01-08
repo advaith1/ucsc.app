@@ -83,10 +83,6 @@ def getClassLocationsForTerm(term: int) -> None:
 
 	roomPattern: re.Pattern = re.compile(r' ([A-Z]?[0-9]+[A-Z]?)$')
 	timePattern: re.Pattern = re.compile(r'((?:[A-Z][a-z]?)+) (\d\d:\d\d[A-Z][A-Z]-\d\d:\d\d[A-Z][A-Z])') #group1 is days, group2 is time
-	
-	# capital letter followed by optional lowercase letter, repeated 7 times, to capture each individual day
-	# repeating captures (+) only store the last match, not all of them, so i need to do this bullshit
-	dayPattern: re.Pattern = re.compile(r'^([A-Z][a-z]?)([A-Z][a-z]?)?([A-Z][a-z]?)?([A-Z][a-z]?)?([A-Z][a-z]?)?([A-Z][a-z]?)?([A-Z][a-z]?)?') 
 
 	conn: sqlite3.Connection = sqlite3.connect('locations/locations.db')
 	cursor: sqlite3.Cursor = conn.cursor()
@@ -137,21 +133,17 @@ def getClassLocationsForTerm(term: int) -> None:
 
 		# "The DO UPDATE SET locationString = locationString is a no-op that triggers the RETURNING clause even when there's a conflict."
 		cursor.execute('''
-			INSERT INTO location(locationString, building, room) VALUES (?, ?, ?)
-			ON CONFLICT(building, room) DO UPDATE SET locationString = locationString
+			INSERT INTO location(building, room) VALUES (?, ?)
+			ON CONFLICT(building, room) DO UPDATE SET building = building
 			RETURNING locationID
-		''', (
-			classData["location"],
-			classData["building"],
-			classData["room"],
-		))
+		''', (classData["building"], classData["room"]))
 		classData["locationID"] = cursor.fetchone()[0]
 
 
 		# insert class
 		query: str = '''
-			INSERT INTO class(term, id, pisaLink, name, instructor, time, locationID) 
-			VALUES(?, ?, ?, ?, ?, ?, ?)
+			INSERT INTO class(term, id, pisaLink, name, instructor, locationID) 
+			VALUES(?, ?, ?, ?, ?, ?)
 		'''
 		cursor.execute(query, (
 			term,
@@ -159,7 +151,6 @@ def getClassLocationsForTerm(term: int) -> None:
 			classData["link"],
 			classData["name"],
 			classData["instructor"], 
-			classData["time"],
 			classData["locationID"], 
 		))
 	
@@ -203,49 +194,3 @@ if __name__ == "__main__":
 	CURRENT_TERM: int = 2260
 	for term in tqdm(range(2048, CURRENT_TERM + 2, 2)):
 		getClassLocationsForTerm(term)
-	
-	# getClassLocationsForTerm(2260)
-
-
-'''
-CREATE TABLE class (
-	term INTEGER,
-	id INTEGER,
-
-	pisaLink VARCHAR(300),
-	name VARCHAR(200),
-	instructor VARCHAR(100),
-	time VARCHAR(30),                  -- the original time string, remove later
-	locationID INTEGER NOT NULL,
-
-	PRIMARY KEY (term, id),
-	FOREIGN KEY (locationID) REFERENCES location(locationID)
-);
-
-CREATE TABLE classTimeBlock (
-	term INTEGER,
-	classID INTEGER,
-	blockID INTEGER,
-
-	FOREIGN KEY (term, classID) REFERENCES class(term, id),
-	FOREIGN KEY (blockID) REFERENCES timeBlock(blockID)
-);
-
-CREATE TABLE location (
-	locationID INTEGER PRIMARY KEY,
-	locationString VARCHAR(30),        -- the original location string, remove later
-	building VARCHAR(30),
-	room VARCHAR(10),
-
-	UNIQUE (building, room)
-);
-
-CREATE TABLE timeBlock (
-	blockID   INTEGER PRIMARY KEY,
-	day       TINYINT NOT NULL,      -- 0 mon, 1 tues, etc
-	startTime TIME NOT NULL,
-	endTime   TIME NOT NULL,
-
-	UNIQUE (day, startTime, endTime)
-);
-'''

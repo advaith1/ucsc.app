@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 import scraper
 from fastapi.middleware.cors import CORSMiddleware
-import news, AI
-import menu
+import news, AI, menu
+from locations import locations
 from contextlib import asynccontextmanager
 from datetime import datetime
 import uvicorn
@@ -10,8 +10,9 @@ import uvicorn
 # this function runs on startup
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-	await news.UpdateFeed()
-	yield
+    locations.startup()
+    await news.UpdateFeed()
+    yield
 
 api = FastAPI(lifespan=lifespan)
 api.add_middleware(
@@ -64,6 +65,7 @@ async def get_menu(location: menu.LocationRequest, day_offset: int = 0):
 
 api.include_router(news.router)
 api.include_router(AI.router)
+api.include_router(locations.router)
 
 @api.get('/all_menus')
 async def get_all_menus(day_offset: int = 0):
