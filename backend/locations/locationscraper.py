@@ -113,7 +113,9 @@ def getClassLocationsForTerm(term: int) -> None:
 			classData["location"].startswith("Ocean Health") or
 			classData["location"].startswith("CoastBio") or
 			classData["location"].startswith("WestResearchPark") or
-			classData["location"].startswith("Lg Discovery")
+			classData["location"].startswith("Lg Discovery") or
+			# only a handful of classes have been taught at the Arboretum (years ago), and the building doesn't seem to exist anymore
+			classData["location"].startswith("Arboretum")
 		): continue
 
 		# get location
@@ -130,6 +132,16 @@ def getClassLocationsForTerm(term: int) -> None:
 		if classData["building"] in ["Soc Sci 1 135 PC Lab", "Soc Sci 1 135 Mac Lab"]:
 			classData["building"] = "Soc Sci 1"
 			classData["room"] = "135"
+		if classData["building"] == "BiomedSci":
+			classData["building"] = "BioMedSci"
+
+		if classData["building"] == "Bay Tree Conf A":
+			classData["building"] = "Bay Tree"
+			classData["room"] = "Conf A"
+		if classData["building"] == "Bay Tree Conf D":
+			classData["building"] = "Bay Tree"
+			classData["room"] = "Conf D"		
+
 
 		# "The DO UPDATE SET locationString = locationString is a no-op that triggers the RETURNING clause even when there's a conflict."
 		cursor.execute('''
