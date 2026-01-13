@@ -16,20 +16,20 @@ export function Menu({children}: {children: Record<string, Menu>}) {
     return (
         <>
             <DateHeader/>
-            <a href="#top" id="top" style={{textDecoration: 'none', color: 'inherit', scrollMarginTop: 100}} onClick={(e) => {
-                e.preventDefault();
-            }}>
-                <div style={{display: 'flex', flexDirection: 'row', marginTop: 150}}>
-                    <div style={{display: 'flex', flexDirection: 'row', overflow: 'scroll', marginTop: 0, padding: '0px 15px'}}>
-                            {Object.entries(children).map(([location, menu]: [string, Menu], i: number) => (
-                                <div key={location} style={{display: 'flex', overflow: 'visible', marginLeft: 10, marginBottom: 0, "--delay": `${i * 150}ms`} as React.CSSProperties}
-                                >
-                                    <MenuPanel key={location} name={location} menu={menu} width="100%"></MenuPanel>
-                                </div>
-                            ))}
-                    </div>
-                </div>
-            </a>
+            <div style={{display: 'flex', flexDirection: 'row', marginTop: 150}}>
+                <a href="#top" id="top" style={{textDecoration: 'none', color: 'inherit', scrollMarginTop: 210}} onClick={(e) => {
+                    e.preventDefault();
+                }}>
+                        <div style={{display: 'flex', flexDirection: 'row', overflow: 'scroll', marginTop: 0, padding: '0px 15px'}}>
+                                {Object.entries(children).map(([location, menu]: [string, Menu], i: number) => (
+                                    <div key={location} style={{display: 'flex', overflow: 'visible', marginLeft: 10, marginBottom: 0, "--delay": `${i * 150}ms`} as React.CSSProperties}
+                                    >
+                                        <MenuPanel key={location} name={location} menu={menu} width="100%"></MenuPanel>
+                                    </div>
+                                ))}
+                        </div>
+                </a>
+            </div>
         </>
     );
 }
