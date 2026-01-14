@@ -110,7 +110,8 @@ def getClassLocationsForTerm(term: int) -> None:
 				"Remote Meeting",
 				"UCSC Boating Center",
 				"IAS Gallery",
-				"Lower Quarry" # no class has been offered here since winter 2011
+				"Lower Quarry", # no class has been offered here since winter 2011
+				"Steven Music" # idk where this is, only 3 classes have ever been offered here
 			] or
 			# coastal campus locations
 			classData["location"].startswith("Ocean Health") or
