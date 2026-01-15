@@ -57,17 +57,18 @@ export function DateSelector() {
                                 menuElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' } );
                             }
                             
-                            // const dateButton = document.getElementsByClassName('dateButton')[offset];
-                            // console.log(dateButton);
-                            // if (dateButton) {
-                            //     dateButton.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' } );
-                            // }
+                            const dateButton = document.getElementsByClassName('dateButton')[offset];
+                            if (dateButton) {
+                                dateButton.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' } );
+                            }
 
                             window.history.replaceState(null, '', `#dayOffset${offset}`);                            
                         }}
-                        key={offset} style={{margin: '5px', padding: '0px 15px', scrollMargin: '0px 12.5px', whiteSpace: 'nowrap',
+                        key={offset} style={{margin: '5px', padding: '0px 15px', scrollMargin: '0px 12.5px',
                             borderRadius: 50, wordBreak: 'keep-all', backgroundColor: selectedDateOffset === offset ? 'var(--gold)' : 'var(--light-gray)', color: selectedDateOffset === offset ? 'black' : 'var(--dark-gray)', cursor: 'pointer', userSelect: 'none'}}>
-                        <h3>{display}</h3>
+                        <h3 style={{whiteSpace: 'nowrap', minWidth: 200}}>
+                            {display}
+                        </h3>
                     </div>
                     );
                 })
