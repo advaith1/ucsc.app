@@ -75,10 +75,10 @@ def scrapePanel(panel) -> dict[str, str]:
 
 
 def getClassLocationsForTerm(term: int) -> None:
-	body["binds[:term]"] = str(term)
-	
-	response: requests.Response = requests.post(URL, headers=HEADERS, data=body)
-	soup = bs4.BeautifulSoup(response.text, 'lxml')
+	with open(f'locations/html/{term}.html', 'r', encoding='utf-8') as file:
+		responseText: str = ''.join(file.readlines())
+
+	soup = bs4.BeautifulSoup(responseText, 'lxml')
 	panels = soup.find_all(class_="panel panel-default row")
 
 	roomPattern: re.Pattern = re.compile(r' ([A-Z]?[0-9]+[A-Z]?)$')
@@ -108,12 +108,24 @@ def getClassLocationsForTerm(term: int) -> None:
 				"Harbor",
 				"Lockheed",
 				"Remote Meeting",
-				"UCSC Boating Center"
+				"UCSC Boating Center",
+				"IAS Gallery",
+				"Lower Quarry", # no class has been offered here since winter 2011
+				"Steven Music" # idk where this is, only 3 classes have ever been offered here
 			] or
+			# coastal campus locations
 			classData["location"].startswith("Ocean Health") or
 			classData["location"].startswith("CoastBio") or
 			classData["location"].startswith("WestResearchPark") or
-			classData["location"].startswith("Lg Discovery")
+			classData["location"].startswith("Lg Discovery") or
+			# only a handful of classes have been taught at the Arboretum (years ago), and the building doesn't seem to exist anymore
+			classData["location"].startswith("Arboretum") or
+			# these buildings dont exist anymore
+			classData["location"].startswith("Ch Merr Rm") or
+			classData["location"].startswith("Kresge Rec") or
+			classData["location"].startswith("Krsg Town Hall") or
+			# only two classes have ever been offered here (CLNI 70 spring23 and spring24)
+			classData["location"].startswith("Coll9/JRLC Garden")
 		): continue
 
 		# get location
@@ -127,9 +139,24 @@ def getClassLocationsForTerm(term: int) -> None:
 		# fix some miscellaneous locations
 		if classData["building"] == "R Carson  Acad":
 			classData["building"] = "R Carson Acad"
+
 		if classData["building"] in ["Soc Sci 1 135 PC Lab", "Soc Sci 1 135 Mac Lab"]:
 			classData["building"] = "Soc Sci 1"
 			classData["room"] = "135"
+			
+		if classData["building"] == "BiomedSci":
+			classData["building"] = "BioMedSci"
+
+		if classData["building"] == "Bay Tree Conf A":
+			classData["building"] = "Bay Tree"
+			classData["room"] = "Conf A"
+		if classData["building"] == "Bay Tree Conf D":
+			classData["building"] = "Bay Tree"
+			classData["room"] = "Conf D"
+
+		if classData["building"] == "Kr Lounge":
+			classData["building"] = "Kresge Lounge"	
+
 
 		# "The DO UPDATE SET locationString = locationString is a no-op that triggers the RETURNING clause even when there's a conflict."
 		cursor.execute('''

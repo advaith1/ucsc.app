@@ -26,8 +26,9 @@ async def getRoomsForBuilding(building: str):
 	if building not in knownBuildings:
 		raise HTTPException(status_code=400, detail="Building not found")
 
-	cursor.execute('SELECT room FROM location WHERE building = ?', (building,))
-	return list(map(lambda x: x[0], cursor.fetchall()))
+	cursor.execute('SELECT room FROM location WHERE building = ? AND room IS NOT NULL;', (building,))
+	rows: list = cursor.fetchall()
+	return [x[0] for x in rows]
 	
 
 @router.get('/schedule/{term}/{building}/{room}/{day}')

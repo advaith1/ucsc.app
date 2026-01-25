@@ -3,6 +3,7 @@ import { Context } from "../Context";
 import { TopBar as MobileTopBar } from "../components/navbar/mobile/TopBar";
 import { TopBar as DesktopTopBar } from "../components/navbar/desktop/TopBar";
 import { BASE_API_URL } from "../constants";
+import Map from "./Map";
 
 /* Keeping this hidden for now, so I won't add a link in the topbar to here */
 /* It'll still be accessible from /schedules */
@@ -63,16 +64,20 @@ export default function Schedules() {
 	const [selectedDay, setSelectedDay] = useState<string>("");
 
 
+
+
 	const ctx = useContext(Context);
 	const terms = [];
 	for (let i = 2048; i <= 2260; i += 2)
 		terms.push(i);
 
-	useEffect(() => {
-		fetch(`${BASE_API_URL}/schedule`)
-			.then(res => res.json())
-			.then(b => setBuildings(b));
-	}, []);
+	// useEffect(() => {
+	// 	fetch(`${BASE_API_URL}/schedule`)
+	// 		.then(res => res.json())
+	// 		.then(b => setBuildings(b));
+	// }, []);
+
+	
 
 	useEffect(() => {
 		if (selectedBuilding.length == 0) return;
@@ -83,51 +88,55 @@ export default function Schedules() {
 			.then(b => setRooms(b));
 	}, [selectedBuilding]);
 
-	const onGo = () => {
-		const r = (selectedRoom.length == 0) ? "-1" : selectedRoom;
-		const dayNum = days[selectedDay];
-		fetch(`${BASE_API_URL}/schedule/${selectedTerm}/${selectedBuilding}/${r}/${dayNum}`)
-			.then(res => res.json())
-			.then(res => console.log(res));
-	}
+	// const onGo = () => {
+	// 	const r = (selectedRoom.length == 0) ? "-1" : selectedRoom;
+	// 	const dayNum = days[selectedDay];
+	// 	fetch(`${BASE_API_URL}/schedule/${selectedTerm}/${selectedBuilding}/${r}/${dayNum}`)
+	// 		.then(res => res.json())
+	// 		.then(res => console.log(res));
+	// }
 
 	return (
 		<>
 			{ctx!.mobile ? <MobileTopBar /> : <DesktopTopBar />}
-			<div style={{ position: "absolute", top: "200px" }}>
+			<Map />
+			{/* <div style={{ width: '100%' }}> */}
+				{/* <div style={{ flex: "0 0 300px", display: "flex", flexDirection: "column", gap: "10px" }}>
+					<Autocomplete
+						label={"select term"}
+						options={terms}
+						onSelect={setSelectedTerm}
+						disabled={false}
+					/>
 
-				<Autocomplete
-					label={"select term"}
-					options={terms}
-					onSelect={setSelectedTerm}
-					disabled={false}
-				/>
+					<Autocomplete
+						label={"select building"}
+						options={buildings}
+						onSelect={setSelectedBuilding}
+						disabled={false}
+					/>
 
-				<Autocomplete
-					label={"select building"}
-					options={buildings}
-					onSelect={setSelectedBuilding}
-					disabled={false}
-				/>
+					<Selector
+						label={"select rooms"}
+						options={rooms}
+						onSelect={setSelectedRoom}
+						disabled={selectedBuilding.length == 0}
+					/>
 
-				<Selector
-					label={"select rooms"}
-					options={rooms}
-					onSelect={setSelectedRoom}
-					disabled={selectedBuilding.length == 0}
-				/>
+					<Selector
+						label={"select day"}
+						options={Object.keys(days)}
+						onSelect={setSelectedDay}
+						disabled={selectedBuilding.length == 0}
+					/>
 
-				<Selector
-					label={"select day"}
-					options={Object.keys(days)}
-					onSelect={setSelectedDay}
-					disabled={selectedBuilding.length == 0}
-				/>
+					<button onClick={() => onGo()}>
+						Go
+					</button>
+				</div> */}
 
-				<button onClick={() => onGo()}>
-					Go
-				</button>
-			</div>
+				
+			{/* </div> */}
 		</>
 	)
 }
