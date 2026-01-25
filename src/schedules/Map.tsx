@@ -18,13 +18,13 @@ export default function Map() {
 				),
 				maxBoundsViscosity: 1.0,
 				minZoom: 15,
-				maxZoom: 19,
+				maxZoom: 30, //19
 			}).setView([36.9914, -122.0609], 15);
 
 			L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
 				attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
 				subdomains: 'abcd',
-				maxZoom: 20
+				maxZoom: 30 //20
 			}).addTo(map);
 
 			// L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{ext}', {
@@ -48,11 +48,11 @@ export default function Map() {
 					const props = feature.properties;
 					layer.bindPopup(`
 						<strong>${props.BUILDINGNAME}</strong><br>
-						${props.ADDRESS || ''}<br>
+						${props.ADDRESS}<br>
 					`);
 
 					layer.on('click', (e) => {
-						console.log('Coordinates:', e.latlng);
+						console.log([e.latlng.lng, e.latlng.lat]);
 						const buildingName = feature.properties.BUILDINGNAME;
 						let pisaName: string|string[] = buildingLookup[buildingName as keyof typeof buildingLookup];
 						const pisaNames: string[] = Array.isArray(pisaName) ? pisaName : [pisaName];
@@ -67,7 +67,7 @@ export default function Map() {
 			}).addTo(map);
 
 			map.on('click', (e) => {
-				console.log([e.latlng.lat, e.latlng.lng]);
+				console.log([e.latlng.lng, e.latlng.lat]);
 			});
 
 			mapInstanceRef.current = map;

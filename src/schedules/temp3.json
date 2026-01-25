@@ -6,8 +6,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Barn",
 				"ADDRESS": "101 Coolidge Drive",
-				"LATITUDE": "36.977614513643",
-				"LONGITUDE": "-122.054289411",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -47,8 +45,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kiosk for East Entrance",
 				"ADDRESS": "108 Coolidge Drive",
-				"LATITUDE": "36.97868665573",
-				"LONGITUDE": "-122.054059447",
 				"CONSTRUCTIONYEAR": "2003"
 			},
 			"geometry": {
@@ -92,8 +88,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cook House",
 				"ADDRESS": "109 Coolidge Drive",
-				"LATITUDE": "36.97891810630",
-				"LONGITUDE": "-122.054498669",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -145,8 +139,6 @@
 			"properties": {
 				"BUILDINGNAME": "Emergency Response Center",
 				"ADDRESS": "114 Carriage House Road",
-				"LATITUDE": "36.97917308235",
-				"LONGITUDE": "-122.052146945",
 				"CONSTRUCTIONYEAR": "2007"
 			},
 			"geometry": {
@@ -290,8 +282,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cardiff House Women's Center",
 				"ADDRESS": "117 Carriage House Road",
-				"LATITUDE": "36.97942902559",
-				"LONGITUDE": "-122.051457267",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -343,8 +333,6 @@
 			"properties": {
 				"BUILDINGNAME": "Receiving Barn",
 				"ADDRESS": "116 Ox Team Road",
-				"LATITUDE": "36.97954055628",
-				"LONGITUDE": "-122.053476850",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -420,8 +408,6 @@
 			"properties": {
 				"BUILDINGNAME": "Campus Fleet Garage and TSM Office",
 				"ADDRESS": "113 Ox Team Road",
-				"LATITUDE": "36.97995633792",
-				"LONGITUDE": "-122.053158317",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -521,8 +507,6 @@
 			"properties": {
 				"BUILDINGNAME": "Physical Plant Trailer 1",
 				"ADDRESS": "102 Carriage House Road",
-				"LATITUDE": "36.98010601441",
-				"LONGITUDE": "-122.052561118",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -562,8 +546,6 @@
 			"properties": {
 				"BUILDINGNAME": "Carriage House",
 				"ADDRESS": "105 Carriage House Road",
-				"LATITUDE": "36.98005212138",
-				"LONGITUDE": "-122.051987605",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -647,8 +629,6 @@
 			"properties": {
 				"BUILDINGNAME": "Barn G",
 				"ADDRESS": "101 Ox Team Road",
-				"LATITUDE": "36.98043842729",
-				"LONGITUDE": "-122.052585586",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -728,8 +708,6 @@
 			"properties": {
 				"BUILDINGNAME": "Physical Planning & Construction Trailer 2",
 				"ADDRESS": "105 Ox Team Road",
-				"LATITUDE": "36.98060178760",
-				"LONGITUDE": "-122.052636984",
 				"CONSTRUCTIONYEAR": "1978"
 			},
 			"geometry": {
@@ -769,8 +747,6 @@
 			"properties": {
 				"BUILDINGNAME": "Physical Planning & Construction Trailer 1",
 				"ADDRESS": "103 Ox Team Road",
-				"LATITUDE": "36.98063477985",
-				"LONGITUDE": "-122.052694876",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -838,8 +814,6 @@
 			"properties": {
 				"BUILDINGNAME": "Hagar Court Offices",
 				"ADDRESS": "151 Hagar Court",
-				"LATITUDE": "36.98069195777",
-				"LONGITUDE": "-122.049027317",
 				"CONSTRUCTIONYEAR": "1981"
 			},
 			"geometry": {
@@ -887,8 +861,6 @@
 			"properties": {
 				"BUILDINGNAME": "Blacksmith Shop",
 				"ADDRESS": "93 Ranch View Road",
-				"LATITUDE": "36.98087250966",
-				"LONGITUDE": "-122.053501017",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -944,8 +916,6 @@
 			"properties": {
 				"BUILDINGNAME": "Hay Barn",
 				"ADDRESS": "94 Ranch View Road",
-				"LATITUDE": "36.98098854828",
-				"LONGITUDE": "-122.054238154",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -981,8 +951,6 @@
 			"properties": {
 				"BUILDINGNAME": "Powder House",
 				"ADDRESS": "90 Ranch View Road",
-				"LATITUDE": "36.98163504790",
-				"LONGITUDE": "-122.053059807",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -1018,8 +986,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum Gift Shop",
 				"ADDRESS": "104 Arboretum Road",
-				"LATITUDE": "36.98249832408",
-				"LONGITUDE": "-122.061310092",
 				"CONSTRUCTIONYEAR": "1994"
 			},
 			"geometry": {
@@ -1059,8 +1025,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Louise Cain Gatehouse",
 				"ADDRESS": "164 Farm Road",
-				"LATITUDE": "36.98334956045",
-				"LONGITUDE": "-122.054300490",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -1104,8 +1068,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Vegetable Packing & Storage",
 				"ADDRESS": "150 Farm Road",
-				"LATITUDE": "36.98339618006",
-				"LONGITUDE": "-122.055388940",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -1141,8 +1103,6 @@
 			"properties": {
 				"BUILDINGNAME": "Center for Agroecology & Sustainable Food Systems Lab",
 				"ADDRESS": "152 Farm Road",
-				"LATITUDE": "36.98340637095",
-				"LONGITUDE": "-122.055143320",
 				"CONSTRUCTIONYEAR": "1983"
 			},
 			"geometry": {
@@ -1178,8 +1138,6 @@
 			"properties": {
 				"BUILDINGNAME": "Agroecology Trailer 4",
 				"ADDRESS": "160 Farm Road",
-				"LATITUDE": "36.98336593756",
-				"LONGITUDE": "-122.054669026",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -1215,8 +1173,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum Horticulture 1",
 				"ADDRESS": "120 Arboretum Road",
-				"LATITUDE": "36.98364210956",
-				"LONGITUDE": "-122.060844211",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -1252,8 +1208,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Chalet",
 				"ADDRESS": "143 Farm Road",
-				"LATITUDE": "36.98385654930",
-				"LONGITUDE": "-122.055446633",
 				"CONSTRUCTIONYEAR": "1975"
 			},
 			"geometry": {
@@ -1297,8 +1251,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum Horticulture 2",
 				"ADDRESS": "122 Arboretum Road",
-				"LATITUDE": "36.983840077279",
-				"LONGITUDE": "-122.060872451",
 				"CONSTRUCTIONYEAR": "1994"
 			},
 			"geometry": {
@@ -1334,8 +1286,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Equipment Barn & Sleep loft",
 				"ADDRESS": "104 Farm Road",
-				"LATITUDE": "36.98484567891",
-				"LONGITUDE": "-122.056413218",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -1371,8 +1321,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Slaughter House",
 				"ADDRESS": "103 Farm Road",
-				"LATITUDE": "36.98497988141",
-				"LONGITUDE": "-122.055999136",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -1416,8 +1364,6 @@
 			"properties": {
 				"BUILDINGNAME": "Agroecology Modular A1",
 				"ADDRESS": "201 Village Road",
-				"LATITUDE": "36.98549357002",
-				"LONGITUDE": "-122.055465495",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1461,8 +1407,6 @@
 			"properties": {
 				"BUILDINGNAME": "Agroecology Modular A2",
 				"ADDRESS": "203 Village Road",
-				"LATITUDE": "36.98554171185",
-				"LONGITUDE": "-122.055238010",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1502,8 +1446,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing B2",
 				"ADDRESS": "212 Village Road",
-				"LATITUDE": "36.98640320681",
-				"LONGITUDE": "-122.055105305",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1539,8 +1481,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing B1",
 				"ADDRESS": "216 Village Road",
-				"LATITUDE": "36.98657454996",
-				"LONGITUDE": "-122.055053013",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1576,8 +1516,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Maintenance & Telecommunications",
 				"ADDRESS": "217 Village Road",
-				"LATITUDE": "36.98662372617",
-				"LONGITUDE": "-122.055463555",
 				"CONSTRUCTIONYEAR": "2001"
 			},
 			"geometry": {
@@ -1613,8 +1551,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing B3",
 				"ADDRESS": "214 Village Road",
-				"LATITUDE": "36.98657743201",
-				"LONGITUDE": "-122.055259683",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1654,8 +1590,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing C1",
 				"ADDRESS": "222 Village Road",
-				"LATITUDE": "36.98700807967",
-				"LONGITUDE": "-122.055330725",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1695,8 +1629,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing C2",
 				"ADDRESS": "224 Village Road",
-				"LATITUDE": "36.98720525670",
-				"LONGITUDE": "-122.055252733",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1736,8 +1668,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing C3",
 				"ADDRESS": "226 Village Road",
-				"LATITUDE": "36.98738638885",
-				"LONGITUDE": "-122.055350335",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1777,8 +1707,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing C5",
 				"ADDRESS": "228 Village Road",
-				"LATITUDE": "36.98742177234",
-				"LONGITUDE": "-122.055141143",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1822,8 +1750,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing C4",
 				"ADDRESS": "230 Village Road",
-				"LATITUDE": "36.98761518125",
-				"LONGITUDE": "-122.055329201",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1863,8 +1789,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing C6",
 				"ADDRESS": "232 Village Road",
-				"LATITUDE": "36.98763792421",
-				"LONGITUDE": "-122.055105570",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1904,8 +1828,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing D1",
 				"ADDRESS": "241 Village Road",
-				"LATITUDE": "36.98821950791",
-				"LONGITUDE": "-122.055698045",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1945,8 +1867,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing D2",
 				"ADDRESS": "243 Village Road",
-				"LATITUDE": "36.98833125744",
-				"LONGITUDE": "-122.055661921",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -1982,8 +1902,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing F5",
 				"ADDRESS": "260 Village Road",
-				"LATITUDE": "36.98852754302",
-				"LONGITUDE": "-122.054770546",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -2023,8 +1941,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing E1",
 				"ADDRESS": "245 Village Road",
-				"LATITUDE": "36.98860446759",
-				"LONGITUDE": "-122.055599741",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -2064,8 +1980,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Dining",
 				"ADDRESS": "259 Village Road",
-				"LATITUDE": "36.98863792425",
-				"LONGITUDE": "-122.055024243",
 				"CONSTRUCTIONYEAR": "2001"
 			},
 			"geometry": {
@@ -2117,8 +2031,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing F1",
 				"ADDRESS": "255 Village Road",
-				"LATITUDE": "36.98865799962",
-				"LONGITUDE": "-122.055234144",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -2158,8 +2070,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing E4",
 				"ADDRESS": "247 Village Road",
-				"LATITUDE": "36.98873087463",
-				"LONGITUDE": "-122.055786748",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -2199,8 +2109,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing E2",
 				"ADDRESS": "251 Village Road",
-				"LATITUDE": "36.98878692096",
-				"LONGITUDE": "-122.055571759",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -2240,8 +2148,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing F3",
 				"ADDRESS": "257 Village Road",
-				"LATITUDE": "36.98880641988",
-				"LONGITUDE": "-122.055130943",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -2289,8 +2195,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing F2",
 				"ADDRESS": "253 Village Road",
-				"LATITUDE": "36.98882203137",
-				"LONGITUDE": "-122.055338931",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -2326,8 +2230,6 @@
 			"properties": {
 				"BUILDINGNAME": "Village Housing E3",
 				"ADDRESS": "249 Village Road",
-				"LATITUDE": "36.98893142595",
-				"LONGITUDE": "-122.055684058",
 				"CONSTRUCTIONYEAR": "1997"
 			},
 			"geometry": {
@@ -2371,8 +2273,6 @@
 			"properties": {
 				"BUILDINGNAME": "Athletics & Recreation Fitness Center",
 				"ADDRESS": "405 East Field Service Road",
-				"LATITUDE": "36.99358615235",
-				"LONGITUDE": "-122.054543043",
 				"CONSTRUCTIONYEAR": "1999"
 			},
 			"geometry": {
@@ -2452,8 +2352,6 @@
 			"properties": {
 				"BUILDINGNAME": "Athletics & Recreation Activities Building",
 				"ADDRESS": "403 East Field Service Road",
-				"LATITUDE": "36.99380944058",
-				"LONGITUDE": "-122.054820870",
 				"CONSTRUCTIONYEAR": "1974"
 			},
 			"geometry": {
@@ -2493,8 +2391,6 @@
 			"properties": {
 				"BUILDINGNAME": "East Field House",
 				"ADDRESS": "418 Hagar Drive",
-				"LATITUDE": "36.99446848996",
-				"LONGITUDE": "-122.054912772",
 				"CONSTRUCTIONYEAR": "1965"
 			},
 			"geometry": {
@@ -2642,8 +2538,6 @@
 			"properties": {
 				"BUILDINGNAME": "Athletics & Recreation Offices & Support Space",
 				"ADDRESS": "451 East Field Service Road",
-				"LATITUDE": "36.99500795425",
-				"LONGITUDE": "-122.054057045",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -2703,8 +2597,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Residence D11-12",
 				"ADDRESS": "241 Oakes Field Service Road",
-				"LATITUDE": "36.98873192424",
-				"LONGITUDE": "-122.063622639",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -2756,8 +2648,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Residence D14-16",
 				"ADDRESS": "243 Oakes Field Service Road",
-				"LATITUDE": "36.98874767074",
-				"LONGITUDE": "-122.063168738",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -2851,8 +2741,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College House",
 				"ADDRESS": "246 Oakes Field Service Road",
-				"LATITUDE": "36.98879391767",
-				"LONGITUDE": "-122.062378010",
 				"CONSTRUCTIONYEAR": "1977"
 			},
 			"geometry": {
@@ -2928,8 +2816,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Dorm 4",
 				"ADDRESS": "212 Oakes Road",
-				"LATITUDE": "36.988901614305",
-				"LONGITUDE": "-122.0649632881",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -3081,8 +2967,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Service Module S3",
 				"ADDRESS": "247 Oakes Field Service Road",
-				"LATITUDE": "36.989037618056",
-				"LONGITUDE": "-122.063155760",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -3126,8 +3010,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Residence C11-15",
 				"ADDRESS": "245 Oakes Field Service Road",
-				"LATITUDE": "36.98898182125",
-				"LONGITUDE": "-122.062892266",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -3207,8 +3089,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Dorm 1",
 				"ADDRESS": "210 Oakes Road",
-				"LATITUDE": "36.98908425421",
-				"LONGITUDE": "-122.065460055",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -3360,8 +3240,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Tutorial Commons",
 				"ADDRESS": "249 Oakes Field Service Road",
-				"LATITUDE": "36.98928730519",
-				"LONGITUDE": "-122.063269524",
 				"CONSTRUCTIONYEAR": "1977"
 			},
 			"geometry": {
@@ -3413,8 +3291,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Dorm 3",
 				"ADDRESS": "216 Oakes Road",
-				"LATITUDE": "36.98927284958",
-				"LONGITUDE": "-122.064415218",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -3566,8 +3442,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Dorm 2",
 				"ADDRESS": "214 Oakes Road",
-				"LATITUDE": "36.98935169043",
-				"LONGITUDE": "-122.064944860",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -3719,8 +3593,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Residence A11-12",
 				"ADDRESS": "218 Oakes Road",
-				"LATITUDE": "36.98970710750",
-				"LONGITUDE": "-122.064246609",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -3780,8 +3652,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Service Module S1",
 				"ADDRESS": "224 Oakes Road",
-				"LATITUDE": "36.98986330519",
-				"LONGITUDE": "-122.063997669",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -3821,8 +3691,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Service Module S2",
 				"ADDRESS": "226 Oakes Road",
-				"LATITUDE": "36.98991449966",
-				"LONGITUDE": "-122.063706788",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -3862,8 +3730,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Residence A13-15",
 				"ADDRESS": "220 Oakes Road",
-				"LATITUDE": "36.989935293242",
-				"LONGITUDE": "-122.064246821",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -3911,8 +3777,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Residence B11-15",
 				"ADDRESS": "230 Oakes Road",
-				"LATITUDE": "36.98986491024",
-				"LONGITUDE": "-122.063456479",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -3988,8 +3852,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing F 6-10",
 				"ADDRESS": "606 Koshland Way",
-				"LATITUDE": "36.99001128084",
-				"LONGITUDE": "-122.068242425",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -4193,8 +4055,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Residence A16-17",
 				"ADDRESS": "222 Oakes Road",
-				"LATITUDE": "36.990085882366",
-				"LONGITUDE": "-122.064005349",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -4246,8 +4106,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing F 11-14",
 				"ADDRESS": "611 Koshland Way",
-				"LATITUDE": "36.99006850843",
-				"LONGITUDE": "-122.068367104",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -4455,8 +4313,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Residence B16-17",
 				"ADDRESS": "228 Oakes Road",
-				"LATITUDE": "36.99013475816",
-				"LONGITUDE": "-122.063662996",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -4508,8 +4364,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing F 18-23",
 				"ADDRESS": "618 Koshland Way",
-				"LATITUDE": "36.99008956133",
-				"LONGITUDE": "-122.068783725",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -4735,8 +4589,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing F 15-17",
 				"ADDRESS": "615 Koshland Way",
-				"LATITUDE": "36.99011463520",
-				"LONGITUDE": "-122.068622426",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -4808,8 +4660,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing D 7-9",
 				"ADDRESS": "407 Koshland Way",
-				"LATITUDE": "36.99019894303",
-				"LONGITUDE": "-122.068074470",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -4969,8 +4819,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing D 10-14",
 				"ADDRESS": "410 Koshland Way",
-				"LATITUDE": "36.99024725231",
-				"LONGITUDE": "-122.068286891",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -5246,8 +5094,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing F 1-5",
 				"ADDRESS": "601 Koshland Way",
-				"LATITUDE": "36.99025304376",
-				"LONGITUDE": "-122.068434313",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -5483,8 +5329,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing F 24-29",
 				"ADDRESS": "624 Koshland Way",
-				"LATITUDE": "36.99026930018",
-				"LONGITUDE": "-122.069023449",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -5692,8 +5536,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing B 7-9",
 				"ADDRESS": "207 Koshland Way",
-				"LATITUDE": "36.99027554820",
-				"LONGITUDE": "-122.067316052",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -5797,8 +5639,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing B 10-12",
 				"ADDRESS": "210 Koshland Way",
-				"LATITUDE": "36.99033412938",
-				"LONGITUDE": "-122.067448084",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -5958,8 +5798,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing B 3-6",
 				"ADDRESS": "203 Koshland Way",
-				"LATITUDE": "36.99039457294",
-				"LONGITUDE": "-122.067262651",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -6179,8 +6017,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing B 13-19",
 				"ADDRESS": "213 Koshland Way",
-				"LATITUDE": "36.990391122327",
-				"LONGITUDE": "-122.067941615",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -6420,8 +6256,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Dorm D-Garden",
 				"ADDRESS": "301 Rachel Carson Service Road",
-				"LATITUDE": "36.99045988858",
-				"LONGITUDE": "-122.064479849",
 				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
@@ -6505,8 +6339,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing D 15-21",
 				"ADDRESS": "415 Koshland Way",
-				"LATITUDE": "36.99055777089",
-				"LONGITUDE": "-122.068222690",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -6770,8 +6602,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing D 1-6",
 				"ADDRESS": "401 Koshland Way",
-				"LATITUDE": "36.99058665095",
-				"LONGITUDE": "-122.068100690",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -7059,8 +6889,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing F 30-33",
 				"ADDRESS": "630 Koshland Way",
-				"LATITUDE": "36.99058038342",
-				"LONGITUDE": "-122.069033159",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -7196,8 +7024,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Dorm D-L-Building",
 				"ADDRESS": "303 Rachel Carson Service Road",
-				"LATITUDE": "36.99054716995",
-				"LONGITUDE": "-122.064790832",
 				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
@@ -7349,8 +7175,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing A 13-18",
 				"ADDRESS": "113 Koshland Way",
-				"LATITUDE": "36.99067075258",
-				"LONGITUDE": "-122.067272875",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -7566,8 +7390,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing B 24-28",
 				"ADDRESS": "224 Koshland Way",
-				"LATITUDE": "36.99067706956",
-				"LONGITUDE": "-122.067745351",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -7747,8 +7569,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Dorm C-Garden",
 				"ADDRESS": "307 Rachel Carson Service Road",
-				"LATITUDE": "36.99067971746",
-				"LONGITUDE": "-122.065516966",
 				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
@@ -7832,8 +7652,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Dorm C-L-Building",
 				"ADDRESS": "305 Rachel Carson Service Road",
-				"LATITUDE": "36.99063073118",
-				"LONGITUDE": "-122.065183054",
 				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
@@ -7985,8 +7803,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing A 8-12",
 				"ADDRESS": "108 Koshland Way",
-				"LATITUDE": "36.99076550949",
-				"LONGITUDE": "-122.066957296",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -8154,8 +7970,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing A 5-7",
 				"ADDRESS": "105 Koshland Way",
-				"LATITUDE": "36.99083925379",
-				"LONGITUDE": "-122.066666631",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -8343,8 +8157,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Apartment Building 5",
 				"ADDRESS": "314 Rachel Carson Service Road",
-				"LATITUDE": "36.99080715689",
-				"LONGITUDE": "-122.063664134",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -8460,8 +8272,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Dorm B-Garden",
 				"ADDRESS": "302 Rachel Carson Service Road",
-				"LATITUDE": "36.990848534688",
-				"LONGITUDE": "-122.064253723",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -8545,8 +8355,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Apartment Building 6",
 				"ADDRESS": "312 Rachel Carson Service Road",
-				"LATITUDE": "36.99085206136",
-				"LONGITUDE": "-122.063984213",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -8798,8 +8606,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Dorm B-L-Building",
 				"ADDRESS": "304 Rachel Carson Service Road",
-				"LATITUDE": "36.99094783554",
-				"LONGITUDE": "-122.064543058",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -8947,8 +8753,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing E 1-5",
 				"ADDRESS": "501 Koshland Way",
-				"LATITUDE": "36.990987759334",
-				"LONGITUDE": "-122.068805010",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -9112,8 +8916,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Apartment Building 4",
 				"ADDRESS": "315 Rachel Carson Service Road",
-				"LATITUDE": "36.99102436601",
-				"LONGITUDE": "-122.063397108",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -9269,8 +9071,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing A 1-4",
 				"ADDRESS": "101 Koshland Way",
-				"LATITUDE": "36.99107335701",
-				"LONGITUDE": "-122.066820311",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -9386,8 +9186,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing C 1-5",
 				"ADDRESS": "301 Koshland Way",
-				"LATITUDE": "36.99110841385",
-				"LONGITUDE": "-122.067862760",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -9543,8 +9341,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Dorm A-Garden",
 				"ADDRESS": "308 Rachel Carson Service Road",
-				"LATITUDE": "36.991103843928",
-				"LONGITUDE": "-122.065469559",
 				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
@@ -9628,8 +9424,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Dorm A-L-Building",
 				"ADDRESS": "306 Rachel Carson Service Road",
-				"LATITUDE": "36.99106681316",
-				"LONGITUDE": "-122.065144604",
 				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
@@ -9785,8 +9579,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing C 17-23",
 				"ADDRESS": "317 Koshland Way",
-				"LATITUDE": "36.99118537514",
-				"LONGITUDE": "-122.067460234",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -10050,8 +9842,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Apartment Building 3",
 				"ADDRESS": "313 Rachel Carson Service Road",
-				"LATITUDE": "36.99117593095",
-				"LONGITUDE": "-122.063652030",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -10207,8 +9997,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Student Commons",
 				"ADDRESS": "310 Rachel Carson Service Road",
-				"LATITUDE": "36.991220689891",
-				"LONGITUDE": "-122.064700428",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -10332,8 +10120,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing E 6-9",
 				"ADDRESS": "506 Koshland Way",
-				"LATITUDE": "36.99119236648",
-				"LONGITUDE": "-122.068665421",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -10465,8 +10251,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing C 6-7 and E 19",
 				"ADDRESS": "306 Koshland Way",
-				"LATITUDE": "36.99120598270",
-				"LONGITUDE": "-122.068188156",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -10778,8 +10562,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing E 10-13",
 				"ADDRESS": "510 Koshland Way",
-				"LATITUDE": "36.99134858563",
-				"LONGITUDE": "-122.068579956",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -10895,8 +10677,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing C 8-16",
 				"ADDRESS": "308 Koshland Way",
-				"LATITUDE": "36.99144775215",
-				"LONGITUDE": "-122.067894250",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -11244,8 +11024,6 @@
 			"properties": {
 				"BUILDINGNAME": "Fieldhouse West",
 				"ADDRESS": "311 Rachel Carson Service Road",
-				"LATITUDE": "36.99139838168",
-				"LONGITUDE": "-122.064110949",
 				"CONSTRUCTIONYEAR": "1977"
 			},
 			"geometry": {
@@ -11329,8 +11107,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing Maintenance",
 				"ADDRESS": "520 Koshland Way",
-				"LATITUDE": "36.99162798746",
-				"LONGITUDE": "-122.068622464",
 				"CONSTRUCTIONYEAR": "1979"
 			},
 			"geometry": {
@@ -11370,8 +11146,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing Affiliate",
 				"ADDRESS": "530 Koshland Way",
-				"LATITUDE": "36.991710105425",
-				"LONGITUDE": "-122.068533673",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -11423,8 +11197,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing Common Building",
 				"ADDRESS": "540 Koshland Way",
-				"LATITUDE": "36.99172441011",
-				"LONGITUDE": "-122.068360054",
 				"CONSTRUCTIONYEAR": "1979"
 			},
 			"geometry": {
@@ -11504,8 +11276,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Academic Building",
 				"ADDRESS": "355 Rachel Carson Road",
-				"LATITUDE": "36.99183415677",
-				"LONGITUDE": "-122.064488621",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -11657,8 +11427,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing G 12-14",
 				"ADDRESS": "712 Koshland Way",
-				"LATITUDE": "36.99203306664",
-				"LONGITUDE": "-122.067450261",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -11726,8 +11494,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing G 15-16",
 				"ADDRESS": "715 Koshland Way",
-				"LATITUDE": "36.99207060988",
-				"LONGITUDE": "-122.067588762",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -11859,8 +11625,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Academic Building",
 				"ADDRESS": "354 Rachel Carson Road",
-				"LATITUDE": "36.991931516469",
-				"LONGITUDE": "-122.064999303",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -11960,8 +11724,6 @@
 			"properties": {
 				"BUILDINGNAME": "Infant & Toddler Care Modular Unit",
 				"ADDRESS": "550 Koshland Way",
-				"LATITUDE": "36.99213920183",
-				"LONGITUDE": "-122.068103145",
 				"CONSTRUCTIONYEAR": "2000"
 			},
 			"geometry": {
@@ -11997,8 +11759,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing G 17-21",
 				"ADDRESS": "717 Koshland Way",
-				"LATITUDE": "36.99224057708",
-				"LONGITUDE": "-122.067703545",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -12234,8 +11994,6 @@
 			"properties": {
 				"BUILDINGNAME": "School Age Child Care Modular Unit",
 				"ADDRESS": "560 Koshland Way",
-				"LATITUDE": "36.99226635299",
-				"LONGITUDE": "-122.068237609",
 				"CONSTRUCTIONYEAR": "2000"
 			},
 			"geometry": {
@@ -12275,8 +12033,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing H 30-33",
 				"ADDRESS": "830 Koshland Way",
-				"LATITUDE": "36.99232722803",
-				"LONGITUDE": "-122.067269001",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -12422,8 +12178,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing H 1-13",
 				"ADDRESS": "801 Koshland Way",
-				"LATITUDE": "36.99238463693",
-				"LONGITUDE": "-122.067816092",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -12917,8 +12671,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Apartment Building 2",
 				"ADDRESS": "353 Rachel Carson Road",
-				"LATITUDE": "36.99219738736",
-				"LONGITUDE": "-122.063757262",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -13146,8 +12898,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Apartment Building 1",
 				"ADDRESS": "351 Rachel Carson Road",
-				"LATITUDE": "36.99231077079",
-				"LONGITUDE": "-122.064210199",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -13351,8 +13101,6 @@
 			"properties": {
 				"BUILDINGNAME": "Visual Arts Research Facility",
 				"ADDRESS": "350 Rachel Carson Road",
-				"LATITUDE": "36.99249295569",
-				"LONGITUDE": "-122.064739141",
 				"CONSTRUCTIONYEAR": "1982"
 			},
 			"geometry": {
@@ -13528,8 +13276,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing H 23-29",
 				"ADDRESS": "823 Koshland Way",
-				"LATITUDE": "36.992576970159",
-				"LONGITUDE": "-122.067198792",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -13811,8 +13557,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing H 19-22",
 				"ADDRESS": "819 Koshland Way",
-				"LATITUDE": "36.99282655567",
-				"LONGITUDE": "-122.067239063",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -14032,8 +13776,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing H 14-18",
 				"ADDRESS": "814 Koshland Way",
-				"LATITUDE": "36.99298314570",
-				"LONGITUDE": "-122.067547144",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -14201,8 +13943,6 @@
 			"properties": {
 				"BUILDINGNAME": "University House",
 				"ADDRESS": "400 McHenry Road",
-				"LATITUDE": "36.99245750233",
-				"LONGITUDE": "-122.062010576",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -14350,8 +14090,6 @@
 			"properties": {
 				"BUILDINGNAME": "Gamelan Studio",
 				"ADDRESS": "404 McHenry Road",
-				"LATITUDE": "36.99336216202",
-				"LONGITUDE": "-122.060473159",
 				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
@@ -14407,8 +14145,6 @@
 			"properties": {
 				"BUILDINGNAME": "Digital Arts Research Center",
 				"ADDRESS": "407 McHenry Road",
-				"LATITUDE": "36.99390161820",
-				"LONGITUDE": "-122.060490043",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -14468,8 +14204,6 @@
 			"properties": {
 				"BUILDINGNAME": "Academic Resource Center Multipurpose Building",
 				"ADDRESS": "410 McHenry Road",
-				"LATITUDE": "36.99411152608",
-				"LONGITUDE": "-122.058932161",
 				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
@@ -14581,8 +14315,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building J",
 				"ADDRESS": "436 Baskin Arts Service Road",
-				"LATITUDE": "36.99433183836",
-				"LONGITUDE": "-122.060209778",
 				"CONSTRUCTIONYEAR": "1993"
 			},
 			"geometry": {
@@ -14642,8 +14374,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College Academic",
 				"ADDRESS": "405 Porter-Kresge Road",
-				"LATITUDE": "36.99419633068",
-				"LONGITUDE": "-122.065067435",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -15051,8 +14781,6 @@
 			"properties": {
 				"BUILDINGNAME": "Academic Resource Center",
 				"ADDRESS": "408 McHenry Road",
-				"LATITUDE": "36.99430184967",
-				"LONGITUDE": "-122.059376388",
 				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
@@ -15136,8 +14864,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building K",
 				"ADDRESS": "434 Baskin Arts Service Road",
-				"LATITUDE": "36.99442731954",
-				"LONGITUDE": "-122.060337835",
 				"CONSTRUCTIONYEAR": "1993"
 			},
 			"geometry": {
@@ -15173,8 +14899,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts J Offices",
 				"ADDRESS": "445 Kerr Road",
-				"LATITUDE": "36.99437704106",
-				"LONGITUDE": "-122.061982146",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -15214,8 +14938,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building G",
 				"ADDRESS": "432 Baskin Arts Service Road",
-				"LATITUDE": "36.99439232362",
-				"LONGITUDE": "-122.0605237408",
 				"CONSTRUCTIONYEAR": "1984"
 			},
 			"geometry": {
@@ -15395,8 +15117,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building L",
 				"ADDRESS": "422 Baskin Arts Service Road",
-				"LATITUDE": "36.99440746495",
-				"LONGITUDE": "-122.061218801",
 				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
@@ -15496,8 +15216,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts K Costume",
 				"ADDRESS": "443 Kerr Road",
-				"LATITUDE": "36.99451539775",
-				"LONGITUDE": "-122.062247238",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -15533,8 +15251,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building F",
 				"ADDRESS": "430 Baskin Arts Service Road",
-				"LATITUDE": "36.994566051047",
-				"LONGITUDE": "-122.060687551",
 				"CONSTRUCTIONYEAR": "1984"
 			},
 			"geometry": {
@@ -15678,8 +15394,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building I",
 				"ADDRESS": "435 Baskin Arts Service Road",
-				"LATITUDE": "36.99458672360",
-				"LONGITUDE": "-122.060093341",
 				"CONSTRUCTIONYEAR": "1992"
 			},
 			"geometry": {
@@ -15783,8 +15497,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts G Toilet Room",
 				"ADDRESS": "447 Kerr Road",
-				"LATITUDE": "36.99462961587",
-				"LONGITUDE": "-122.062095680",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -15824,8 +15536,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building E",
 				"ADDRESS": "424 Baskin Arts Service Road",
-				"LATITUDE": "36.99456371817",
-				"LONGITUDE": "-122.061000015",
 				"CONSTRUCTIONYEAR": "1984"
 			},
 			"geometry": {
@@ -16125,8 +15835,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building M",
 				"ADDRESS": "418 Baskin Arts Service Road",
-				"LATITUDE": "36.99464440346",
-				"LONGITUDE": "-122.061247015",
 				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
@@ -16226,8 +15934,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts H 2nd Stage",
 				"ADDRESS": "451 Kerr Road",
-				"LATITUDE": "36.99464194600",
-				"LONGITUDE": "-122.061820769",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -16271,8 +15977,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building D",
 				"ADDRESS": "433 Baskin Arts Service Road",
-				"LATITUDE": "36.99473605598",
-				"LONGITUDE": "-122.060552379",
 				"CONSTRUCTIONYEAR": "1984"
 			},
 			"geometry": {
@@ -16372,8 +16076,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building N",
 				"ADDRESS": "421 Baskin Arts Service Road",
-				"LATITUDE": "36.99479766485",
-				"LONGITUDE": "-122.061293472",
 				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
@@ -16409,8 +16111,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building B",
 				"ADDRESS": "429 Baskin Arts Service Road",
-				"LATITUDE": "36.99487350474",
-				"LONGITUDE": "-122.060933997",
 				"CONSTRUCTIONYEAR": "1984"
 			},
 			"geometry": {
@@ -16526,8 +16226,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building A",
 				"ADDRESS": "425 Baskin Arts Service Road",
-				"LATITUDE": "36.994837809602",
-				"LONGITUDE": "-122.061113720",
 				"CONSTRUCTIONYEAR": "1984"
 			},
 			"geometry": {
@@ -16659,8 +16357,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts A Main Stage",
 				"ADDRESS": "441 Kerr Road",
-				"LATITUDE": "36.99475227772",
-				"LONGITUDE": "-122.062415561",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -16920,8 +16616,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts D Student Production",
 				"ADDRESS": "461 Kerr Road",
-				"LATITUDE": "36.99504421732",
-				"LONGITUDE": "-122.062259414",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -16961,8 +16655,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts F Ticket Office",
 				"ADDRESS": "457 Kerr Road",
-				"LATITUDE": "36.99496261810",
-				"LONGITUDE": "-122.062057733",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -17002,8 +16694,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts B Drama",
 				"ADDRESS": "465 Kerr Road",
-				"LATITUDE": "36.99501375594",
-				"LONGITUDE": "-122.062661614",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -17039,8 +16729,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building H",
 				"ADDRESS": "427 Baskin Arts Service Road",
-				"LATITUDE": "36.995067739016",
-				"LONGITUDE": "-122.060989218",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -17172,8 +16860,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts E Classroom",
 				"ADDRESS": "459 Kerr Road",
-				"LATITUDE": "36.99507367160",
-				"LONGITUDE": "-122.062092140",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -17209,8 +16895,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College Dining Common",
 				"ADDRESS": "411 Porter-Kresge Road",
-				"LATITUDE": "36.99434385118",
-				"LONGITUDE": "-122.065944225",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -17334,8 +17018,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building P",
 				"ADDRESS": "423 Baskin Arts Service Road",
-				"LATITUDE": "36.99504331157",
-				"LONGITUDE": "-122.061267635",
 				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
@@ -17415,8 +17097,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College House A",
 				"ADDRESS": "407 Porter-Kresge Road",
-				"LATITUDE": "36.99485175486",
-				"LONGITUDE": "-122.064990907",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -18256,8 +17936,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts C Studio",
 				"ADDRESS": "463 Kerr Road",
-				"LATITUDE": "36.99516412311",
-				"LONGITUDE": "-122.062367125",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -18297,8 +17975,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts M Media Theater",
 				"ADDRESS": "453 Kerr Road",
-				"LATITUDE": "36.99520158279",
-				"LONGITUDE": "-122.061629388",
 				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
@@ -18382,8 +18058,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts L Experimental Theater",
 				"ADDRESS": "455 Kerr Road",
-				"LATITUDE": "36.99524674553",
-				"LONGITUDE": "-122.061937214",
 				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
@@ -18451,8 +18125,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts Foundry",
 				"ADDRESS": "410 Foundry Road",
-				"LATITUDE": "36.99545530737",
-				"LONGITUDE": "-122.062320916",
 				"CONSTRUCTIONYEAR": "1975"
 			},
 			"geometry": {
@@ -18488,8 +18160,6 @@
 			"properties": {
 				"BUILDINGNAME": "Theater Arts I 2nd Stage Annex",
 				"ADDRESS": "449 Kerr Road",
-				"LATITUDE": "36.99464194600",
-				"LONGITUDE": "-122.061820769",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -18541,8 +18211,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Dining Room",
 				"ADDRESS": "356 Rachel Carson Road",
-				"LATITUDE": "36.991931516469",
-				"LONGITUDE": "-122.064999303",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -18610,8 +18278,6 @@
 			"properties": {
 				"BUILDINGNAME": "Rachel Carson College Cafe Building",
 				"ADDRESS": "355 Rachel Carson Road",
-				"LATITUDE": "36.99150691329",
-				"LONGITUDE": "-122.064380056",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -18671,8 +18337,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College House B",
 				"ADDRESS": "409 Porter-Kresge Road",
-				"LATITUDE": "36.99492657216",
-				"LONGITUDE": "-122.065667024",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -19580,8 +19244,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College Apartment Building E",
 				"ADDRESS": "410 Porter-Kresge Road",
-				"LATITUDE": "36.99560924920",
-				"LONGITUDE": "-122.064975185",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -19697,8 +19359,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College House",
 				"ADDRESS": "415 Porter-Kresge Road",
-				"LATITUDE": "36.99588261947",
-				"LONGITUDE": "-122.065842233",
 				"CONSTRUCTIONYEAR": "1983"
 			},
 			"geometry": {
@@ -19746,8 +19406,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College Apartment Building G",
 				"ADDRESS": "412 Porter-Kresge Road",
-				"LATITUDE": "36.99579276301",
-				"LONGITUDE": "-122.065282966",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -19911,8 +19569,6 @@
 			"properties": {
 				"BUILDINGNAME": "McHenry Library",
 				"ADDRESS": "414 McHenry Road",
-				"LATITUDE": "36.99571658674",
-				"LONGITUDE": "-122.0589122992",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -19972,8 +19628,6 @@
 			"properties": {
 				"BUILDINGNAME": "Hahn Student Services",
 				"ADDRESS": "400 Hahn Road",
-				"LATITUDE": "36.99607443095",
-				"LONGITUDE": "-122.057003587",
 				"CONSTRUCTIONYEAR": "1965"
 			},
 			"geometry": {
@@ -20185,8 +19839,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College Apartment Building F",
 				"ADDRESS": "414 Porter-Kresge Road",
-				"LATITUDE": "36.99608613547",
-				"LONGITUDE": "-122.064923319",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -20326,8 +19978,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College Apartment Building H",
 				"ADDRESS": "416 Porter-Kresge Road",
-				"LATITUDE": "36.99617540141",
-				"LONGITUDE": "-122.065274963",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -20455,8 +20105,6 @@
 			"properties": {
 				"BUILDINGNAME": "Porter College Apartments Lounge",
 				"ADDRESS": "418 Porter-Kresge Road",
-				"LATITUDE": "36.99647347297",
-				"LONGITUDE": "-122.065265249",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -20584,8 +20232,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Apartment Building J",
 				"ADDRESS": "417 Porter-Kresge Road",
-				"LATITUDE": "36.99642696706",
-				"LONGITUDE": "-122.065645793",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -20669,8 +20315,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Apartment Building K",
 				"ADDRESS": "419 Porter-Kresge Road",
-				"LATITUDE": "36.99671310860",
-				"LONGITUDE": "-122.066034777",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -20750,8 +20394,6 @@
 			"properties": {
 				"BUILDINGNAME": "Redwood Grove Apartments Building 12",
 				"ADDRESS": "525 Heller Drive",
-				"LATITUDE": "36.99701898815",
-				"LONGITUDE": "-122.064041239",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -20923,8 +20565,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House",
 				"ADDRESS": "508 Porter-Kresge Road",
-				"LATITUDE": "36.99710619015",
-				"LONGITUDE": "-122.066403152",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -21000,8 +20640,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Annex Building A",
 				"ADDRESS": "516 Porter-Kresge Road",
-				"LATITUDE": "36.99722597619",
-				"LONGITUDE": "-122.066002238",
 				"CONSTRUCTIONYEAR": "1991"
 			},
 			"geometry": {
@@ -21089,8 +20727,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Annex Building B",
 				"ADDRESS": "522 Porter-Kresge Road",
-				"LATITUDE": "36.99721142847",
-				"LONGITUDE": "-122.065474324",
 				"CONSTRUCTIONYEAR": "1991"
 			},
 			"geometry": {
@@ -21158,8 +20794,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Academic Building West Wing",
 				"ADDRESS": "500 Porter-Kresge Road",
-				"LATITUDE": "36.99724328885",
-				"LONGITUDE": "-122.066746580",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -21231,8 +20865,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 11",
 				"ADDRESS": "512 Porter-Kresge Road",
-				"LATITUDE": "36.99737092073",
-				"LONGITUDE": "-122.066059514",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -21272,8 +20904,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Academic Building",
 				"ADDRESS": "511 Porter-Kresge Road",
-				"LATITUDE": "36.99710619015",
-				"LONGITUDE": "-122.066403152",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -21441,8 +21071,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 10",
 				"ADDRESS": "520 Porter-Kresge Road",
-				"LATITUDE": "36.997396407436",
-				"LONGITUDE": "-122.065608363",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -21494,8 +21122,6 @@
 			"properties": {
 				"BUILDINGNAME": "Redwood Grove Apartments Building 13",
 				"ADDRESS": "535 Heller Drive",
-				"LATITUDE": "36.997412060832",
-				"LONGITUDE": "-122.064141473",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -21667,8 +21293,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Lounge",
 				"ADDRESS": "500 Porter-Kresge Road",
-				"LATITUDE": "36.99745110330",
-				"LONGITUDE": "-122.066942442",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -21740,8 +21364,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 01",
 				"ADDRESS": "506 Porter-Kresge Road",
-				"LATITUDE": "36.99755000813",
-				"LONGITUDE": "-122.066684506",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -21781,8 +21403,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 02",
 				"ADDRESS": "514 Porter-Kresge Road",
-				"LATITUDE": "36.99766835118",
-				"LONGITUDE": "-122.066303593",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -21822,8 +21442,6 @@
 			"properties": {
 				"BUILDINGNAME": "Redwood Grove Apartments Building 14",
 				"ADDRESS": "545 Heller Drive",
-				"LATITUDE": "36.99764049665",
-				"LONGITUDE": "-122.064062195",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -21995,8 +21613,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 09",
 				"ADDRESS": "526 Porter-Kresge Road",
-				"LATITUDE": "36.99768455568",
-				"LONGITUDE": "-122.065499757",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -22052,8 +21668,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 03",
 				"ADDRESS": "518 Porter-Kresge Road",
-				"LATITUDE": "36.99771517239",
-				"LONGITUDE": "-122.065980935",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -22121,8 +21735,6 @@
 			"properties": {
 				"BUILDINGNAME": "Redwood Grove Apartments Utility Building",
 				"ADDRESS": "549 Heller Drive",
-				"LATITUDE": "36.99787004291",
-				"LONGITUDE": "-122.064104526",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -22170,8 +21782,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Classroom Building",
 				"ADDRESS": "524 Porter-Kresge Road",
-				"LATITUDE": "36.997861760983",
-				"LONGITUDE": "-122.065762719",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -22231,8 +21841,6 @@
 			"properties": {
 				"BUILDINGNAME": "Redwood Grove Apartments Building 15",
 				"ADDRESS": "555 Heller Drive",
-				"LATITUDE": "36.99796499077",
-				"LONGITUDE": "-122.064304630",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -22404,8 +22012,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Library",
 				"ADDRESS": "530 Porter-Kresge Road",
-				"LATITUDE": "36.99797554087",
-				"LONGITUDE": "-122.065543685",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -22469,8 +22075,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 04",
 				"ADDRESS": "532 Porter-Kresge Road",
-				"LATITUDE": "36.99796832364",
-				"LONGITUDE": "-122.066020532",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -22514,8 +22118,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 05",
 				"ADDRESS": "536 Porter-Kresge Road",
-				"LATITUDE": "36.99813950838",
-				"LONGITUDE": "-122.066221570",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -22567,8 +22169,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 08",
 				"ADDRESS": "534 Porter-Kresge Road",
-				"LATITUDE": "36.99824527747",
-				"LONGITUDE": "-122.065809636",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -22620,8 +22220,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College House 06",
 				"ADDRESS": "538 Porter-Kresge Road",
-				"LATITUDE": "36.998393259185",
-				"LONGITUDE": "-122.066122391",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -22673,8 +22271,6 @@
 			"properties": {
 				"BUILDINGNAME": "Redwood Grove Apartments Building 16",
 				"ADDRESS": "565 Heller Drive",
-				"LATITUDE": "36.99856082403",
-				"LONGITUDE": "-122.064732797",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -22846,8 +22442,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kresge College Academic Center",
 				"ADDRESS": "544 Porter-Kresge Road",
-				"LATITUDE": "36.998824809913",
-				"LONGITUDE": "-122.066198836",
 				"CONSTRUCTIONYEAR": "2023"
 			},
 			"geometry": {
@@ -23427,8 +23021,6 @@
 			"properties": {
 				"BUILDINGNAME": "RV Park Recreation Building",
 				"ADDRESS": "701 Leonardo Lane",
-				"LATITUDE": "37.00132273345",
-				"LONGITUDE": "-122.066183983",
 				"CONSTRUCTIONYEAR": "1984"
 			},
 			"geometry": {
@@ -23480,8 +23072,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kerr Hall",
 				"ADDRESS": "500 Kerr Road",
-				"LATITUDE": "36.996990953663",
-				"LONGITUDE": "-122.061952628",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -23697,8 +23287,6 @@
 			"properties": {
 				"BUILDINGNAME": "Thimann Receiving Building",
 				"ADDRESS": "572 Steinhart Way",
-				"LATITUDE": "36.99798344801",
-				"LONGITUDE": "-122.062540690",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -23758,8 +23346,6 @@
 			"properties": {
 				"BUILDINGNAME": "Thimann Lecture Hall",
 				"ADDRESS": "562 Steinhart Way",
-				"LATITUDE": "36.99803355914",
-				"LONGITUDE": "-122.061311061",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -23811,8 +23397,6 @@
 			"properties": {
 				"BUILDINGNAME": "Center for Adaptive Optics",
 				"ADDRESS": "540 Red Hill Road",
-				"LATITUDE": "36.99818509653",
-				"LONGITUDE": "-122.060468889",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -23872,8 +23456,6 @@
 			"properties": {
 				"BUILDINGNAME": "Thimann Laboratories",
 				"ADDRESS": "568 Steinhart Way",
-				"LATITUDE": "36.99814587962",
-				"LONGITUDE": "-122.062010892",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -23929,8 +23511,6 @@
 			"properties": {
 				"BUILDINGNAME": "Earth & Marine Sciences",
 				"ADDRESS": "552 Red Hill Road",
-				"LATITUDE": "36.99787630945",
-				"LONGITUDE": "-122.059637506",
 				"CONSTRUCTIONYEAR": "1993"
 			},
 			"geometry": {
@@ -24252,8 +23832,6 @@
 			"properties": {
 				"BUILDINGNAME": "Nat Sci 2 Annex",
 				"ADDRESS": "570 Red Hill Road",
-				"LATITUDE": "36.99850120578",
-				"LONGITUDE": "-122.061085097",
 				"CONSTRUCTIONYEAR": "1969"
 			},
 			"geometry": {
@@ -24293,8 +23871,6 @@
 			"properties": {
 				"BUILDINGNAME": "Nat Sci 2 Main Building",
 				"ADDRESS": "560 Red Hill Road",
-				"LATITUDE": "36.99855161713",
-				"LONGITUDE": "-122.060453980",
 				"CONSTRUCTIONYEAR": "1969"
 			},
 			"geometry": {
@@ -24436,8 +24012,6 @@
 			"properties": {
 				"BUILDINGNAME": "Interdisciplinary Sciences Building",
 				"ADDRESS": "550 Red Hill Road",
-				"LATITUDE": "36.99855161713",
-				"LONGITUDE": "-122.060453980",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -24721,8 +24295,6 @@
 			"properties": {
 				"BUILDINGNAME": "Sinsheimer Laboratories",
 				"ADDRESS": "582 Steinhart Way",
-				"LATITUDE": "36.99874518005",
-				"LONGITUDE": "-122.061700672",
 				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
@@ -25022,8 +24594,6 @@
 			"properties": {
 				"BUILDINGNAME": "Core West Parking Structure",
 				"ADDRESS": "590 Heller Drive",
-				"LATITUDE": "36.99911022972",
-				"LONGITUDE": "-122.063620257",
 				"CONSTRUCTIONYEAR": "2001"
 			},
 			"geometry": {
@@ -25251,8 +24821,6 @@
 			"properties": {
 				"BUILDINGNAME": "Science and Engineering Library",
 				"ADDRESS": "580 Red Hill Road",
-				"LATITUDE": "36.99912456649",
-				"LONGITUDE": "-122.060750671",
 				"CONSTRUCTIONYEAR": "1991"
 			},
 			"geometry": {
@@ -25544,8 +25112,6 @@
 			"properties": {
 				"BUILDINGNAME": "Graduate Student Housing 1",
 				"ADDRESS": "615 Heller Drive",
-				"LATITUDE": "36.999309996088",
-				"LONGITUDE": "-122.064821769",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -25781,8 +25347,6 @@
 			"properties": {
 				"BUILDINGNAME": "Graduate Student Housing 2",
 				"ADDRESS": "625 Heller Drive",
-				"LATITUDE": "36.99951223245",
-				"LONGITUDE": "-122.064636354",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -25946,8 +25510,6 @@
 			"properties": {
 				"BUILDINGNAME": "Graduate Student Housing 4",
 				"ADDRESS": "645 Heller Drive",
-				"LATITUDE": "36.999743007739",
-				"LONGITUDE": "-122.064604434",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -26015,8 +25577,6 @@
 			"properties": {
 				"BUILDINGNAME": "Graduate Student Housing 3",
 				"ADDRESS": "635 Heller Drive",
-				"LATITUDE": "36.99977068252",
-				"LONGITUDE": "-122.064808817",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -26176,8 +25736,6 @@
 			"properties": {
 				"BUILDINGNAME": "Physical Sciences Building",
 				"ADDRESS": "590 Steinhart Way",
-				"LATITUDE": "36.99959673357",
-				"LONGITUDE": "-122.061891454",
 				"CONSTRUCTIONYEAR": "2006"
 			},
 			"geometry": {
@@ -26449,8 +26007,6 @@
 			"properties": {
 				"BUILDINGNAME": "Jack Baskin Engineering Auditorium",
 				"ADDRESS": "605 Baskin Circle",
-				"LATITUDE": "37.00020882309",
-				"LONGITUDE": "-122.062348858",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -26530,8 +26086,6 @@
 			"properties": {
 				"BUILDINGNAME": "John R. Lewis College Residence Hall 5",
 				"ADDRESS": "602 John R. Lewis College Road",
-				"LATITUDE": "37.00024977457",
-				"LONGITUDE": "-122.058271494",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -26763,8 +26317,6 @@
 			"properties": {
 				"BUILDINGNAME": "Central Heating Plant 2",
 				"ADDRESS": "604 Red Hill Road",
-				"LATITUDE": "37.00059619086",
-				"LONGITUDE": "-122.060425604",
 				"CONSTRUCTIONYEAR": "2003"
 			},
 			"geometry": {
@@ -26808,8 +26360,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Residence Hall Lounge",
 				"ADDRESS": "608 College Nine Road",
-				"LATITUDE": "37.00074341794",
-				"LONGITUDE": "-122.057169875",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -26853,8 +26403,6 @@
 			"properties": {
 				"BUILDINGNAME": "John R. Lewis College Residence Hall 6",
 				"ADDRESS": "604 John R. Lewis College Road",
-				"LATITUDE": "37.00059692339",
-				"LONGITUDE": "-122.058633589",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -27042,8 +26590,6 @@
 			"properties": {
 				"BUILDINGNAME": "Fackler Cogeneration Plant",
 				"ADDRESS": "606 Red Hill Road",
-				"LATITUDE": "37.00080382065",
-				"LONGITUDE": "-122.060428770",
 				"CONSTRUCTIONYEAR": "2015"
 			},
 			"geometry": {
@@ -27079,8 +26625,6 @@
 			"properties": {
 				"BUILDINGNAME": "John R. Lewis College Residence Hall 4",
 				"ADDRESS": "606 John R. Lewis College Road",
-				"LATITUDE": "37.00072204322",
-				"LONGITUDE": "-122.058262844",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -27264,8 +26808,6 @@
 			"properties": {
 				"BUILDINGNAME": "Communications Building",
 				"ADDRESS": "620 Baskin Circle",
-				"LATITUDE": "37.00084210675",
-				"LONGITUDE": "-122.061414159",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -27365,8 +26907,6 @@
 			"properties": {
 				"BUILDINGNAME": "Communications Trailer 1",
 				"ADDRESS": "625 Red Hill Road",
-				"LATITUDE": "37.00104052719",
-				"LONGITUDE": "-122.061668348",
 				"CONSTRUCTIONYEAR": "1979"
 			},
 			"geometry": {
@@ -27402,8 +26942,6 @@
 			"properties": {
 				"BUILDINGNAME": "Communications Trailer 2",
 				"ADDRESS": "623 Red Hill Road",
-				"LATITUDE": "37.00104052719",
-				"LONGITUDE": "-122.061668348",
 				"CONSTRUCTIONYEAR": "1985"
 			},
 			"geometry": {
@@ -27447,8 +26985,6 @@
 			"properties": {
 				"BUILDINGNAME": "Engineering Building 2",
 				"ADDRESS": "612 Engineering Loop",
-				"LATITUDE": "37.00096651204",
-				"LONGITUDE": "-122.062989534",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -27592,8 +27128,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Dining Hall",
 				"ADDRESS": "615 College Nine Road",
-				"LATITUDE": "37.00092015148",
-				"LONGITUDE": "-122.057741240",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -28041,8 +27575,6 @@
 			"properties": {
 				"BUILDINGNAME": "Central Heating Plant",
 				"ADDRESS": "610 Red Hill Road",
-				"LATITUDE": "37.00106070493",
-				"LONGITUDE": "-122.060844936",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -28102,8 +27634,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Residence Hall 2",
 				"ADDRESS": "610 College Nine Road",
-				"LATITUDE": "37.00111991601",
-				"LONGITUDE": "-122.057035714",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -28283,8 +27813,6 @@
 			"properties": {
 				"BUILDINGNAME": "Communications Trailer 3",
 				"ADDRESS": "630 Red Hill Road",
-				"LATITUDE": "37.00137929034",
-				"LONGITUDE": "-122.061725187",
 				"CONSTRUCTIONYEAR": "1984"
 			},
 			"geometry": {
@@ -28320,8 +27848,6 @@
 			"properties": {
 				"BUILDINGNAME": "Astronomy Shop B",
 				"ADDRESS": "622 Red Hill Road",
-				"LATITUDE": "37.001690691866",
-				"LONGITUDE": "-122.061057740",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -28381,8 +27907,6 @@
 			"properties": {
 				"BUILDINGNAME": "Nat Sci Greenhouse",
 				"ADDRESS": "632 Red Hill Road",
-				"LATITUDE": "37.00152571082",
-				"LONGITUDE": "-122.061621520",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -28418,8 +27942,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Residence Hall 3",
 				"ADDRESS": "620 College Nine Road",
-				"LATITUDE": "37.00146977070",
-				"LONGITUDE": "-122.057464318",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -28627,8 +28149,6 @@
 			"properties": {
 				"BUILDINGNAME": "Astronomy Shop A",
 				"ADDRESS": "624 Red Hill Road",
-				"LATITUDE": "37.001453010199",
-				"LONGITUDE": "-122.061369990",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -28680,8 +28200,6 @@
 			"properties": {
 				"BUILDINGNAME": "Environmental Health & Safety Trailer",
 				"ADDRESS": "634 Red Hill Road",
-				"LATITUDE": "37.00161830059",
-				"LONGITUDE": "-122.061727154",
 				"CONSTRUCTIONYEAR": "1991"
 			},
 			"geometry": {
@@ -28717,8 +28235,6 @@
 			"properties": {
 				"BUILDINGNAME": "Nat Sci Paleo-Magnetic Lab",
 				"ADDRESS": "636 Red Hill Road",
-				"LATITUDE": "37.00170222790",
-				"LONGITUDE": "-122.061526851",
 				"CONSTRUCTIONYEAR": "1983"
 			},
 			"geometry": {
@@ -28754,8 +28270,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Residence Hall 1",
 				"ADDRESS": "630 College Nine Road",
-				"LATITUDE": "37.00167093649",
-				"LONGITUDE": "-122.057184059",
 				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
@@ -28943,8 +28457,6 @@
 			"properties": {
 				"BUILDINGNAME": "Social Sciences 2",
 				"ADDRESS": "712 John R. Lewis College Road",
-				"LATITUDE": "37.00165811376",
-				"LONGITUDE": "-122.058853262",
 				"CONSTRUCTIONYEAR": "1995"
 			},
 			"geometry": {
@@ -29068,8 +28580,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Apartment Building 1",
 				"ADDRESS": "715 John R. Lewis College Road",
-				"LATITUDE": "37.00212131782",
-				"LONGITUDE": "-122.059638276",
 				"CONSTRUCTIONYEAR": "2000"
 			},
 			"geometry": {
@@ -29217,8 +28727,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Commons",
 				"ADDRESS": "719 John R. Lewis College Road",
-				"LATITUDE": "37.00227018225",
-				"LONGITUDE": "-122.059367457",
 				"CONSTRUCTIONYEAR": "2000"
 			},
 			"geometry": {
@@ -29270,8 +28778,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Apartment Building 2",
 				"ADDRESS": "725 John R. Lewis College Road",
-				"LATITUDE": "37.00236958153",
-				"LONGITUDE": "-122.058828312",
 				"CONSTRUCTIONYEAR": "2000"
 			},
 			"geometry": {
@@ -29375,8 +28881,6 @@
 			"properties": {
 				"BUILDINGNAME": "Social Sciences 1",
 				"ADDRESS": "704 College Nine Road",
-				"LATITUDE": "37.00226683503",
-				"LONGITUDE": "-122.058056257",
 				"CONSTRUCTIONYEAR": "1994"
 			},
 			"geometry": {
@@ -29480,8 +28984,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Apartment Building 3",
 				"ADDRESS": "735 John R. Lewis College Road",
-				"LATITUDE": "37.00277392807",
-				"LONGITUDE": "-122.058761812",
 				"CONSTRUCTIONYEAR": "2000"
 			},
 			"geometry": {
@@ -29601,8 +29103,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Apartment Building 4",
 				"ADDRESS": "740 John R. Lewis College Road",
-				"LATITUDE": "37.00308379120",
-				"LONGITUDE": "-122.058310559",
 				"CONSTRUCTIONYEAR": "2000"
 			},
 			"geometry": {
@@ -29650,8 +29150,6 @@
 			"properties": {
 				"BUILDINGNAME": "College Nine Apartment Building 5",
 				"ADDRESS": "750 John R. Lewis College Road",
-				"LATITUDE": "37.00324167361",
-				"LONGITUDE": "-122.058218517",
 				"CONSTRUCTIONYEAR": "2000"
 			},
 			"geometry": {
@@ -29787,8 +29285,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College House",
 				"ADDRESS": "500 Cowell Service Road",
-				"LATITUDE": "36.99577396592",
-				"LONGITUDE": "-122.054656830",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -29852,8 +29348,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Garage",
 				"ADDRESS": "500 Cowell Service Road",
-				"LATITUDE": "36.99585928085",
-				"LONGITUDE": "-122.054868322",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -29889,8 +29383,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College House 6",
 				"ADDRESS": "543 Stevenson Service Road",
-				"LATITUDE": "36.99619341148",
-				"LONGITUDE": "-122.051522168",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -29978,8 +29470,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College House 7",
 				"ADDRESS": "545 Stevenson Service Road",
-				"LATITUDE": "36.99630787641",
-				"LONGITUDE": "-122.051963821",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -30071,8 +29561,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Apartment Building 3",
 				"ADDRESS": "505 Cowell Service Road",
-				"LATITUDE": "36.99621769640",
-				"LONGITUDE": "-122.054649341",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -30280,8 +29768,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College Apartment Building 10",
 				"ADDRESS": "553 Stevenson Service Road",
-				"LATITUDE": "36.99615711871",
-				"LONGITUDE": "-122.052388030",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -30381,8 +29867,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Parrington House",
 				"ADDRESS": "513 Cowell Service Road",
-				"LATITUDE": "36.99638448704",
-				"LONGITUDE": "-122.054160143",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -30518,8 +30002,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College House 8",
 				"ADDRESS": "547 Stevenson Service Road",
-				"LATITUDE": "36.99656761876",
-				"LONGITUDE": "-122.051887515",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -30611,8 +30093,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College House 5",
 				"ADDRESS": "541 Stevenson Service Road",
-				"LATITUDE": "36.99649102850",
-				"LONGITUDE": "-122.051485460",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -30676,8 +30156,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College Apartment Building 9",
 				"ADDRESS": "551 Stevenson Service Road",
-				"LATITUDE": "36.99652628499",
-				"LONGITUDE": "-122.052366841",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -30725,8 +30203,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College Apartment Building 11",
 				"ADDRESS": "555 Stevenson Service Road",
-				"LATITUDE": "36.99639740331",
-				"LONGITUDE": "-122.052686134",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -30818,8 +30294,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Beard House",
 				"ADDRESS": "511 Cowell Service Road",
-				"LATITUDE": "36.996568926868",
-				"LONGITUDE": "-122.054487177",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -30959,8 +30433,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Faculty Office Addition",
 				"ADDRESS": "521 Cowell Service Road",
-				"LATITUDE": "36.99670544493",
-				"LONGITUDE": "-122.053446716",
 				"CONSTRUCTIONYEAR": "1987"
 			},
 			"geometry": {
@@ -31000,8 +30472,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Turner House",
 				"ADDRESS": "517 Cowell Service Road",
-				"LATITUDE": "36.99663523260",
-				"LONGITUDE": "-122.053847764",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -31133,8 +30603,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Apartment Building 2",
 				"ADDRESS": "503 Cowell Service Road",
-				"LATITUDE": "36.996552078317",
-				"LONGITUDE": "-122.055072702",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -31354,8 +30822,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Morison House",
 				"ADDRESS": "514 Cowell-Stevenson Road",
-				"LATITUDE": "36.996835932761",
-				"LONGITUDE": "-122.054273260",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -31495,8 +30961,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Library",
 				"ADDRESS": "523 Cowell Service Road",
-				"LATITUDE": "36.99688473046",
-				"LONGITUDE": "-122.053540236",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -31536,8 +31000,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College House",
 				"ADDRESS": "537 Stevenson Service Road",
-				"LATITUDE": "36.99699904908",
-				"LONGITUDE": "-122.050750541",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -31605,8 +31067,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Apartment Building 1",
 				"ADDRESS": "501 Cowell Service Road",
-				"LATITUDE": "36.99688681675",
-				"LONGITUDE": "-122.054887329",
 				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
@@ -31726,8 +31186,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College Academic Building",
 				"ADDRESS": "530 Cowell-Stevenson Road",
-				"LATITUDE": "36.99697369611",
-				"LONGITUDE": "-122.051703096",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -31735,74 +31193,20 @@
 				"coordinates": [
 					[
 						[
-							-122.05165100444711,
-							36.996872213273676
-						],
-						[
-							-122.05165215342738,
-							36.996865943711555
-						],
-						[
-							-122.05166992335415,
-							36.99686442316775
-						],
-						[
-							-122.0516735723764,
-							36.99687125975042
-						],
-						[
-							-122.05169337454389,
-							36.9968695643779
-						],
-						[
-							-122.05169089645584,
-							36.99685094444146
-						],
-						[
-							-122.05176221724474,
-							36.99684484009417
-						],
-						[
 							-122.05179547469653,
 							36.99709480146696
 						],
 						[
-							-122.05166723235011,
-							36.99710577866345
+							-122.05177545547487,
+							36.99694568764121
 						],
 						[
-							-122.05164675471961,
-							36.99695186497799
+							-122.05165006220342,
+							36.99696603847588
 						],
 						[
-							-122.05163632440062,
-							36.9968734692234
-						],
-						[
-							-122.05165100444711,
-							36.996872213273676
-						]
-					],
-					[
-						[
-							-122.05196893509027,
-							36.9970563823733
-						],
-						[
-							-122.05203578754123,
-							36.99705597426605
-						],
-						[
-							-122.05203734571491,
-							36.997110627128194
-						],
-						[
-							-122.05196945295106,
-							36.997111041865196
-						],
-						[
-							-122.05196893509027,
-							36.9970563823733
+							-122.05167721956971,
+							36.99711277854367
 						]
 					],
 					[
@@ -31865,10 +31269,39 @@
 		{
 			"type": "Feature",
 			"properties": {
+				"BUILDINGNAME": "Wagstaff Fireside Lounge",
+				"ADDRESS": "530 Cowell-Stevenson Road",
+				"CONSTRUCTIONYEAR": "1966"
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[
+							-122.05177545547487,
+							36.99694568764121
+						],
+						[
+							-122.05165006220342,
+							36.99696603847588
+						],
+						[
+							-122.05163765698673,
+							36.99686508757139
+						],
+						[
+							-122.05175802111629,
+							36.9968466111314
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
 				"BUILDINGNAME": "Stevenson College Library",
 				"ADDRESS": "540 Stevenson Service Road",
-				"LATITUDE": "36.99710185668",
-				"LONGITUDE": "-122.051452524",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -31952,8 +31385,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Classroom Building",
 				"ADDRESS": "518 Cowell-Stevenson Road",
-				"LATITUDE": "36.99720121893",
-				"LONGITUDE": "-122.053706023",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -31993,8 +31424,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Commons",
 				"ADDRESS": "520 Cowell-Stevenson Road",
-				"LATITUDE": "36.997031718406",
-				"LONGITUDE": "-122.052904893",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -32078,8 +31507,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College House 4",
 				"ADDRESS": "538 Stevenson Service Road",
-				"LATITUDE": "36.99734755527",
-				"LONGITUDE": "-122.051353676",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -32155,8 +31582,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College House 3",
 				"ADDRESS": "536 Stevenson Service Road",
-				"LATITUDE": "36.997526178407",
-				"LONGITUDE": "-122.051020633",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -32240,8 +31665,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Academic Building",
 				"ADDRESS": "518 Cowell-Stevenson Road",
-				"LATITUDE": "36.99738479773",
-				"LONGITUDE": "-122.053620527",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -32289,8 +31712,6 @@
 			"properties": {
 				"BUILDINGNAME": "Student Union Redwood",
 				"ADDRESS": "502 Steinhart Way",
-				"LATITUDE": "36.99755419857",
-				"LONGITUDE": "-122.055973455",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -32350,8 +31771,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College House 1",
 				"ADDRESS": "532 Stevenson Service Road",
-				"LATITUDE": "36.99756954687",
-				"LONGITUDE": "-122.051615171",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -32427,8 +31846,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Scholars House",
 				"ADDRESS": "508 Cowell-Stevenson Road",
-				"LATITUDE": "36.99763792369",
-				"LONGITUDE": "-122.054542255",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -32464,8 +31881,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College House 2",
 				"ADDRESS": "534 Stevenson Service Road",
-				"LATITUDE": "36.99778605055",
-				"LONGITUDE": "-122.051236550",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -32521,8 +31936,6 @@
 			"properties": {
 				"BUILDINGNAME": "Hahn Art Facility",
 				"ADDRESS": "521 Cowell-Stevenson Road",
-				"LATITUDE": "36.99789497346",
-				"LONGITUDE": "-122.052669068",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -32558,8 +31971,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College Music Practice",
 				"ADDRESS": "535 Stevenson Service Road",
-				"LATITUDE": "36.99800646308",
-				"LONGITUDE": "-122.050823824",
 				"CONSTRUCTIONYEAR": "1975"
 			},
 			"geometry": {
@@ -32633,8 +32044,6 @@
 			"properties": {
 				"BUILDINGNAME": "Student Union",
 				"ADDRESS": "504 Steinhart Way",
-				"LATITUDE": "36.99789174539",
-				"LONGITUDE": "-122.055934732",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -32710,8 +32119,6 @@
 			"properties": {
 				"BUILDINGNAME": "Classroom Unit 1",
 				"ADDRESS": "520 Steinhart Way",
-				"LATITUDE": "36.99792349595",
-				"LONGITUDE": "-122.056808565",
 				"CONSTRUCTIONYEAR": "1972"
 			},
 			"geometry": {
@@ -32775,8 +32182,6 @@
 			"properties": {
 				"BUILDINGNAME": "Humanities Building 1",
 				"ADDRESS": "506 Cowell-Stevenson Road",
-				"LATITUDE": "36.99797467455",
-				"LONGITUDE": "-122.054658245",
 				"CONSTRUCTIONYEAR": "2006"
 			},
 			"geometry": {
@@ -33144,8 +32549,6 @@
 			"properties": {
 				"BUILDINGNAME": "Graduate Commons",
 				"ADDRESS": "508 Steinhart Way",
-				"LATITUDE": "36.99815738216",
-				"LONGITUDE": "-122.055791348",
 				"CONSTRUCTIONYEAR": "2001"
 			},
 			"geometry": {
@@ -33285,8 +32688,6 @@
 			"properties": {
 				"BUILDINGNAME": "Bay Tree Bookstore",
 				"ADDRESS": "500 Steinhart Way",
-				"LATITUDE": "36.99798579674",
-				"LONGITUDE": "-122.055492745",
 				"CONSTRUCTIONYEAR": "2001"
 			},
 			"geometry": {
@@ -33750,8 +33151,6 @@
 			"properties": {
 				"BUILDINGNAME": "Humanities & Social Sciences Building",
 				"ADDRESS": "504 Cowell-Stevenson Road",
-				"LATITUDE": "36.99840548736",
-				"LONGITUDE": "-122.054871488",
 				"CONSTRUCTIONYEAR": "2006"
 			},
 			"geometry": {
@@ -33931,8 +33330,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill Garden House",
 				"ADDRESS": "604 Merrill Road",
-				"LATITUDE": "36.99899269838",
-				"LONGITUDE": "-122.051449492",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -33968,8 +33365,6 @@
 			"properties": {
 				"BUILDINGNAME": "Quarry Amphitheater Storage",
 				"ADDRESS": "514 Steinhart Way",
-				"LATITUDE": "36.99899279613",
-				"LONGITUDE": "-122.056085251",
 				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
@@ -34013,8 +33408,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College House",
 				"ADDRESS": "660 Crown Service Road",
-				"LATITUDE": "36.99912867447",
-				"LONGITUDE": "-122.053820718",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -34130,8 +33523,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Descartes House",
 				"ADDRESS": "655 Crown Service Road",
-				"LATITUDE": "36.99927249372",
-				"LONGITUDE": "-122.054551971",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -34279,8 +33670,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Library",
 				"ADDRESS": "633 Merrill Road",
-				"LATITUDE": "36.99937254113",
-				"LONGITUDE": "-122.053307806",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -34360,8 +33749,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Faculty Office Annex",
 				"ADDRESS": "635 Merrill Road",
-				"LATITUDE": "36.99937995441",
-				"LONGITUDE": "-122.053535161",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -34417,8 +33804,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Garage",
 				"ADDRESS": "622 Merrill Road",
-				"LATITUDE": "36.99948041078",
-				"LONGITUDE": "-122.050998230",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -34454,8 +33839,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Faculty Common",
 				"ADDRESS": "637 Merrill Road",
-				"LATITUDE": "36.99944626182",
-				"LONGITUDE": "-122.053681632",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -34523,8 +33906,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College House",
 				"ADDRESS": "620 Merrill Road",
-				"LATITUDE": "36.99943325976",
-				"LONGITUDE": "-122.050755859",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -34714,8 +34095,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Rutherford House",
 				"ADDRESS": "665 Crown Service Road",
-				"LATITUDE": "36.99942915536",
-				"LONGITUDE": "-122.054166854",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -34855,8 +34234,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Gauss House",
 				"ADDRESS": "685 Crown Service Road",
-				"LATITUDE": "36.99945965157",
-				"LONGITUDE": "-122.054752153",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -34976,8 +34353,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Galileo House",
 				"ADDRESS": "675 Crown Service Road",
-				"LATITUDE": "36.999588463669",
-				"LONGITUDE": "-122.054421575",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -35101,8 +34476,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill Ming Ong Computer Lab",
 				"ADDRESS": "630 Merrill Road",
-				"LATITUDE": "36.99970677155",
-				"LONGITUDE": "-122.052275999",
 				"CONSTRUCTIONYEAR": "1991"
 			},
 			"geometry": {
@@ -35190,8 +34563,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Administration Building",
 				"ADDRESS": "645 Merrill Road",
-				"LATITUDE": "36.99968078211",
-				"LONGITUDE": "-122.053039601",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -35279,8 +34650,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Library",
 				"ADDRESS": "680 Crown Service Road",
-				"LATITUDE": "36.99976918003",
-				"LONGITUDE": "-122.054851290",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -35376,8 +34745,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Academic Building",
 				"ADDRESS": "639 Merrill Road",
-				"LATITUDE": "36.99964673260",
-				"LONGITUDE": "-122.053512128",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -35561,8 +34928,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Harvey House",
 				"ADDRESS": "625 Crown Service Road",
-				"LATITUDE": "36.99994733730",
-				"LONGITUDE": "-122.055198401",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -35822,8 +35187,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College House D",
 				"ADDRESS": "632 Merrill Road",
-				"LATITUDE": "36.99996345482",
-				"LONGITUDE": "-122.052028546",
 				"CONSTRUCTIONYEAR": "1969"
 			},
 			"geometry": {
@@ -36099,8 +35462,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College House C",
 				"ADDRESS": "634 Merrill Road",
-				"LATITUDE": "37.00001584379",
-				"LONGITUDE": "-122.052292184",
 				"CONSTRUCTIONYEAR": "1969"
 			},
 			"geometry": {
@@ -36376,8 +35737,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Classroom Building",
 				"ADDRESS": "624 Crown Road",
-				"LATITUDE": "37.00003673508",
-				"LONGITUDE": "-122.054782266",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -36457,8 +35816,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Common",
 				"ADDRESS": "661 Merrill Service Road",
-				"LATITUDE": "37.00016599133",
-				"LONGITUDE": "-122.053630644",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -36530,8 +35887,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College House B",
 				"ADDRESS": "650 Merrill Service Road",
-				"LATITUDE": "37.00002293064",
-				"LONGITUDE": "-122.052734477",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -36807,8 +36162,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Maxwell House",
 				"ADDRESS": "615 Crown Service Road",
-				"LATITUDE": "37.00011767056",
-				"LONGITUDE": "-122.055470753",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -37048,8 +36401,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Dining Common",
 				"ADDRESS": "630 Crown Road",
-				"LATITUDE": "37.000104192361",
-				"LONGITUDE": "-122.054114469",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -37237,8 +36588,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Admin Building",
 				"ADDRESS": "620 Crown Road",
-				"LATITUDE": "37.00025041293",
-				"LONGITUDE": "-122.054764037",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -37302,8 +36651,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Galen House",
 				"ADDRESS": "618 Crown Road",
-				"LATITUDE": "37.00022720108",
-				"LONGITUDE": "-122.055042111",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -37539,8 +36886,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College House A",
 				"ADDRESS": "660 Merrill Service Road",
-				"LATITUDE": "37.00036003246",
-				"LONGITUDE": "-122.053293514",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -37952,8 +37297,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Leonardo House",
 				"ADDRESS": "605 Crown Service Road",
-				"LATITUDE": "37.00036559339",
-				"LONGITUDE": "-122.055295224",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -38237,8 +37580,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Recreation Room",
 				"ADDRESS": "633 Crown Road",
-				"LATITUDE": "37.00059458261",
-				"LONGITUDE": "-122.053861075",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -38406,8 +37747,6 @@
 			"properties": {
 				"BUILDINGNAME": "Student Music East-KZSC Radio Station",
 				"ADDRESS": "631 Crown Road",
-				"LATITUDE": "37.00064454204",
-				"LONGITUDE": "-122.054118312",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -38447,8 +37786,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Preceptors Apartments",
 				"ADDRESS": "602 Crown Road",
-				"LATITUDE": "37.00089120928",
-				"LONGITUDE": "-122.055414933",
 				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
@@ -38504,8 +37841,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 11",
 				"ADDRESS": "742 East Road",
-				"LATITUDE": "37.00133534438",
-				"LONGITUDE": "-122.052651632",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -38653,8 +37988,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 7",
 				"ADDRESS": "716 East Road",
-				"LATITUDE": "37.00138450810",
-				"LONGITUDE": "-122.053947112",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -38802,8 +38135,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 10",
 				"ADDRESS": "740 East Road",
-				"LATITUDE": "37.00146958762",
-				"LONGITUDE": "-122.052958806",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -38951,8 +38282,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 6",
 				"ADDRESS": "710 East Road",
-				"LATITUDE": "37.00155266188",
-				"LONGITUDE": "-122.054240983",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -39084,8 +38413,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 9",
 				"ADDRESS": "750 East Road",
-				"LATITUDE": "37.00160722663",
-				"LONGITUDE": "-122.052664404",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -39233,8 +38560,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 8",
 				"ADDRESS": "724 East Road",
-				"LATITUDE": "37.00169988090",
-				"LONGITUDE": "-122.053484803",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -39366,8 +38691,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 3",
 				"ADDRESS": "708 East Road",
-				"LATITUDE": "37.001740161978",
-				"LONGITUDE": "-122.054160860",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -39499,8 +38822,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 12",
 				"ADDRESS": "752 East Road",
-				"LATITUDE": "37.00177963932",
-				"LONGITUDE": "-122.052399318",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -39684,8 +39005,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 13",
 				"ADDRESS": "732 East Road",
-				"LATITUDE": "37.001810713779",
-				"LONGITUDE": "-122.052803385",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -39953,8 +39272,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 2",
 				"ADDRESS": "706 East Road",
-				"LATITUDE": "37.00185938876",
-				"LONGITUDE": "-122.054410140",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -40126,8 +39443,6 @@
 			"properties": {
 				"BUILDINGNAME": "Fire House",
 				"ADDRESS": "701 Chinquapin Road",
-				"LATITUDE": "37.00183198065",
-				"LONGITUDE": "-122.055614863",
 				"CONSTRUCTIONYEAR": "1975"
 			},
 			"geometry": {
@@ -40175,8 +39490,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 4",
 				"ADDRESS": "712 East Road",
-				"LATITUDE": "37.00191457290",
-				"LONGITUDE": "-122.053881245",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -40308,8 +39621,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 5",
 				"ADDRESS": "722 East Road",
-				"LATITUDE": "37.00192886234",
-				"LONGITUDE": "-122.053518165",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -40409,8 +39720,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 1",
 				"ADDRESS": "702 East Road",
-				"LATITUDE": "37.00193274455",
-				"LONGITUDE": "-122.054756068",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -40542,8 +39851,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Housing Building 14",
 				"ADDRESS": "730 East Road",
-				"LATITUDE": "37.00200700716",
-				"LONGITUDE": "-122.052795976",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -40723,8 +40030,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson Preceptor House",
 				"ADDRESS": "532 Stevenson Service Road",
-				"LATITUDE": "36.99772618836",
-				"LONGITUDE": "-122.051669889",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -40776,8 +40081,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Commons",
 				"ADDRESS": "630 Crown Road",
-				"LATITUDE": "37.000104192361",
-				"LONGITUDE": "-122.054114469",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -40813,8 +40116,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stevenson College Commons",
 				"ADDRESS": "520 Cowell-Stevenson Road",
-				"LATITUDE": "36.997031718406",
-				"LONGITUDE": "-122.052904893",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -40910,8 +40211,6 @@
 			"properties": {
 				"BUILDINGNAME": "Shop Stores & EH&S",
 				"ADDRESS": "110 Carriage House Road",
-				"LATITUDE": "36.97947010119",
-				"LONGITUDE": "-122.052328969",
 				"CONSTRUCTIONYEAR": "1982"
 			},
 			"geometry": {
@@ -40983,8 +40282,6 @@
 			"properties": {
 				"BUILDINGNAME": "Campus Fleet Washbay",
 				"ADDRESS": "104 Carriage House Road",
-				"LATITUDE": "36.97962224840",
-				"LONGITUDE": "-122.052569443",
 				"CONSTRUCTIONYEAR": "2013"
 			},
 			"geometry": {
@@ -41020,8 +40317,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cooperage",
 				"ADDRESS": "113 Coolidge Drive",
-				"LATITUDE": "36.97974760058",
-				"LONGITUDE": "-122.054484547",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -41057,8 +40352,6 @@
 			"properties": {
 				"BUILDINGNAME": "Physical Plant Trailer 3",
 				"ADDRESS": "106 Carriage House Road",
-				"LATITUDE": "36.97992834042",
-				"LONGITUDE": "-122.052216150",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -41110,8 +40403,6 @@
 			"properties": {
 				"BUILDINGNAME": "Shop Office Building",
 				"ADDRESS": "109 Ox Team Road",
-				"LATITUDE": "36.980013359689",
-				"LONGITUDE": "-122.052664187",
 				"CONSTRUCTIONYEAR": "1965"
 			},
 			"geometry": {
@@ -41195,8 +40486,6 @@
 			"properties": {
 				"BUILDINGNAME": "Sign Shop",
 				"ADDRESS": "107 Ox Team Road",
-				"LATITUDE": "36.980013359689",
-				"LONGITUDE": "-122.052664187",
 				"CONSTRUCTIONYEAR": "1965"
 			},
 			"geometry": {
@@ -41252,8 +40541,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum Kiosk",
 				"ADDRESS": "103 Arboretum Road",
-				"LATITUDE": "36.98239061133",
-				"LONGITUDE": "-122.061494121",
 				"CONSTRUCTIONYEAR": "1994"
 			},
 			"geometry": {
@@ -41293,8 +40580,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Greenhouse",
 				"ADDRESS": "152 Farm Road",
-				"LATITUDE": "36.98326061109",
-				"LONGITUDE": "-122.054889404",
 				"CONSTRUCTIONYEAR": "2007"
 			},
 			"geometry": {
@@ -41400,8 +40685,6 @@
 			"properties": {
 				"BUILDINGNAME": "Center for Agroecology & Sustainable Food Systems Soils",
 				"ADDRESS": "151 Farm Road",
-				"LATITUDE": "36.98364867142",
-				"LONGITUDE": "-122.055083657",
 				"CONSTRUCTIONYEAR": "2001"
 			},
 			"geometry": {
@@ -41437,8 +40720,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum 1",
 				"ADDRESS": "121 Arboretum Road",
-				"LATITUDE": "36.98373776210",
-				"LONGITUDE": "-122.061387038",
 				"CONSTRUCTIONYEAR": "1975"
 			},
 			"geometry": {
@@ -41474,8 +40755,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum Sign Shop",
 				"ADDRESS": "125 Arboretum Road",
-				"LATITUDE": "36.98385631754",
-				"LONGITUDE": "-122.061654405",
 				"CONSTRUCTIONYEAR": "1994"
 			},
 			"geometry": {
@@ -41515,8 +40794,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Library",
 				"ADDRESS": "141 Farm Road",
-				"LATITUDE": "36.98454801461",
-				"LONGITUDE": "-122.056049609",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -41552,8 +40829,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Vinegar Shed",
 				"ADDRESS": "105 Farm Road",
-				"LATITUDE": "36.98489588572",
-				"LONGITUDE": "-122.056074071",
 				"CONSTRUCTIONYEAR": "1980"
 			},
 			"geometry": {
@@ -41589,8 +40864,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Goat Shed",
 				"ADDRESS": "101 Farm Road",
-				"LATITUDE": "36.984965324705",
-				"LONGITUDE": "-122.056103900",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -41626,8 +40899,6 @@
 			"properties": {
 				"BUILDINGNAME": "Agroecology Modular A3",
 				"ADDRESS": "205 Village Road",
-				"LATITUDE": "36.98576879347",
-				"LONGITUDE": "-122.055250078",
 				"CONSTRUCTIONYEAR": "1985"
 			},
 			"geometry": {
@@ -41663,8 +40934,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing B 20-23",
 				"ADDRESS": "220 Koshland Way",
-				"LATITUDE": "36.99052507676",
-				"LONGITUDE": "-122.067988927",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -41856,8 +41125,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing A 19-21",
 				"ADDRESS": "119 Koshland Way",
-				"LATITUDE": "36.99083780947",
-				"LONGITUDE": "-122.067229982",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -42025,8 +41292,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing B 1-2",
 				"ADDRESS": "201 Koshland Way",
-				"LATITUDE": "36.99085220255",
-				"LONGITUDE": "-122.067314645",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -42158,8 +41423,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing G 9-11",
 				"ADDRESS": "709 Koshland Way",
-				"LATITUDE": "36.99162497026",
-				"LONGITUDE": "-122.068053137",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -42343,8 +41606,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing G 1-4",
 				"ADDRESS": "701 Koshland Way",
-				"LATITUDE": "36.99169802192",
-				"LONGITUDE": "-122.067485861",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -42552,8 +41813,6 @@
 			"properties": {
 				"BUILDINGNAME": "Family Student Housing G 5-8",
 				"ADDRESS": "705 Koshland Way",
-				"LATITUDE": "36.99178495230",
-				"LONGITUDE": "-122.067806678",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -42677,8 +41936,6 @@
 			"properties": {
 				"BUILDINGNAME": "Elena Baskin Building C",
 				"ADDRESS": "431 Baskin Arts Service Road",
-				"LATITUDE": "36.99479635493",
-				"LONGITUDE": "-122.060813304",
 				"CONSTRUCTIONYEAR": "1984"
 			},
 			"geometry": {
@@ -42786,8 +42043,6 @@
 			"properties": {
 				"BUILDINGNAME": "Kiosk for West Entrance",
 				"ADDRESS": "200 Heller Drive",
-				"LATITUDE": "36.988113453471",
-				"LONGITUDE": "-122.068283099",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -42823,8 +42078,6 @@
 			"properties": {
 				"BUILDINGNAME": "Biomedical Sciences",
 				"ADDRESS": "575 McLaughlin Drive",
-				"LATITUDE": "36.99978204181",
-				"LONGITUDE": "-122.061079327",
 				"CONSTRUCTIONYEAR": "2012"
 			},
 			"geometry": {
@@ -42956,8 +42209,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cooling Tower 1",
 				"ADDRESS": "612 Red Hill Road",
-				"LATITUDE": "37.00122437273",
-				"LONGITUDE": "-122.060578103",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -42993,8 +42244,6 @@
 			"properties": {
 				"BUILDINGNAME": "Nat Sci Storage 1",
 				"ADDRESS": "638 Red Hill Road",
-				"LATITUDE": "37.00184512925",
-				"LONGITUDE": "-122.061703177",
 				"CONSTRUCTIONYEAR": "1983"
 			},
 			"geometry": {
@@ -43030,8 +42279,6 @@
 			"properties": {
 				"BUILDINGNAME": "Nat Sci Woodshop",
 				"ADDRESS": "637 Red Hill Road",
-				"LATITUDE": "37.00186022211",
-				"LONGITUDE": "-122.062010411",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -43075,8 +42322,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Prescott House",
 				"ADDRESS": "512 Cowell-Stevenson Road",
-				"LATITUDE": "36.99707207164",
-				"LONGITUDE": "-122.054609039",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -43208,8 +42453,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Adams House",
 				"ADDRESS": "516 Cowell-Stevenson Road",
-				"LATITUDE": "36.99725637503",
-				"LONGITUDE": "-122.054062970",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -43341,8 +42584,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Parkman House",
 				"ADDRESS": "510 Cowell-Stevenson Road",
-				"LATITUDE": "36.99737923795",
-				"LONGITUDE": "-122.054446739",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -43478,8 +42719,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Faculty Wing",
 				"ADDRESS": "670 Crown Service Road",
-				"LATITUDE": "36.99984419318",
-				"LONGITUDE": "-122.054445748",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -43571,8 +42810,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown College Gatehouse",
 				"ADDRESS": "628 Crown Road",
-				"LATITUDE": "37.00025929082",
-				"LONGITUDE": "-122.054524147",
 				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
@@ -43608,8 +42845,6 @@
 			"properties": {
 				"BUILDINGNAME": "Crown-Merrill Multipurpose Building 15",
 				"ADDRESS": "714 East Road",
-				"LATITUDE": "37.00163035904",
-				"LONGITUDE": "-122.053858315",
 				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
@@ -43743,8 +42978,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cooling Tower 4 EMS",
 				"ADDRESS": "551 Red Hill Road",
-				"LATITUDE": "36.99813629261",
-				"LONGITUDE": "-122.059008690",
 				"CONSTRUCTIONYEAR": "2012"
 			},
 			"geometry": {
@@ -43864,8 +43097,6 @@
 			"properties": {
 				"BUILDINGNAME": "Jack Baskin Engineering Building",
 				"ADDRESS": "606 Engineering Loop",
-				"LATITUDE": "37.00038248398",
-				"LONGITUDE": "-122.063179540",
 				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
@@ -44061,8 +43292,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes College Academic Building",
 				"ADDRESS": "233 Oakes Road",
-				"LATITUDE": "36.98995976524",
-				"LONGITUDE": "-122.062818096",
 				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
@@ -44266,8 +43495,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell Surge Trailer 1",
 				"ADDRESS": "502 Cowell Service Road",
-				"LATITUDE": "36.99595454766",
-				"LONGITUDE": "-122.054149991",
 				"CONSTRUCTIONYEAR": "2015"
 			},
 			"geometry": {
@@ -44303,8 +43530,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell Surge Trailer 2",
 				"ADDRESS": "506 Cowell Service Road",
-				"LATITUDE": "36.995859126752",
-				"LONGITUDE": "-122.053959753",
 				"CONSTRUCTIONYEAR": "2015"
 			},
 			"geometry": {
@@ -44340,8 +43565,6 @@
 			"properties": {
 				"BUILDINGNAME": "Music Center",
 				"ADDRESS": "402 McHenry Road",
-				"LATITUDE": "36.99329760429",
-				"LONGITUDE": "-122.059823608",
 				"CONSTRUCTIONYEAR": "1996"
 			},
 			"geometry": {
@@ -44745,8 +43968,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill College Plaza",
 				"ADDRESS": "655 Merrill Service Road",
-				"LATITUDE": "37.00016099151",
-				"LONGITUDE": "-122.053342873",
 				"CONSTRUCTIONYEAR": "2015"
 			},
 			"geometry": {
@@ -44874,8 +44095,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Apprentice Cabin 2",
 				"ADDRESS": "173 Farm Fire Road",
-				"LATITUDE": "36.98394200696",
-				"LONGITUDE": "-122.057409095",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -44911,8 +44130,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Apprentice Cabin 1",
 				"ADDRESS": "171 Farm Fire Road",
-				"LATITUDE": "36.98405544088",
-				"LONGITUDE": "-122.057342494",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -44948,8 +44165,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Apprentice Cabin 3",
 				"ADDRESS": "175 Farm Fire Road",
-				"LATITUDE": "36.98403808915",
-				"LONGITUDE": "-122.057499065",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -44985,8 +44200,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Apprentice Cabin 4",
 				"ADDRESS": "177 Farm Fire Road",
-				"LATITUDE": "36.98391011779",
-				"LONGITUDE": "-122.057725864",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -45022,8 +44235,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Apprentice Cabin 5",
 				"ADDRESS": "179 Farm Fire Road",
-				"LATITUDE": "36.98400801190",
-				"LONGITUDE": "-122.057823005",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -45059,8 +44270,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Apprentice Cabin 6",
 				"ADDRESS": "181 Farm Fire Road",
-				"LATITUDE": "36.98389265554",
-				"LONGITUDE": "-122.057890755",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -45096,8 +44305,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Apprentice Cabin 7",
 				"ADDRESS": "183 Farm Fire Road",
-				"LATITUDE": "36.98398001550",
-				"LONGITUDE": "-122.058133910",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -45133,8 +44340,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Apprentice Cabin 8",
 				"ADDRESS": "185 Farm Fire Road",
-				"LATITUDE": "36.98386659699",
-				"LONGITUDE": "-122.058199322",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -45170,8 +44375,6 @@
 			"properties": {
 				"BUILDINGNAME": "Farm Apprentice Cabin 9",
 				"ADDRESS": "187 Farm Fire Road",
-				"LATITUDE": "36.98395789618",
-				"LONGITUDE": "-122.058290384",
 				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
@@ -45207,8 +44410,6 @@
 			"properties": {
 				"BUILDINGNAME": "Emergency Response Storage",
 				"ADDRESS": "1456 High Street",
-				"LATITUDE": "36.979528799601",
-				"LONGITUDE": "-122.057858584",
 				"CONSTRUCTIONYEAR": "2007"
 			},
 			"geometry": {
@@ -45244,8 +44445,6 @@
 			"properties": {
 				"BUILDINGNAME": "Environmental Health and Safety Facility",
 				"ADDRESS": "490 Heller Drive",
-				"LATITUDE": "36.99623085808",
-				"LONGITUDE": "-122.063139401",
 				"CONSTRUCTIONYEAR": "2018"
 			},
 			"geometry": {
@@ -45369,8 +44568,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cogen Mechanical Electrical Structure",
 				"ADDRESS": "608 Red Hill Road",
-				"LATITUDE": "37.00099911580",
-				"LONGITUDE": "-122.060449745",
 				"CONSTRUCTIONYEAR": "2015"
 			},
 			"geometry": {
@@ -45418,8 +44615,6 @@
 			"properties": {
 				"BUILDINGNAME": "South Campus Core Building",
 				"ADDRESS": "108 Carriage House Road",
-				"LATITUDE": "36.97971019159",
-				"LONGITUDE": "-122.052120911",
 				"CONSTRUCTIONYEAR": "2014"
 			},
 			"geometry": {
@@ -45455,8 +44650,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell Student Health Center Addition",
 				"ADDRESS": "525 McLaughlin Drive",
-				"LATITUDE": "36.99960452977",
-				"LONGITUDE": "-122.057219305",
 				"CONSTRUCTIONYEAR": "2010"
 			},
 			"geometry": {
@@ -45544,8 +44737,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell Student Health Center",
 				"ADDRESS": "525 McLaughlin Drive",
-				"LATITUDE": "36.99947600289",
-				"LONGITUDE": "-122.057580095",
 				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
@@ -45689,8 +44880,6 @@
 			"properties": {
 				"BUILDINGNAME": "Oakes Co Recycling Ctr",
 				"ADDRESS": "248 Oakes Field Service Road",
-				"LATITUDE": "36.98917920982",
-				"LONGITUDE": "-122.062663926",
 				"CONSTRUCTIONYEAR": "1987"
 			},
 			"geometry": {
@@ -45726,8 +44915,6 @@
 			"properties": {
 				"BUILDINGNAME": "Merrill Material Recovery Enclosure",
 				"ADDRESS": "655 Merrill Service Road",
-				"LATITUDE": "37.000171719647",
-				"LONGITUDE": "-122.053086772",
 				"CONSTRUCTIONYEAR": "2015"
 			},
 			"geometry": {
@@ -45803,8 +44990,6 @@
 			"properties": {
 				"BUILDINGNAME": "Humanities Auditorium",
 				"ADDRESS": "502 Cowell-Stevenson Road",
-				"LATITUDE": "36.99840680120",
-				"LONGITUDE": "-122.054451131",
 				"CONSTRUCTIONYEAR": "2006"
 			},
 			"geometry": {
@@ -46064,8 +45249,6 @@
 			"properties": {
 				"BUILDINGNAME": "Humanities Building Rest Rooms",
 				"ADDRESS": "502 Cowell-Stevenson Road",
-				"LATITUDE": "36.99851314191",
-				"LONGITUDE": "-122.054592664",
 				"CONSTRUCTIONYEAR": "2006"
 			},
 			"geometry": {
@@ -46121,8 +45304,6 @@
 			"properties": {
 				"BUILDINGNAME": "Athletics & Recreation Tennis Building",
 				"ADDRESS": "425 East Field Service Road",
-				"LATITUDE": "36.99453409345",
-				"LONGITUDE": "-122.054468199",
 				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
@@ -46158,8 +45339,6 @@
 			"properties": {
 				"BUILDINGNAME": "Cowell College Faculty Wing",
 				"ADDRESS": "518 Cowell-Stevenson Road",
-				"LATITUDE": "36.99738479773",
-				"LONGITUDE": "-122.053620527",
 				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
@@ -46203,8 +45382,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum Dome 3",
 				"ADDRESS": "119 Arboretum Road",
-				"LATITUDE": "36.983476310138",
-				"LONGITUDE": "-122.0613804175",
 				"CONSTRUCTIONYEAR": "1975"
 			},
 			"geometry": {
@@ -46368,8 +45545,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum Dome 2",
 				"ADDRESS": "117 Arboretum Road",
-				"LATITUDE": "36.983434776186",
-				"LONGITUDE": "-122.0612114716",
 				"CONSTRUCTIONYEAR": "1975"
 			},
 			"geometry": {
@@ -46533,8 +45708,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum Dome 1",
 				"ADDRESS": "115 Arboretum Road",
-				"LATITUDE": "36.983324048897",
-				"LONGITUDE": "-122.0613901803",
 				"CONSTRUCTIONYEAR": "1975"
 			},
 			"geometry": {
@@ -46698,8 +45871,6 @@
 			"properties": {
 				"BUILDINGNAME": "Carriage House Annex",
 				"ADDRESS": "116 Carriage House Road",
-				"LATITUDE": "36.979458030249",
-				"LONGITUDE": "-122.0517754397",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -46735,8 +45906,6 @@
 			"properties": {
 				"BUILDINGNAME": "EH&S Storage Unit 1",
 				"ADDRESS": "110 Carriage House Road",
-				"LATITUDE": "36.979221065451",
-				"LONGITUDE": "-122.0527147940",
 				"CONSTRUCTIONYEAR": "2015"
 			},
 			"geometry": {
@@ -46772,8 +45941,6 @@
 			"properties": {
 				"BUILDINGNAME": "EH&S Storage Unit 2",
 				"ADDRESS": "110 Carriage House Road",
-				"LATITUDE": "36.979181780216",
-				"LONGITUDE": "-122.0525669332",
 				"CONSTRUCTIONYEAR": "2015"
 			},
 			"geometry": {
@@ -46829,8 +45996,6 @@
 			"properties": {
 				"BUILDINGNAME": "Physical Planning & Construction Trailer 3",
 				"ADDRESS": "106 Carriage House Road",
-				"LATITUDE": "36.97992834042",
-				"LONGITUDE": "-122.052216150",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -46882,8 +46047,6 @@
 			"properties": {
 				"BUILDINGNAME": "Physical Plant Trailer 2",
 				"ADDRESS": "106 Carriage House Road",
-				"LATITUDE": "36.97992834042",
-				"LONGITUDE": "-122.052216150",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -46935,8 +46098,6 @@
 			"properties": {
 				"BUILDINGNAME": "Arboretum Restroom",
 				"ADDRESS": "105 Arboretum Road",
-				"LATITUDE": "36.983840077279",
-				"LONGITUDE": "-122.060872451",
 				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
@@ -46972,8 +46133,6 @@
 			"properties": {
 				"BUILDINGNAME": "Central Heat Trailer 1",
 				"ADDRESS": "614 Red Hill Road",
-				"LATITUDE": "37.001214453014",
-				"LONGITUDE": "-122.0607039290",
 				"CONSTRUCTIONYEAR": "1991"
 			},
 			"geometry": {
@@ -47009,8 +46168,6 @@
 			"properties": {
 				"BUILDINGNAME": "CAPS Porter Annex Modular",
 				"ADDRESS": "403 Porter-Kresge Road",
-				"LATITUDE": "36.99370324",
-				"LONGITUDE": "-122.06577243",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
@@ -47046,8 +46203,6 @@
 			"properties": {
 				"BUILDINGNAME": "Stone House",
 				"ADDRESS": null,
-				"LATITUDE": "36.97729317",
-				"LONGITUDE": "-122.05227297",
 				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
@@ -47083,8 +46238,6 @@
 			"properties": {
 				"BUILDINGNAME": "50 Meter Pool",
 				"ADDRESS": "idk",
-				"LATITUDE": "36.994748836566345",
-				"LONGITUDE": "-122.05405533313753",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
@@ -47116,8 +46269,6 @@
 			"properties": {
 				"BUILDINGNAME": "East Field",
 				"ADDRESS": "idk",
-				"LATITUDE": "36.99523941144698",
-				"LONGITUDE": "-122.05300927162172",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
@@ -47125,8 +46276,8 @@
 				"coordinates": [
 					[
 						[
-							-122.05300927162172,
-							36.99523941144698
+							-122.05328822135927,
+							36.99481738870495
 						],
 						[
 							-122.05161452293397,
@@ -47169,8 +46320,6 @@
 			"properties": {
 				"BUILDINGNAME": "Lower East Field",
 				"ADDRESS": "idk",
-				"LATITUDE": "36.994748836566345",
-				"LONGITUDE": "-122.05405533313753",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
@@ -47192,6 +46341,107 @@
 						[
 							-122.0519256591797,
 							36.991100488288616
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"BUILDINGNAME": "East Sand Court",
+				"ADDRESS": "idk",
+				"CONSTRUCTIONYEAR": null
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[
+							-122.05326944589616,
+							36.99504875171649
+						],
+						[
+							-122.05315947532655,
+							36.99522655799704
+						],
+						[
+							-122.05306023359302,
+							36.995275829543374
+						],
+						[
+							-122.05288589000703,
+							36.99526726058109
+						],
+						[
+							-122.05275714397432,
+							36.995106592359406
+						],
+						[
+							-122.05312460660936,
+							36.99504875171649
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"BUILDINGNAME": "Kresge Garden",
+				"ADDRESS": "idk",
+				"CONSTRUCTIONYEAR": null
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[
+							-122.06660170108081,
+							36.99644387717901
+						],
+						[
+							-122.06652358174327,
+							36.996508946705404
+						],
+						[
+							-122.0666177943349,
+							36.996591153805255
+						],
+						[
+							-122.06670161336662,
+							36.99652929765697
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"BUILDINGNAME": "West Tennis Courts",
+				"ADDRESS": "idk",
+				"CONSTRUCTIONYEAR": null
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[
+							-122.06500813364985,
+							36.99263761466719
+						],
+						[
+							-122.06509262323382,
+							36.99231519561127
+						],
+						[
+							-122.0659036561847,
+							36.992463819183115
+						],
+						[
+							-122.06581983715297,
+							36.9927800784658
 						]
 					]
 				]

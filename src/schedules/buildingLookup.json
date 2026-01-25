@@ -23,7 +23,8 @@
 	"East Field House": [
 		"Dance Studio",
 		"E Fieldhouse",
-		"Martial Arts"
+		"Martial Arts",
+		"PE Activity Rm"
 	],
 	"Digital Arts Research Center": "Digital Arts",
 	"Athletics & Recreation Tennis Building": [
@@ -36,7 +37,7 @@
 	"East Field": "East Field",
 	"Athletics & Recreation Fitness Center": "East Gym",
 	"Lower East Field": "East Remote Field",
-	"nothing": "East Sand Court",
+	"East Sand Court": "East Sand Court",
 	"Elena Baskin Building A": "Elena Baskin Arts A",
 	"Elena Baskin Building D": "Elena Baskin Arts D",
 	"Elena Baskin Building E": "Elena Baskin Arts E",
@@ -60,7 +61,7 @@
 	"Kerr Hall": "Kerr Hall",
 	"Kresge College Academic Center": "Kresge Acad",
 	"Kresge College Classroom Building": "Kresge Clrm",
-	"nothing": "Kresge Garden",
+	"Kresge Garden": "Kresge Garden",
 	"Kresge College Library": "Kresge Lib",
 	"Kresge College Lounge": "Kresge Lounge",
 	"Kresge College House": "Kresge Prov",
@@ -84,7 +85,6 @@
 	"Athletics & Recreation Offices & Support Space": "OPERS Conference",
 	"Oakes College Academic Building": "Oakes Acad",
 	"Oakes College House": "Oakes Prov",
-	"nothing": "PE Activity Rm",
 	"Physical Sciences Building": "PhysSciences",
 	"Porter College Academic": "Porter Acad",
 	"Porter College Dining Common": "Porter Din",
@@ -102,7 +102,7 @@
 	"Social Sciences 2": "Soc Sci 2",
 	"Stevenson College Academic Building": "Steven Acad",
 	"Stevenson College Commons": "Steven Event Ctr",
-	"nothing": "Steven Fire",
+	"Wagstaff Fireside Lounge": "Steven Fire",
 	"Stevenson College Library": "Steven Lib",
 	"Stevenson College House": "Stevenson Prov",
 	"Theater Arts H 2nd Stage": "TA 2nd Stage",
@@ -121,5 +121,5 @@
 		"W Fieldhouse",
 		"West Field House Gym"
 	],
-	"nothing": "West Tennis Ct"
+	"West Tennis Courts": "West Tennis Ct"
 }
