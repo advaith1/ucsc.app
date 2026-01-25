@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import buildingsData from "./temp3.json";
+import buildingsData from "./filtered.json";
+import buildingLookup from "./buildingLookup.json";
+import { BASE_API_URL } from "../constants";
 
 // Convert Esri JSON to GeoJSON
 function esriToGeoJSON(esriData: any) {
@@ -58,7 +60,7 @@ export default function Map() {
 
 			// Convert and add buildings
 			const geojson = buildingsData;//esriToGeoJSON(buildingsData);
-
+			
 			L.geoJSON(geojson, {
 				style: {
 					color: '#3388ff',
@@ -69,18 +71,26 @@ export default function Map() {
 				onEachFeature: (feature, layer) => {
 					const props = feature.properties;
 					layer.bindPopup(`
-                        <strong>${props.BUILDINGNAME || props.LABELNAME}</strong><br>
-                        ${props.ADDRESS || ''}<br>
-                        ${props.DEPARTMENTS || ''}<br>
-                        <a href="${props.BUILDINGURL}" target="_blank">More Info</a>
-                    `);
+						<strong>${props.BUILDINGNAME || props.LABELNAME}</strong><br>
+						${props.ADDRESS || ''}<br>
+						${props.DEPARTMENTS || ''}<br>
+						<a href="${props.BUILDINGURL}" target="_blank">More Info</a>
+					`);
 
-					// Add click event
-					layer.on('click', () => {
-						console.log('Clicked building:', props.BUILDINGNAME);
+					layer.on('click', (e) => {
+						console.log('Coordinates:', e.latlng);
+						const buildingName = feature.properties.BUILDINGNAME;
+						const pisaName = buildingLookup[buildingName as keyof typeof buildingLookup];
+						if (pisaName) {
+							fetch(`${BASE_API_URL}/schedule/${pisaName}`).then(res => res.json()).then(res => console.log(res));
+						}
 					});
 				}
 			}).addTo(map);
+
+			map.on('click', (e) => {
+				console.log([e.latlng.lat, e.latlng.lng]);
+			});
 
 			mapInstanceRef.current = map;
 		}
