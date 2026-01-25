@@ -1,33 +1,9 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import buildingsData from "./filtered.json";
+import buildingsData from "./temp3.json";
 import buildingLookup from "./buildingLookup.json";
 import { BASE_API_URL } from "../constants";
-
-// Convert Esri JSON to GeoJSON
-function esriToGeoJSON(esriData: any) {
-	return {
-		type: "FeatureCollection",
-		features: esriData.features.map((feature: any) => ({
-			type: "Feature",
-			properties: feature.attributes,
-			geometry: {
-				type: "Polygon",
-				coordinates: feature.geometry.rings.map((ring: any) =>
-					ring.map((coord: any) => {
-						// Convert from Web Mercator (EPSG:3857) to WGS84 (EPSG:4326)
-						const x = coord[0];
-						const y = coord[1];
-						const lng = (x * 180) / 20037508.34;
-						const lat = (Math.atan(Math.exp((y * Math.PI) / 20037508.34)) * 360) / Math.PI - 90;
-						return [lng, lat];
-					})
-				)
-			}
-		}))
-	};
-}
 
 export default function Map() {
 	const mapRef = useRef<HTMLDivElement>(null);
@@ -71,20 +47,22 @@ export default function Map() {
 				onEachFeature: (feature, layer) => {
 					const props = feature.properties;
 					layer.bindPopup(`
-						<strong>${props.BUILDINGNAME || props.LABELNAME}</strong><br>
+						<strong>${props.BUILDINGNAME}</strong><br>
 						${props.ADDRESS || ''}<br>
-						${props.DEPARTMENTS || ''}<br>
-						<a href="${props.BUILDINGURL}" target="_blank">More Info</a>
 					`);
 
 					layer.on('click', (e) => {
 						console.log('Coordinates:', e.latlng);
 						const buildingName = feature.properties.BUILDINGNAME;
-						const pisaName = buildingLookup[buildingName as keyof typeof buildingLookup];
-						if (pisaName) {
-							fetch(`${BASE_API_URL}/schedule/${pisaName}`).then(res => res.json()).then(res => console.log(res));
+						let pisaName: string|string[] = buildingLookup[buildingName as keyof typeof buildingLookup];
+						const pisaNames: string[] = Array.isArray(pisaName) ? pisaName : [pisaName];
+
+						
+						pisaNames.forEach((name: string) => {
+							fetch(`${BASE_API_URL}/schedule/${name}`).then(res => res.json()).then(res => console.log(res));
+						});
 						}
-					});
+					);
 				}
 			}).addTo(map);
 

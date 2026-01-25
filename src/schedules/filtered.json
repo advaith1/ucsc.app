@@ -4,20 +4,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 3,
 				"LABELNAME": "Theater Barn",
-				"ASSETNUM": "7112",
 				"BUILDINGNAME": "Theater Barn",
 				"ADDRESS": "101 Coolidge Drive",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.977614513643",
 				"LONGITUDE": "-122.054289411",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7112",
-				"DEPARTMENTS": "Performance, Play & Design Department",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "1845",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -54,20 +46,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 7,
 				"LABELNAME": "Cardiff House",
-				"ASSETNUM": "7108",
 				"BUILDINGNAME": "Cardiff House Women's Center",
 				"ADDRESS": "117 Carriage House Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.97942902559",
 				"LONGITUDE": "-122.051457267",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7108",
-				"DEPARTMENTS": "Ethnic Resource Center",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1845",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1845"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -116,20 +100,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 22,
 				"LABELNAME": "CASFS Lab",
-				"ASSETNUM": "7479",
 				"BUILDINGNAME": "Center for Agroecology & Sustainable Food Systems Lab",
 				"ADDRESS": "152 Farm Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.98340637095",
 				"LONGITUDE": "-122.055143320",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7479",
-				"DEPARTMENTS": "Agroecology Program ORA",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1983",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1983"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -162,20 +138,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 54,
 				"LABELNAME": "OPERS Fitness Center",
-				"ASSETNUM": "7726",
 				"BUILDINGNAME": "Athletics & Recreation Fitness Center",
 				"ADDRESS": "405 East Field Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99358615235",
 				"LONGITUDE": "-122.054543043",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7726",
-				"DEPARTMENTS": "Athletics and Recreation Department",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "1999",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1999"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -252,20 +220,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 55,
 				"LABELNAME": "Activities",
-				"ASSETNUM": "7406",
 				"BUILDINGNAME": "Athletics & Recreation Activities Building",
 				"ADDRESS": "403 East Field Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99380944058",
 				"LONGITUDE": "-122.054820870",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7406",
-				"DEPARTMENTS": "Athletics and Recreation Department, Physical Plant Services",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "1974",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1974"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -302,20 +262,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 56,
 				"LABELNAME": "East Field House",
-				"ASSETNUM": "7119",
 				"BUILDINGNAME": "East Field House",
 				"ADDRESS": "418 Hagar Drive",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99446848996",
 				"LONGITUDE": "-122.054912772",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7119",
-				"DEPARTMENTS": "Athletics and Recreation Department",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "1965",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1965"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -460,20 +412,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 60,
 				"LABELNAME": "Oakes College House",
-				"ASSETNUM": "7422",
 				"BUILDINGNAME": "Oakes College House",
 				"ADDRESS": "246 Oakes Field Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.98879391767",
 				"LONGITUDE": "-122.062378010",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7422",
-				"DEPARTMENTS": "Provost- Univ House- Housing",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1977",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1977"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -546,20 +490,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 87,
 				"LABELNAME": "Dorm D-Garden",
-				"ASSETNUM": "7764",
 				"BUILDINGNAME": "Rachel Carson College Dorm D-Garden",
 				"ADDRESS": "301 Rachel Carson Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99045988858",
 				"LONGITUDE": "-122.064479849",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7764",
-				"DEPARTMENTS": "Student Living Quarters - Single, Student Residential General",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1989",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -640,20 +576,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 94,
 				"LABELNAME": "Dorm C-Garden",
-				"ASSETNUM": "7762",
 				"BUILDINGNAME": "Rachel Carson College Dorm C-Garden",
 				"ADDRESS": "307 Rachel Carson Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99067971746",
 				"LONGITUDE": "-122.065516966",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7762",
-				"DEPARTMENTS": "Student Living Quarters - Single, Student Residential General",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1989",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -734,20 +662,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 99,
 				"LABELNAME": "Dorm B-Garden",
-				"ASSETNUM": "7760",
 				"BUILDINGNAME": "Rachel Carson College Dorm B-Garden",
 				"ADDRESS": "302 Rachel Carson Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.990848534688",
 				"LONGITUDE": "-122.064253723",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7760",
-				"DEPARTMENTS": "Staff Living Quarters (for Student Residences), Student Living Quarters - Single, Student Residential General",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1990",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -828,20 +748,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 106,
 				"LABELNAME": "Dorm A-Garden",
-				"ASSETNUM": "7758",
 				"BUILDINGNAME": "Rachel Carson College Dorm A-Garden",
 				"ADDRESS": "308 Rachel Carson Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.991103843928",
 				"LONGITUDE": "-122.065469559",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7758",
-				"DEPARTMENTS": "Student Living Quarters - Single, Student Residential General",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1989",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -922,20 +834,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 110,
 				"LABELNAME": "Student Commons",
-				"ASSETNUM": "7768",
 				"BUILDINGNAME": "Rachel Carson College Student Commons",
 				"ADDRESS": "310 Rachel Carson Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.991220689891",
 				"LONGITUDE": "-122.064700428",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7768",
-				"DEPARTMENTS": "SOMeCA, Student Activities - Housing",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "1990",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -1056,20 +960,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 115,
 				"LABELNAME": "West Fieldhouse",
-				"ASSETNUM": "7435",
 				"BUILDINGNAME": "Fieldhouse West",
 				"ADDRESS": "311 Rachel Carson Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99139838168",
 				"LONGITUDE": "-122.064110949",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7435",
-				"DEPARTMENTS": "Athletics and Recreation Department",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "1977",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1977"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -1150,20 +1046,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 119,
 				"LABELNAME": "Academic Building",
-				"ASSETNUM": "7766",
 				"BUILDINGNAME": "Rachel Carson College Academic Building",
 				"ADDRESS": "355 Rachel Carson Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99183415677",
 				"LONGITUDE": "-122.064488621",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7766",
-				"DEPARTMENTS": "Colleges Housing Administration, Counseling and Psychological Services, General Assignment Classrooms, Instructional Computing Laboratories, Rachel Carson College Academic, Rachel Carson College SLRS Administration, Sociology Department, Writing Program",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1990",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1990"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -1312,20 +1200,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 135,
 				"LABELNAME": "Gamelan Studio",
-				"ASSETNUM": "7925",
 				"BUILDINGNAME": "Gamelan Studio",
 				"ADDRESS": "404 McHenry Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99336216202",
 				"LONGITUDE": "-122.060473159",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7925",
-				"DEPARTMENTS": "Music Department",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1998",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -1378,20 +1258,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 136,
 				"LABELNAME": "DARC",
-				"ASSETNUM": "7717",
 				"BUILDINGNAME": "Digital Arts Research Center",
 				"ADDRESS": "407 McHenry Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99390161820",
 				"LONGITUDE": "-122.060490043",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7717",
-				"DEPARTMENTS": "Art Department, Arts Division Administration, Digital Arts and New Media, Film and Digital Media Department, General Arts, ITS Academic Divisional Computing, Music Department, Performance, Play & Design Department",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "2009",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2009"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -1448,20 +1320,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 139,
 				"LABELNAME": "Porter Academic",
-				"ASSETNUM": "7306",
 				"BUILDINGNAME": "Porter College Academic",
 				"ADDRESS": "405 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99419633068",
 				"LONGITUDE": "-122.065067435",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7306",
-				"DEPARTMENTS": "Art Galleries, Arts Division Administration, Counseling and Psychological Services, General Arts, General Assignment Classrooms, History of Art and Visual Culture Department, ITS Academic Divisional Computing, Instructional Computing Laboratories, Physical Plant Services, Porter College Academic, Porter College SLRS Administration, Student Activities - Housing, Student Health Services, Writing Program",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1970",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -1866,20 +1730,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 145,
 				"LABELNAME": "Costume",
-				"ASSETNUM": "7534",
 				"BUILDINGNAME": "Theater Arts K Costume",
 				"ADDRESS": "443 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99451539775",
 				"LONGITUDE": "-122.062247238",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7534",
-				"DEPARTMENTS": "Performance, Play & Design Department",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "1986",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -1912,20 +1768,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 151,
 				"LABELNAME": "2nd Stage",
-				"ASSETNUM": "7318",
 				"BUILDINGNAME": "Theater Arts H 2nd Stage",
 				"ADDRESS": "451 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99464194600",
 				"LONGITUDE": "-122.061820769",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7318",
-				"DEPARTMENTS": "Performance, Play & Design Department",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1971",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -1966,20 +1814,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 156,
 				"LABELNAME": "A Main Stage",
-				"ASSETNUM": "7311",
 				"BUILDINGNAME": "Theater Arts A Main Stage",
 				"ADDRESS": "441 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99475227772",
 				"LONGITUDE": "-122.062415561",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7311",
-				"DEPARTMENTS": "Performance, Play & Design Department",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "1971",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2236,20 +2076,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 158,
 				"LABELNAME": "Ticket Office",
-				"ASSETNUM": "7316",
 				"BUILDINGNAME": "Theater Arts F Ticket Office",
 				"ADDRESS": "457 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99496261810",
 				"LONGITUDE": "-122.062057733",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7316",
-				"DEPARTMENTS": "Arts Division Administration",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1971",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2286,20 +2118,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 159,
 				"LABELNAME": "B Drama",
-				"ASSETNUM": "7312",
 				"BUILDINGNAME": "Theater Arts B Drama",
 				"ADDRESS": "465 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99501375594",
 				"LONGITUDE": "-122.062661614",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7312",
-				"DEPARTMENTS": "Performance, Play & Design Department",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1971",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2332,20 +2156,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 161,
 				"LABELNAME": "E Classroom",
-				"ASSETNUM": "7315",
 				"BUILDINGNAME": "Theater Arts E Classroom",
 				"ADDRESS": "459 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99507367160",
 				"LONGITUDE": "-122.062092140",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7315",
-				"DEPARTMENTS": "Performance, Play & Design Department",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1971",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2378,20 +2194,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 162,
 				"LABELNAME": "Porter/Kresge Dining Commons",
-				"ASSETNUM": "7305",
 				"BUILDINGNAME": "Porter College Dining Common",
 				"ADDRESS": "411 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99434385118",
 				"LONGITUDE": "-122.065944225",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7305",
-				"DEPARTMENTS": "Art Galleries, Campus Commercial Enterprises, Food Services, Mailroom, Student Activities - Housing, Student Residential General, Student Residential Maintenance",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1971",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2512,20 +2320,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 165,
 				"LABELNAME": "Studio",
-				"ASSETNUM": "7313",
 				"BUILDINGNAME": "Theater Arts C Studio",
 				"ADDRESS": "463 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99516412311",
 				"LONGITUDE": "-122.062367125",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7313",
-				"DEPARTMENTS": "Performance, Play & Design Department",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1971",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2562,20 +2362,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 166,
 				"LABELNAME": "M Media",
-				"ASSETNUM": "7924",
 				"BUILDINGNAME": "Theater Arts M Media Theater",
 				"ADDRESS": "453 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99520158279",
 				"LONGITUDE": "-122.061629388",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7924",
-				"DEPARTMENTS": "General Assignment Classrooms",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1998",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2656,20 +2448,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 167,
 				"LABELNAME": "Experimental Theater",
-				"ASSETNUM": "7923",
 				"BUILDINGNAME": "Theater Arts L Experimental Theater",
 				"ADDRESS": "455 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99524674553",
 				"LONGITUDE": "-122.061937214",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7923",
-				"DEPARTMENTS": "Performance, Play & Design Department",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1998",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1998"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2734,20 +2518,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 168,
 				"LABELNAME": "Foundry",
-				"ASSETNUM": "7405",
 				"BUILDINGNAME": "Theater Arts Foundry",
 				"ADDRESS": "410 Foundry Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99545530737",
 				"LONGITUDE": "-122.062320916",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7405",
-				"DEPARTMENTS": "Art Department",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1975",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1975"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2780,20 +2556,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 169,
 				"LABELNAME": "Annex",
-				"ASSETNUM": "7319",
 				"BUILDINGNAME": "Theater Arts I 2nd Stage Annex",
 				"ADDRESS": "449 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99464194600",
 				"LONGITUDE": "-122.061820769",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7319",
-				"DEPARTMENTS": "Performance, Play & Design Department",
-				"PRIMARYUSE": "SUP - Support",
-				"CONSTRUCTIONYEAR": "1971",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2842,20 +2610,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 174,
 				"LABELNAME": "Porter College House",
-				"ASSETNUM": "7468",
 				"BUILDINGNAME": "Porter College House",
 				"ADDRESS": "415 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99588261947",
 				"LONGITUDE": "-122.065842233",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7468",
-				"DEPARTMENTS": "Provost- Univ House- Housing",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1983",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1983"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2900,20 +2660,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 176,
 				"LABELNAME": "McHenry Library",
-				"ASSETNUM": "7145",
 				"BUILDINGNAME": "McHenry Library",
 				"ADDRESS": "414 McHenry Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99571658674",
 				"LONGITUDE": "-122.0589122992",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7145",
-				"DEPARTMENTS": "Chancellor's Conference Rooms, Counseling and Psychological Services, Dining Services Administration, Education Department, History of Art and Visual Culture Department, ITS Academic Divisional Computing, ITS Learning Technologies, Instructional Computing Laboratories, Mathematics Department, Physical Plant Services, Teaching and Learning Center, UR Communications and Marketing, University Library, Vice Provost and Dean, Undergraduate Education",
-				"PRIMARYUSE": "LIB - Library / Study",
-				"CONSTRUCTIONYEAR": "1966",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -2970,20 +2722,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 180,
 				"LABELNAME": "I Lounge",
-				"ASSETNUM": "7716",
 				"BUILDINGNAME": "Porter College Apartments Lounge",
 				"ADDRESS": "418 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99647347297",
 				"LONGITUDE": "-122.065265249",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7716",
-				"DEPARTMENTS": "Student Activities - Housing",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "2004",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -3108,20 +2852,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 184,
 				"LABELNAME": "Kresge College House",
-				"ASSETNUM": "7381",
 				"BUILDINGNAME": "Kresge College House",
 				"ADDRESS": "508 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99710619015",
 				"LONGITUDE": "-122.066403152",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7381",
-				"DEPARTMENTS": "Provost- Univ House- Housing",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1973",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -3194,20 +2930,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 185,
 				"LABELNAME": "Annex Building A",
-				"ASSETNUM": "7807",
 				"BUILDINGNAME": "Kresge College Annex Building A",
 				"ADDRESS": "516 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99722597619",
 				"LONGITUDE": "-122.066002238",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7807",
-				"DEPARTMENTS": null,
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1991",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1991"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -3292,20 +3020,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 186,
 				"LABELNAME": "Annex Building B",
-				"ASSETNUM": "7808",
 				"BUILDINGNAME": "Kresge College Annex Building B",
 				"ADDRESS": "522 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99721142847",
 				"LONGITUDE": "-122.065474324",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7808",
-				"DEPARTMENTS": null,
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1991",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1991"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -3370,20 +3090,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 192,
 				"LABELNAME": "Lounge",
-				"ASSETNUM": "7397",
 				"BUILDINGNAME": "Kresge College Lounge",
 				"ADDRESS": "500 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99745110330",
 				"LONGITUDE": "-122.066942442",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7397",
-				"DEPARTMENTS": "Kresge College Academic, Student Activities - Housing",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "1973",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -3452,20 +3164,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 201,
 				"LABELNAME": "Classroom Building",
-				"ASSETNUM": "7378",
 				"BUILDINGNAME": "Kresge College Classroom Building",
 				"ADDRESS": "524 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.997861760983",
 				"LONGITUDE": "-122.065762719",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7378",
-				"DEPARTMENTS": "General Assignment Classrooms, Instructional Computing Laboratories",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1973",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -3522,20 +3226,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 203,
 				"LABELNAME": "Library",
-				"ASSETNUM": "7380",
 				"BUILDINGNAME": "Kresge College Library",
 				"ADDRESS": "530 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99797554087",
 				"LONGITUDE": "-122.065543685",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7380",
-				"DEPARTMENTS": "Film and Digital Media Department, Kresge College SLRS Administration",
-				"PRIMARYUSE": "LIB - Library / Study",
-				"CONSTRUCTIONYEAR": "1973",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -3596,20 +3292,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 210,
 				"LABELNAME": "Kresge Academic Center",
-				"ASSETNUM": "7874",
 				"BUILDINGNAME": "Kresge College Academic Center",
 				"ADDRESS": "544 Porter-Kresge Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.998824809913",
 				"LONGITUDE": "-122.066198836",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7874",
-				"DEPARTMENTS": "Film and Digital Media Department, General Arts, General Assignment Classrooms, General Physical and Biological Sciences, History of Art and Visual Culture Department, Kresge College Academic, Mailroom, Physical and Biological Sciences Division Administration, Writing Program",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "2023",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2023"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -4186,20 +3874,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 212,
 				"LABELNAME": "Kerr Hall",
-				"ASSETNUM": "7376",
 				"BUILDINGNAME": "Kerr Hall",
 				"ADDRESS": "500 Kerr Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.996990953663",
 				"LONGITUDE": "-122.061952628",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7376",
-				"DEPARTMENTS": "Academic Affairs Department, Academic Personnel Office, Academic Senate, Assessment for Learning Excellence & Equity Center, Audit & Management Advisory Services, Budget Analysis and Planning, Campus Provost and EVC Administration, Campus Sustainability Office, Chancellor's Office, Disability Resource Center, Finance, Operations and Administration Office, Graduate Studies Division, ITS Client Relationship Management, ITS Core Technologies and Eng, ITS Learning Technologies, ITS VC Information Technology, Institutional Research, Assess & Policy Studies, Office of Diversity, Equity and Inclusion, Office of Research, Physical Plant Services, Student Affairs and Success - Divisional Office, Title IX, University Relations, Vice Provost and Dean, Undergraduate Education",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1973",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1973"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -4412,20 +4092,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 214,
 				"LABELNAME": "Thimann Lecture Hall",
-				"ASSETNUM": "7117",
 				"BUILDINGNAME": "Thimann Lecture Hall",
 				"ADDRESS": "562 Steinhart Way",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99803355914",
 				"LONGITUDE": "-122.061311061",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7117",
-				"DEPARTMENTS": "General Assignment Classrooms, Physics Department",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1966",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -4474,20 +4146,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 215,
 				"LABELNAME": "Center for Adaptive Optics",
-				"ASSETNUM": "7693",
 				"BUILDINGNAME": "Center for Adaptive Optics",
 				"ADDRESS": "540 Red Hill Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99818509653",
 				"LONGITUDE": "-122.060468889",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7693",
-				"DEPARTMENTS": "Astronomy and Astrophysics, UCO Lick Santa Cruz MRU, UR Communications and Marketing",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "2002",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -4544,20 +4208,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 217,
 				"LABELNAME": "Earth & Marine Sciences",
-				"ASSETNUM": "7775",
 				"BUILDINGNAME": "Earth & Marine Sciences",
 				"ADDRESS": "552 Red Hill Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99787630945",
 				"LONGITUDE": "-122.059637506",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7775",
-				"DEPARTMENTS": "Earth & Planetary Sciences Department, General Assignment Classrooms, General Physical and Biological Sciences, ITS Academic Divisional Computing, Institute of Marine Sciences ORU, Molecular, Cell, and Developmental Biology, Ocean Sciences Department, Office of Research, Physical and Biological Sciences Academic Support, Physical and Biological Sciences Division Administration, Physics Department",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1993",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1993"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -4876,20 +4532,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 218,
 				"LABELNAME": "Annex",
-				"ASSETNUM": "7180",
 				"BUILDINGNAME": "Nat Sci 2 Annex",
 				"ADDRESS": "570 Red Hill Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99850120578",
 				"LONGITUDE": "-122.061085097",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7180",
-				"DEPARTMENTS": "Astronomy and Astrophysics, Center For Adaptive Optics ORA, General Assignment Classrooms, Physical and Biological Sciences Division Administration, Physics Department, UCO Lick Santa Cruz MRU, UR Philanthropy",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1969",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1969"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -4926,20 +4574,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 219,
 				"LABELNAME": "Natural Sciences 2",
-				"ASSETNUM": "7179",
 				"BUILDINGNAME": "Nat Sci 2 Main Building",
 				"ADDRESS": "560 Red Hill Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99855161713",
 				"LONGITUDE": "-122.060453980",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7179",
-				"DEPARTMENTS": "Astronomy and Astrophysics, Chemistry and Biochemistry, Environmental Studies Department, ITS Academic Divisional Computing, ITS Core Technologies and Eng, Natural Reserve System, Physics Department, Santa Cruz Institute for Particle Physics ORU, UCO Lick Santa Cruz MRU",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1969",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1969"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -5078,20 +4718,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 220,
 				"LABELNAME": "Interdisciplinary Sciences",
-				"ASSETNUM": "7098",
 				"BUILDINGNAME": "Interdisciplinary Sciences Building",
 				"ADDRESS": "550 Red Hill Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99855161713",
 				"LONGITUDE": "-122.060453980",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7098",
-				"DEPARTMENTS": "Astronomy and Astrophysics, Environmental Studies Department, ITS Academic Divisional Computing, ITS Core Technologies and Eng, Physical and Biological Sciences Division Administration, Physics Department, Santa Cruz Institute for Particle Physics ORU, UCO Lick Santa Cruz MRU",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "2002",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -5372,20 +5004,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 221,
 				"LABELNAME": "Sinsheimer Laboratories",
-				"ASSETNUM": "7744",
 				"BUILDINGNAME": "Sinsheimer Laboratories",
 				"ADDRESS": "582 Steinhart Way",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99874518005",
 				"LONGITUDE": "-122.061700672",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7744",
-				"DEPARTMENTS": "Biomolecular Engineering Dept, Chemistry and Biochemistry, General Physical and Biological Sciences, Molecular, Cell, and Developmental Biology, Physical Plant Services",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1989",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1989"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -5682,20 +5306,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 223,
 				"LABELNAME": "Science and Engineering Library",
-				"ASSETNUM": "7782",
 				"BUILDINGNAME": "Science and Engineering Library",
 				"ADDRESS": "580 Red Hill Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99912456649",
 				"LONGITUDE": "-122.060750671",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7782",
-				"DEPARTMENTS": "Educational Opportunity Programs, General Assignment Classrooms, Learning Support Services, University Library",
-				"PRIMARYUSE": "LIB - Library / Study",
-				"CONSTRUCTIONYEAR": "1991",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1991"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -5984,20 +5600,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 228,
 				"LABELNAME": "PSB",
-				"ASSETNUM": "7919",
 				"BUILDINGNAME": "Physical Sciences Building",
 				"ADDRESS": "590 Steinhart Way",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99959673357",
 				"LONGITUDE": "-122.061891454",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7919",
-				"DEPARTMENTS": "Biomolecular Engineering Dept, Chemistry and Biochemistry, Dining Services Administration, Environmental Health and Safety, General Assignment Classrooms, General Physical and Biological Sciences, Genomics Institute ORU, Microbiology and Environmental Toxicology, Physical Plant Services, Physical and Biological Sciences Academic Support, Physical and Biological Sciences Division Administration",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "2006",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2006"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -6266,20 +5874,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 229,
 				"LABELNAME": "Jack Baskin Engineering Auditorium",
-				"ASSETNUM": "7942",
 				"BUILDINGNAME": "Jack Baskin Engineering Auditorium",
 				"ADDRESS": "605 Baskin Circle",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00020882309",
 				"LONGITUDE": "-122.062348858",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7942",
-				"DEPARTMENTS": "General Assignment Classrooms",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "2004",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -6356,20 +5956,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 232,
 				"LABELNAME": "Lounge",
-				"ASSETNUM": "7930",
 				"BUILDINGNAME": "College Nine Residence Hall Lounge",
 				"ADDRESS": "608 College Nine Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00074341794",
 				"LONGITUDE": "-122.057169875",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7930",
-				"DEPARTMENTS": "Student Activities - Housing",
-				"PRIMARYUSE": "SUP - Support",
-				"CONSTRUCTIONYEAR": "2002",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -6410,20 +6002,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 236,
 				"LABELNAME": "Communications Building",
-				"ASSETNUM": "7175",
 				"BUILDINGNAME": "Communications Building",
 				"ADDRESS": "620 Baskin Circle",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00084210675",
 				"LONGITUDE": "-122.061414159",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7175",
-				"DEPARTMENTS": "Cellular Carriers, Film and Digital Media Department, ITS Academic Divisional Computing, ITS Client Relationship Management, ITS Core Technologies and Eng, ITS VC Information Technology",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1968",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -6520,20 +6104,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 239,
 				"LABELNAME": "Engineering 2",
-				"ASSETNUM": "7940",
 				"BUILDINGNAME": "Engineering Building 2",
 				"ADDRESS": "612 Engineering Loop",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00096651204",
 				"LONGITUDE": "-122.062989534",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7940",
-				"DEPARTMENTS": "Biomolecular Engineering Dept, Center for Research in Open Source Software ORA, Computational Media Department, Computer Science & Engineering Department, Ctr for Info Tech Research in the Interest of Society ORA, Cyber Physical Systems Research Center ORA, Economics Department, Electrical and Computer Engineering Department, Engineering Applied Math, Engineering School Administration, General Assignment Classrooms, General Engineering, Genomics Institute ORU, ITS Academic Divisional Computing, Physical Plant Services, Statistics",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "2004",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2004"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -6674,20 +6250,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 240,
 				"LABELNAME": "Dining Hall",
-				"ASSETNUM": "7933",
 				"BUILDINGNAME": "College Nine Dining Hall",
 				"ADDRESS": "615 College Nine Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00092015148",
 				"LONGITUDE": "-122.057741240",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7933",
-				"DEPARTMENTS": "Dining Services Administration, Food Services, Student Activities - Housing, Student Residential General, Student Residential Maintenance, Student Residential Storage, University Center",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "2002",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2002"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7132,20 +6700,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 251,
 				"LABELNAME": "Social Sciences 2",
-				"ASSETNUM": "7921",
 				"BUILDINGNAME": "Social Sciences 2",
 				"ADDRESS": "712 John R. Lewis College Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00165811376",
 				"LONGITUDE": "-122.058853262",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7921",
-				"DEPARTMENTS": "Ctr for Global, International, & Regional Studies ORA, General Assignment Classrooms, General Social Sciences, ITS Academic Divisional Computing, Mailroom, Physical Planning and Construction, Psychology Department, Social Sciences Division Administration",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1995",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1995"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7266,20 +6826,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 253,
 				"LABELNAME": "Commons",
-				"ASSETNUM": "7917",
 				"BUILDINGNAME": "College Nine Commons",
 				"ADDRESS": "719 John R. Lewis College Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00227018225",
 				"LONGITUDE": "-122.059367457",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7917",
-				"DEPARTMENTS": "Colleges Housing Administration, Student Residential Kitchen, Student Residential Lounge, Student Residential Storage",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "2000",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2000"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7328,20 +6880,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 255,
 				"LABELNAME": "Social Sciences 1",
-				"ASSETNUM": "7920",
 				"BUILDINGNAME": "Social Sciences 1",
 				"ADDRESS": "704 College Nine Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00226683503",
 				"LONGITUDE": "-122.058056257",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7920",
-				"DEPARTMENTS": "Anthropology Department, College Nine Administration, Counseling and Psychological Services, General Assignment Classrooms, Housing Services Administration, ITS Academic Divisional Computing, Instructional Computing Laboratories, John R. Lewis College Academic, John R. Lewis College Administration, Mailroom, Psychology Department, Social Sciences Division Administration, Student Activities - Housing",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1994",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1994"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7442,20 +6986,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 259,
 				"LABELNAME": "Cowell College House",
-				"ASSETNUM": "7128",
 				"BUILDINGNAME": "Cowell College House",
 				"ADDRESS": "500 Cowell Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99577396592",
 				"LONGITUDE": "-122.054656830",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7128",
-				"DEPARTMENTS": "Provost- Univ House- Housing",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1966",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7516,20 +7052,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 260,
 				"LABELNAME": "Garage",
-				"ASSETNUM": "7129",
 				"BUILDINGNAME": "Cowell College Garage",
 				"ADDRESS": "500 Cowell Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99585928085",
 				"LONGITUDE": "-122.054868322",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7129",
-				"DEPARTMENTS": "Cowell College Academic",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "1966",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7562,20 +7090,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 276,
 				"LABELNAME": "Stevenson College House",
-				"ASSETNUM": "7173",
 				"BUILDINGNAME": "Stevenson College House",
 				"ADDRESS": "537 Stevenson Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99699904908",
 				"LONGITUDE": "-122.050750541",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7173",
-				"DEPARTMENTS": "Provost- Univ House- Housing",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1967",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7640,20 +7160,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 278,
 				"LABELNAME": "Academic Building",
-				"ASSETNUM": "7143",
 				"BUILDINGNAME": "Stevenson College Academic Building",
 				"ADDRESS": "530 Cowell-Stevenson Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99697369611",
 				"LONGITUDE": "-122.051703096",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7143",
-				"DEPARTMENTS": "Counseling and Psychological Services, General Assignment Classrooms, History Department, Humanities Division Administration, Language and Applied Linguistics, Linguistics Department, Stevenson College Academic, Stevenson College SLRS Administration, Student Activities - Housing, Writing Program",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1966",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7790,20 +7302,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 279,
 				"LABELNAME": "Library",
-				"ASSETNUM": "7197",
 				"BUILDINGNAME": "Stevenson College Library",
 				"ADDRESS": "540 Stevenson Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99710185668",
 				"LONGITUDE": "-122.051452524",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7197",
-				"DEPARTMENTS": "Linguistics Department, Stevenson College Academic",
-				"PRIMARYUSE": "LIB - Library / Study",
-				"CONSTRUCTIONYEAR": "1968",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7884,20 +7388,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 280,
 				"LABELNAME": "Classroom Building",
-				"ASSETNUM": "7132",
 				"BUILDINGNAME": "Cowell College Classroom Building",
 				"ADDRESS": "518 Cowell-Stevenson Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99720121893",
 				"LONGITUDE": "-122.053706023",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7132",
-				"DEPARTMENTS": "General Assignment Classrooms",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1966",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -7934,20 +7430,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 281,
 				"LABELNAME": "Cowell Commons",
-				"ASSETNUM": "7134",
 				"BUILDINGNAME": "Cowell College Commons",
 				"ADDRESS": "520 Cowell-Stevenson Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.997031718406",
 				"LONGITUDE": "-122.052904893",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7134",
-				"DEPARTMENTS": "Agroecology Program ORA, Colleges Housing Administration, Cowell College Academic, Dining Services Administration, Food Services, General Assignment Classrooms, General Humanities, History Department, Housing Commercial Services, Literature Department, Student Activities - Housing, Student Living Quarters - Single",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "1966",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -8028,20 +7516,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 284,
 				"LABELNAME": "Academic Building",
-				"ASSETNUM": "7130",
 				"BUILDINGNAME": "Cowell College Academic Building",
 				"ADDRESS": "518 Cowell-Stevenson Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99738479773",
 				"LONGITUDE": "-122.053620527",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7130",
-				"DEPARTMENTS": "Cowell College Academic, Cowell College Administration, General Assignment Classrooms, Humanities Division Administration, Language and Applied Linguistics, Philosophy Department",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "1966",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -8086,20 +7566,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 292,
 				"LABELNAME": "Classroom Unit 1",
-				"ASSETNUM": "7301",
 				"BUILDINGNAME": "Classroom Unit 1",
 				"ADDRESS": "520 Steinhart Way",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99792349595",
 				"LONGITUDE": "-122.056808565",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7301",
-				"DEPARTMENTS": "General Assignment Classrooms, Global Engagement Administration",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1972",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1972"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -8160,20 +7632,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 293,
 				"LABELNAME": "H1",
-				"ASSETNUM": "7706",
 				"BUILDINGNAME": "Humanities Building 1",
 				"ADDRESS": "506 Cowell-Stevenson Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99797467455",
 				"LONGITUDE": "-122.054658245",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7706",
-				"DEPARTMENTS": "Critical Race & Ethnic Studies, Feminist Studies Department, General Humanities, History Department, History of Consciousness Department, Humanities Division Administration, Language and Applied Linguistics, Linguistics Department, Literature Department, Philosophy Department, Physical Plant Services, The Humanities Institute ORA, Writing Program",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "2006",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2006"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -8538,20 +8002,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 295,
 				"LABELNAME": "Bay Tree Bookstore",
-				"ASSETNUM": "7300",
 				"BUILDINGNAME": "Bay Tree Bookstore",
 				"ADDRESS": "500 Steinhart Way",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99798579674",
 				"LONGITUDE": "-122.055492745",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7300",
-				"DEPARTMENTS": "ABC Student Success, Bay Tree Bookstore, Dean of Students Office, Dining Services Administration, Disability Resource Center, Ethnic Resource Center, Services for Transfer and Re-entry Students, Student Success & Equity",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "2001",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2001"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -9012,20 +8468,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 296,
 				"LABELNAME": "H2",
-				"ASSETNUM": "7710",
 				"BUILDINGNAME": "Humanities & Social Sciences Building",
 				"ADDRESS": "504 Cowell-Stevenson Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99840548736",
 				"LONGITUDE": "-122.054871488",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7710",
-				"DEPARTMENTS": "General Assignment Classrooms, General Humanities, History Department, History of Consciousness Department, ITS Academic Divisional Computing, Literature Department, Philosophy Department, Physical Plant Services, Social Sciences Division Administration, UR Communications and Marketing, Vice Provost and Dean, Undergraduate Education",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "2006",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2006"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -9202,20 +8650,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 304,
 				"LABELNAME": "Garage",
-				"ASSETNUM": "7370",
 				"BUILDINGNAME": "Merrill College Garage",
 				"ADDRESS": "622 Merrill Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99948041078",
 				"LONGITUDE": "-122.050998230",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7370",
-				"DEPARTMENTS": "Provost- Univ House- Housing",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1970",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1970"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -9248,20 +8688,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 312,
 				"LABELNAME": "Library",
-				"ASSETNUM": "7162",
 				"BUILDINGNAME": "Crown College Library",
 				"ADDRESS": "680 Crown Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99976918003",
 				"LONGITUDE": "-122.054851290",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7162",
-				"DEPARTMENTS": "Crown College Academic, Crown College SLRS Administration, Instructional Computing Laboratories",
-				"PRIMARYUSE": "LIB - Library / Study",
-				"CONSTRUCTIONYEAR": "1968",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -9354,20 +8786,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 313,
 				"LABELNAME": "Academic Building",
-				"ASSETNUM": "7189",
 				"BUILDINGNAME": "Merrill College Academic Building",
 				"ADDRESS": "639 Merrill Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99964673260",
 				"LONGITUDE": "-122.053512128",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7189",
-				"DEPARTMENTS": "Colleges Housing Administration, Counseling and Psychological Services, General Assignment Classrooms, Latin American and Latino Studies Department, Merrill College SLRS Administration, Physical Plant Services, Politics Department, Writing Program",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1968",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -9548,20 +8972,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 317,
 				"LABELNAME": "Classroom Building",
-				"ASSETNUM": "7155",
 				"BUILDINGNAME": "Crown College Classroom Building",
 				"ADDRESS": "624 Crown Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00003673508",
 				"LONGITUDE": "-122.054782266",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7155",
-				"DEPARTMENTS": "Counseling and Psychological Services, Crown College Academic, General Assignment Classrooms, Latin American and Latino Studies Department, Writing Program",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "1967",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -9638,20 +9054,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 321,
 				"LABELNAME": "Merrill Dining Commons",
-				"ASSETNUM": "7185",
 				"BUILDINGNAME": "Merrill College Dining Common",
 				"ADDRESS": "630 Crown Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.000104192361",
 				"LONGITUDE": "-122.054114469",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7185",
-				"DEPARTMENTS": "Colleges Housing Administration, Food Services, Merrill College SLRS Administration, Student Activities - Housing",
-				"PRIMARYUSE": "SUP - Support",
-				"CONSTRUCTIONYEAR": "1968",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1968"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -9836,20 +9244,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 327,
 				"LABELNAME": "KZSC Radio",
-				"ASSETNUM": "7163",
 				"BUILDINGNAME": "Student Music East-KZSC Radio Station",
 				"ADDRESS": "631 Crown Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00064454204",
 				"LONGITUDE": "-122.054118312",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7163",
-				"DEPARTMENTS": "KZSC Radio Station",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1967",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -9886,20 +9286,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 346,
 				"LABELNAME": "Stevenson Commons",
-				"ASSETNUM": "7144",
 				"BUILDINGNAME": "Stevenson College Commons",
 				"ADDRESS": "520 Cowell-Stevenson Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.997031718406",
 				"LONGITUDE": "-122.052904893",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7144",
-				"DEPARTMENTS": "Colleges Housing Administration, Dining Services Administration, Food Services, Housing Commercial Services, SOMeCA, Student Activities - Housing",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "1966",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1966"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -9992,20 +9384,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 366,
 				"LABELNAME": "Soils",
-				"ASSETNUM": "7718",
 				"BUILDINGNAME": "Center for Agroecology & Sustainable Food Systems Soils",
 				"ADDRESS": "151 Farm Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.98364867142",
 				"LONGITUDE": "-122.055083657",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7718",
-				"DEPARTMENTS": "Agroecology Program ORA",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "2001",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2001"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -10038,20 +9422,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 407,
 				"LABELNAME": "Biomed",
-				"ASSETNUM": "7947",
 				"BUILDINGNAME": "Biomedical Sciences",
 				"ADDRESS": "575 McLaughlin Drive",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99978204181",
 				"LONGITUDE": "-122.061079327",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7947",
-				"DEPARTMENTS": "Biomolecular Engineering Dept, Ecology and Evolutionary Biology, Environmental Health and Safety, General Physical and Biological Sciences, Microbiology and Environmental Toxicology, Molecular, Cell, and Developmental Biology, Physical and Biological Sciences Academic Support, Physical and Biological Sciences Division Administration, Physics Department",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "2012",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2012"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -10180,20 +9556,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 424,
 				"LABELNAME": "Faculty Wing",
-				"ASSETNUM": "7156",
 				"BUILDINGNAME": "Crown College Faculty Wing",
 				"ADDRESS": "670 Crown Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99984419318",
 				"LONGITUDE": "-122.054445748",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7156",
-				"DEPARTMENTS": "General Humanities, General Social Sciences, Latin American and Latino Studies Department, Politics Department, Writing Program",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1967",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1967"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -10282,20 +9650,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 426,
 				"LABELNAME": "15",
-				"ASSETNUM": "7549",
 				"BUILDINGNAME": "Crown-Merrill Multipurpose Building 15",
 				"ADDRESS": "714 East Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00163035904",
 				"LONGITUDE": "-122.053858315",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7549",
-				"DEPARTMENTS": "Housing Commercial Services, Student Residential Laundry, Student Residential Lounge, Student Residential Maintenance, Student Residential Storage",
-				"PRIMARYUSE": "RES - Residential",
-				"CONSTRUCTIONYEAR": "1986",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1986"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -10426,20 +9786,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 428,
 				"LABELNAME": "Baskin Engineering",
-				"ASSETNUM": "7194",
 				"BUILDINGNAME": "Jack Baskin Engineering Building",
 				"ADDRESS": "606 Engineering Loop",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00038248398",
 				"LONGITUDE": "-122.063179540",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7194",
-				"DEPARTMENTS": "Biomolecular Engineering Dept, Computational Media Department, Computer Science & Engineering Department, Copier Services, Dining Services Administration, Electrical and Computer Engineering Department, Engineering Applied Math, Engineering School Administration, Environmental Health and Safety, General Assignment Classrooms, General Engineering, General Physical and Biological Sciences, ITS Academic Divisional Computing, ITS Client Relationship Management, ITS Core Technologies and Eng, ITS Learning Technologies, Instructional Computing Laboratories, Mail Services, Physical and Biological Sciences Academic Support, Physical and Biological Sciences Division Administration, Physical and Biological Sciences Division Core Facilities",
-				"PRIMARYUSE": "LAB - Lab / Research",
-				"CONSTRUCTIONYEAR": "1971",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1971"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -10632,20 +9984,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 429,
 				"LABELNAME": "Academic Building",
-				"ASSETNUM": "7416",
 				"BUILDINGNAME": "Oakes College Academic Building",
 				"ADDRESS": "233 Oakes Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.98995976524",
 				"LONGITUDE": "-122.062818096",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7416",
-				"DEPARTMENTS": "Counseling and Psychological Services, Educational Partnership Center, General Assignment Classrooms, General Social Sciences, Mailroom, Oakes College Academic, Oakes College SLRS Administration, Sociology Department, Student Health Services, Writing Program",
-				"PRIMARYUSE": "OFF - Office",
-				"CONSTRUCTIONYEAR": "1976",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1976"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -10846,20 +10190,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 437,
 				"LABELNAME": "Music Center",
-				"ASSETNUM": "7922",
 				"BUILDINGNAME": "Music Center",
 				"ADDRESS": "402 McHenry Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99329760429",
 				"LONGITUDE": "-122.059823608",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7922",
-				"DEPARTMENTS": "Arts Division Administration, Instructional Computing Laboratories, Music Department",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "1996",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1996"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -11260,20 +10596,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 438,
 				"LABELNAME": "Merrill Plaza",
-				"ASSETNUM": "7415",
 				"BUILDINGNAME": "Merrill College Plaza",
 				"ADDRESS": "655 Merrill Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "37.00016099151",
 				"LONGITUDE": "-122.053342873",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7415",
-				"DEPARTMENTS": "Campus Commercial Enterprises, Crown College SLRS Administration, Merrill College SLRS Administration",
-				"PRIMARYUSE": "GEN - General Use",
-				"CONSTRUCTIONYEAR": "2015",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2015"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -11398,20 +10726,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 458,
 				"LABELNAME": "Auditorium",
-				"ASSETNUM": "7711",
 				"BUILDINGNAME": "Humanities Auditorium",
 				"ADDRESS": "502 Cowell-Stevenson Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99840680120",
 				"LONGITUDE": "-122.054451131",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7711",
-				"DEPARTMENTS": "General Assignment Classrooms",
-				"PRIMARYUSE": "CLS - Classroom",
-				"CONSTRUCTIONYEAR": "2006",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "2006"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -11668,20 +10988,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 460,
 				"LABELNAME": "OPERS Tennis",
-				"ASSETNUM": "7753",
 				"BUILDINGNAME": "Athletics & Recreation Tennis Building",
 				"ADDRESS": "425 East Field Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.99453409345",
 				"LONGITUDE": "-122.054468199",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7753",
-				"DEPARTMENTS": "Athletics and Recreation Department",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "1988",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": "1988"
 			},
 			"geometry": {
 				"type": "Polygon",
@@ -11714,20 +11026,12 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"OBJECTID": 1000,
 				"LABELNAME": "50 Meter Pool",
-				"ASSETNUM": "7753",
 				"BUILDINGNAME": "50 Meter Pool",
 				"ADDRESS": "425 East Field Service Road",
-				"CITY": "Santa Cruz",
-				"STATE": "CA",
 				"LATITUDE": "36.994748836566345",
 				"LONGITUDE": "-122.05405533313753",
-				"BUILDINGURL": "https://maps.ucsc.edu?ASSETNUM=7753",
-				"DEPARTMENTS": "Athletics and Recreation Department",
-				"PRIMARYUSE": "SPC - Special Use",
-				"CONSTRUCTIONYEAR": "Unknown",
-				"ZIPCODE": 95064
+				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
 				"type": "Polygon",

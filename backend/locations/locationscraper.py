@@ -155,7 +155,11 @@ def getClassLocationsForTerm(term: int) -> None:
 			classData["room"] = "Conf D"
 
 		if classData["building"] == "Kr Lounge":
-			classData["building"] = "Kresge Lounge"	
+			classData["building"] = "Kresge Lounge"
+		
+		if classData["building"] == "Elena Baskin Arts" and classData["room"]:
+			classData["building"] = f"Elena Baskin Arts {classData['room'][0]}"
+			classData["room"] = classData["room"][1:]
 
 
 		# "The DO UPDATE SET locationString = locationString is a no-op that triggers the RETURNING clause even when there's a conflict."
