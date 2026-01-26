@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Path
 import sqlite3
 from fastapi import HTTPException
+from urllib.parse import unquote
 
 router = APIRouter()
 conn: sqlite3.Connection 
@@ -23,6 +24,8 @@ async def getBuildings():
 
 @router.get('/schedule/{building}')
 async def getRoomsForBuilding(building: str):
+	building = unquote(building)
+	
 	if building not in knownBuildings:
 		raise HTTPException(status_code=400, detail="Building not found")
 
