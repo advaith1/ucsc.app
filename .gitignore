@@ -5,3 +5,4 @@ dist/
 .env
 
 locations.db
+*.html

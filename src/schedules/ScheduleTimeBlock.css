@@ -1,0 +1,44 @@
+.schedule-time-block {
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	padding: 10px 12px;
+	border-radius: 10px;
+	background: var(--bg-color);
+	border: 1px solid rgba(255, 255, 255, 0.04);
+	overflow: hidden;
+}
+
+.schedule-time-block .stb-pisalink {
+	display: block;
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	color: var(--gold);
+	text-decoration: none;
+}
+
+.stb-pisalink:hover {
+	text-decoration: underline;
+}
+
+.schedule-time-block .stb-meta {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	color: #bfc9d9;
+	font-size: 12px;
+}
+
+.schedule-time-block .stb-instructor {
+	margin: 0;
+	font-size: 14px;
+}
+
+.schedule-time-block .stb-time {
+	margin: 0;
+	padding: 0px 0px;
+	border-radius: 6px;
+}
