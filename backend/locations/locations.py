@@ -25,11 +25,11 @@ async def getBuildings():
 @router.get('/schedule/{building}')
 async def getRoomsForBuilding(building: str):
 	building = unquote(building)
-	
+
 	if building not in knownBuildings:
 		raise HTTPException(status_code=400, detail="Building not found")
 
-	cursor.execute('SELECT room FROM location WHERE building = ? AND room IS NOT NULL;', (building,))
+	cursor.execute('SELECT room FROM location WHERE building = ? AND room IS NOT NULL ORDER BY room;', (building,))
 	rows: list = cursor.fetchall()
 	return [x[0] for x in rows]
 	
