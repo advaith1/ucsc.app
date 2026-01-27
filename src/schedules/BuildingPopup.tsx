@@ -47,7 +47,7 @@ export default function BuildingPopup({ locationName, locationAddress, term }: {
 
 		setWasRoomSelected(true);
 		const uriEncoded = encodeURIComponent(selectedBuilding as string).replace(/%2F/g, '%252F');
-		fetch(`http://10.0.0.89:8000/schedule/${term}/${uriEncoded}/${selectedRoom}/${day}`)
+		fetch(`http://localhost:8000/schedule/${term}/${uriEncoded}/${selectedRoom}/${day}`)
 			.then(res => res.json())
 			.then(res => {
 				setSelectedSchedule(res);
