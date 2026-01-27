@@ -4,6 +4,5 @@ fastapi[standard]
 requests
 httpx
 feedparser
-google-generativeai
 lxml
 

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import scraper
 from fastapi.middleware.cors import CORSMiddleware
-import news, AI, menu
+import news, menu
 from locations import locations
 from contextlib import asynccontextmanager
 from datetime import datetime
@@ -70,7 +70,6 @@ async def get_menu(location: menu.LocationRequest, day_offset: int = 0):
     return shortmenu
 
 api.include_router(news.router)
-api.include_router(AI.router)
 api.include_router(locations.router)
 
 @api.get('/all_menus')

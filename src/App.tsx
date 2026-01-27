@@ -9,8 +9,6 @@ import { Context } from './Context.tsx';
 import Courses from './courses/Courses.tsx';
 import { useEffect, useState } from 'react';
 
-import AIComponent from './AI/AI.tsx';
-
 import ScheduleMapPage from './schedules/ScheduleMapPage.tsx';
 
 function App() {
@@ -57,7 +55,6 @@ function App() {
 					<Route path='/news' element={<RssFeed />} />
 					<Route path='/courses' element={<Courses />} />
 					<Route path='/menu' element={<MenuPage />} />
-					<Route path='/insights' element={<AIComponent />} />
 					<Route path='/schedule' element={<ScheduleMapPage />} />
 				</Routes>
 			</BrowserRouter>
