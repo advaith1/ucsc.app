@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { MapContext } from "./MapContext";
 import { TimeBlock } from "../types";
 import ScheduleTimeBlock from "./components/ScheduleTimeBlock";
+import "./styles/Map.css";
+
 
 function NoClassesHere() {
 	return (
@@ -19,10 +21,14 @@ function NoClassesHere() {
 export default function Schedule({ locationName }: { locationName: string }) {
 	const ctx = useContext(MapContext);
 
+	// if the building isnt normal (eg East Field, East Field House, etc), display the selectedBuilding (eg "Martial Arts", "Dance Studio")
+	// otherwise, if its normal and has a building + room (eg Physical Sciences 114), display locationName and room number
+	const title = ctx!.selectedRoom == "-1" ? ctx!.selectedBuilding : `${locationName} ${ctx!.selectedRoom}`;
+
 	return (
 		<div>
 			<div style={{ marginBottom: '10px' }}>
-				<strong style={{ marginTop: '0', color: "var(--gold)" }}>{locationName} {ctx!.selectedRoom}</strong>
+				<strong style={{ marginTop: '0', color: "var(--gold)" }}>{title}</strong>
 			</div>
 			<div style={{ gap: '5px', display: 'flex', flexDirection: 'column' }}>
 				{ctx!.selectedSchedule.length == 0 ? (
@@ -38,16 +44,7 @@ export default function Schedule({ locationName }: { locationName: string }) {
 			</div>
 			<div style={{ display: 'flex', justifyContent: 'center' }}>
 				<button
-					style={{
-						marginTop: '10px',
-						padding: '8px 16px',
-						backgroundColor: 'var(--gold)',
-						color: 'black',
-						border: 'none',
-						borderRadius: '4px',
-						cursor: 'pointer',
-						fontWeight: '500'
-					}}
+					className="mapGoldButton"
 					onClick={(e) => {
 						e.stopPropagation();
 						ctx!.onScheduleBackButtonPress();

@@ -36,6 +36,7 @@ async def getRoomsForBuilding(building: str):
 
 @router.get('/schedule/{term}/{building}/{room}/{day}')
 async def getSchedule(term: str, building: str, room: str|None, day: int = Path(..., ge=0, le=6)):
+	building = unquote(building)
 	if building not in knownBuildings:
 		raise HTTPException(status_code=400, detail="Building not found")
 	
@@ -71,4 +72,3 @@ async def getSchedule(term: str, building: str, room: str|None, day: int = Path(
 		ORDER BY t.startTime;
 	''', params)
 	return cursor.fetchall()
-

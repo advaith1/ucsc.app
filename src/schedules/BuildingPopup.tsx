@@ -4,6 +4,7 @@ import { RoomsInBuilding, TimeBlock } from "../types";
 import BuildingRoomList from "./components/BuildingRoomList";
 import { MapContext } from "./MapContext";
 import Schedule from "./Schedule";
+import buildingLookup from "./data/buildingLookup.json";
 
 /*
 Each location can have multiple "buildings" in it
@@ -11,6 +12,8 @@ eg McHenry's rooms and McHenry Classrooms are considered two separate places, ev
 they're both the same building, hence why selectedBuilding and locationName are separate things
 */
 
+// todo Oakes Acad might be null some terms
+// and TA 2nd Stage
 
 export default function BuildingPopup({ locationName, locationAddress }: { locationName: string; locationAddress: string }) {
 	const [fetchRooms, rooms, setRooms] = GetRooms() as [(building: string) => void, Array<RoomsInBuilding>, (a: any) => void];
@@ -46,7 +49,7 @@ export default function BuildingPopup({ locationName, locationAddress }: { locat
 				setSelectedSchedule(res);
 				console.log(selectedSchedule);
 			});
-	}, [selectedBuilding, selectedRoom]);
+	}, [selectedRoom]);
 
 	const contextValues = {
 		selectedBuilding,
@@ -70,7 +73,7 @@ export default function BuildingPopup({ locationName, locationAddress }: { locat
 					{locationAddress}
 					<br />
 					<div style={{ display: 'flex', flexDirection: 'column', width: '100%', gap: '0px' }}>
-						{rooms && rooms.map(d => {
+						{rooms.map(d => {
 							return (
 								<BuildingRoomList
 									buildingData={d}
@@ -81,7 +84,7 @@ export default function BuildingPopup({ locationName, locationAddress }: { locat
 					</div>
 				</div>
 			) : (
-				<Schedule 
+				<Schedule
 					locationName={locationName}
 				/>
 			)}

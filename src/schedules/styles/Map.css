@@ -66,3 +66,14 @@
 	background-color: #3d7dd6;
 	box-shadow: 0 2px 8px rgba(85, 155, 251, 0.3);
 }
+
+.mapGoldButton {
+	margin-top: 10px;
+	padding: 8px 16px;
+	background-color: var(--gold);
+	color: black;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+}
