@@ -21,6 +21,7 @@ export default function BuildingPopup({ locationName, locationAddress }: { locat
 	const [selectedBuilding, setSelectedBuilding] = useState<string>("");
 	const [selectedRoom, setSelectedRoom] = useState<string>("");
 	const [selectedSchedule, setSelectedSchedule] = useState<Array<TimeBlock>>([]);
+	const [day, setDay] = useState<number>((new Date().getDay() + 6) % 7); // Monday=0, Tuesday=1, etc
 
 	// just checking if selected schedule length > 1 is not enough to determine if a room was selected
 	// because a room can have no classes in it. i need a dedicated boolean to know if it was selected or not
@@ -43,13 +44,13 @@ export default function BuildingPopup({ locationName, locationAddress }: { locat
 
 		setWasRoomSelected(true);
 		const uriEncoded = encodeURIComponent(selectedBuilding as string).replace(/%2F/g, '%252F');
-		fetch(`http://10.0.0.89:8000/schedule/2260/${uriEncoded}/${selectedRoom}/0`)
+		fetch(`http://10.0.0.89:8000/schedule/2260/${uriEncoded}/${selectedRoom}/${day}`)
 			.then(res => res.json())
 			.then(res => {
 				setSelectedSchedule(res);
 				console.log(selectedSchedule);
 			});
-	}, [selectedRoom]);
+	}, [selectedRoom, day]);
 
 	const contextValues = {
 		selectedBuilding,
@@ -61,7 +62,9 @@ export default function BuildingPopup({ locationName, locationAddress }: { locat
 			setSelectedSchedule([]);
 			setSelectedRoom("");
 			setWasRoomSelected(false);
-		}
+		},
+		day,
+		setDay
 	}
 
 	return (

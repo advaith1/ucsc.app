@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { MapContext } from "./MapContext";
 import { TimeBlock } from "../types";
 import ScheduleTimeBlock from "./components/ScheduleTimeBlock";
@@ -18,6 +18,8 @@ function NoClassesHere() {
 	)
 }
 
+const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
 export default function Schedule({ locationName }: { locationName: string }) {
 	const ctx = useContext(MapContext);
 
@@ -29,6 +31,41 @@ export default function Schedule({ locationName }: { locationName: string }) {
 		<div>
 			<div style={{ marginBottom: '10px' }}>
 				<strong style={{ marginTop: '0', color: "var(--gold)" }}>{title}</strong>
+			</div>
+			<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+				<button
+					className="mapGoldButton"
+					style={{
+						padding: '0px',
+						marginTop: '0px',
+						width: '32px',
+						height: '32px',
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center'
+					}}
+					onClick={() => ctx!.setDay(d => (d + 6) % 7)}
+				>
+					<img src="/icons/arrow-back.svg" alt="Previous Day" style={{ width: '16px', height: '16px' }} />
+				</button>
+
+				<p style={{ display: 'block', width: '100px', textAlign: 'center', margin: 0 }}>{days[ctx!.day]}</p>
+
+				<button
+					className="mapGoldButton"
+					style={{
+						padding: '0px',
+						marginTop: '0px',
+						width: '32px',
+						height: '32px',
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center'
+					}}
+					onClick={() => ctx!.setDay(d => (d + 1) % 7)}
+				>
+					<img src="/icons/arrow-forward.svg" alt="Next Day" style={{ width: '16px', height: '16px' }} />
+				</button>
 			</div>
 			<div style={{ gap: '5px', display: 'flex', flexDirection: 'column' }}>
 				{ctx!.selectedSchedule.length == 0 ? (

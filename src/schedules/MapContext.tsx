@@ -8,6 +8,8 @@ export interface ContextType {
 	setSelectedRoom: (room: string) => void;
 	selectedSchedule: TimeBlock[];
 	onScheduleBackButtonPress: () => void;
+	day: number;
+	setDay: (day: number | ((prevDay: number) => number)) => void;
 }
 
 export const MapContext = createContext<ContextType | null>( null);
