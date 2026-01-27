@@ -1,10 +1,10 @@
 import { useState } from "react";
-import buildingLookup from "./buildingLookup.json";
-import { BuildingData } from "../types";
+import buildingLookup from "./data/buildingLookup.json";
+import { RoomsInBuilding } from "../types";
 
 
 export default function GetRooms() {
-	const [scheduleData, setRoomData] = useState<Array<BuildingData>>([]);
+	const [rooms, setRooms] = useState<Array<RoomsInBuilding>>([]);
 	const [loading, setLoading] = useState(false);
 
 	const fetchRooms = (name: string) => {
@@ -18,12 +18,12 @@ export default function GetRooms() {
 					.then(res => res.json())
 					.then(data => ({ name: n, data }))
 			)
-		).then(results => {
+		).then((results) => {
 			console.log(results)
-			setRoomData(results);
+			setRooms(results);
 			setLoading(false);
 		});
 	};
 
-	return [fetchRooms, scheduleData, setRoomData, loading];
+	return [fetchRooms, rooms, setRooms, loading];
 }

@@ -1,5 +1,5 @@
-import { TimeBlock } from "../types"
-import "./ScheduleTimeBlock.css"
+import { TimeBlock } from "../../types"
+import "../styles/ScheduleTimeBlock.css"
 
 interface ScheduleTimeBlockProps {
 	timeBlock: TimeBlock

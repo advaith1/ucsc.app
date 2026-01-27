@@ -1,32 +1,21 @@
 import { useState, useEffect } from "react";
 import GetRooms from "./FetchRooms";
-import buildingLookup from "./buildingLookup.json";
-import { BuildingData, TimeBlock } from "../types";
-import ScheduleTimeBlock from "./ScheduleTimeBlock";
+import { RoomsInBuilding, TimeBlock } from "../types";
+import BuildingRoomList from "./components/BuildingRoomList";
+import { MapContext } from "./MapContext";
+import Schedule from "./Schedule";
 
-interface RoomButtonProps {
-	buildingData: BuildingData;
-	shouldDisplayName: boolean;
-	onButtonClick: (roomNumber: string) => void;
-}
+/*
+Each location can have multiple "buildings" in it
+eg McHenry's rooms and McHenry Classrooms are considered two separate places, even though
+they're both the same building, hence why selectedBuilding and locationName are separate things
+*/
 
-function RoomButtons({ buildingData, shouldDisplayName, onButtonClick }: RoomButtonProps) {
-	return (
-		<div>
-			{shouldDisplayName && <p style={{ marginBottom: '4px' }}>{buildingData.name}</p>}
-			<div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
-				{buildingData.data.map((r: string, index: number) => (
-					<button key={index} className="popup-button" onClick={(e) => { e.stopPropagation(); onButtonClick(r) }}>
-						{r}
-					</button>
-				))}
-			</div>
-		</div>
-	)
-}
 
-export default function BuildingPopup({ name, address }: { name: string; address: string }) {
-	const [fetchRooms, scheduleData, setRoomData, loading] = GetRooms() as [(name: string) => void, Array<BuildingData>, (a: any) => void, boolean];
+export default function BuildingPopup({ locationName, locationAddress }: { locationName: string; locationAddress: string }) {
+	const [fetchRooms, rooms, setRooms] = GetRooms() as [(building: string) => void, Array<RoomsInBuilding>, (a: any) => void];
+
+	const [selectedBuilding, setSelectedBuilding] = useState<string>("");
 	const [selectedRoom, setSelectedRoom] = useState<string>("");
 	const [selectedSchedule, setSelectedSchedule] = useState<Array<TimeBlock>>([]);
 
@@ -34,92 +23,68 @@ export default function BuildingPopup({ name, address }: { name: string; address
 	// because a room can have no classes in it. i need a dedicated boolean to know if it was selected or not
 	const [wasRoomSelected, setWasRoomSelected] = useState<boolean>(false);
 
-	const onClick = (room: string) => {
-		setSelectedRoom(room);
-		setWasRoomSelected(true);
-		const uriEncoded = encodeURIComponent(buildingLookup[name as keyof typeof buildingLookup]).replace(/%2F/g, '%252F');
-		fetch(`http://10.0.0.89:8000/schedule/2260/${uriEncoded}/${room}/0`)
-			.then(res => res.json())
-			.then(res => {
-				setSelectedSchedule(res);
-			});
-	}
-
-
+	// whenever a new place is clicked, wipe the previous room and schedule info, and call
+	// fetch rooms to get the new list of rooms
 	useEffect(() => {
-		setRoomData([]);
+		setRooms([]);
 		setSelectedRoom("");
 		setSelectedSchedule([]);
 		setWasRoomSelected(false);
-		fetchRooms(name);
+		fetchRooms(locationName);
+	}, [locationName, locationAddress]);
 
-	}, [name, address]);
+	// whenever a button with a room number is clicked, fetch the schedule for that
+	// room from the api 
+	useEffect(() => {
+		if (!selectedBuilding || !selectedRoom) return;
+
+		setWasRoomSelected(true);
+		const uriEncoded = encodeURIComponent(selectedBuilding as string).replace(/%2F/g, '%252F');
+		fetch(`http://10.0.0.89:8000/schedule/2260/${uriEncoded}/${selectedRoom}/0`)
+			.then(res => res.json())
+			.then(res => {
+				setSelectedSchedule(res);
+				console.log(selectedSchedule);
+			});
+	}, [selectedBuilding, selectedRoom]);
+
+	const contextValues = {
+		selectedBuilding,
+		setSelectedBuilding,
+		selectedRoom,
+		setSelectedRoom,
+		selectedSchedule,
+		onScheduleBackButtonPress: () => {
+			setSelectedSchedule([]);
+			setSelectedRoom("");
+			setWasRoomSelected(false);
+		}
+	}
 
 	return (
-		!wasRoomSelected ? (
-			<div style={{ height: 'auto', maxHeight: '200px', overflow: 'scroll', color: 'var(--gold)' }}>
-				<strong>{name}</strong>
-				<br />
-				{address}
-				<br />
-				<div style={{ display: 'flex', flexDirection: 'column', width: '100%', gap: '0px' }}>
-					{scheduleData && scheduleData.map(d => {
-						return (
-							<RoomButtons
-								buildingData={d}
-								shouldDisplayName={scheduleData.length > 1}
-								onButtonClick={onClick}
-							/>
-						)
-					})}
+		<MapContext.Provider value={contextValues}>
+			{!wasRoomSelected ? (
+				<div style={{ height: 'auto', maxHeight: 'calc(50vh - 150px)', overflow: 'scroll', color: 'var(--gold)' }}>
+					<strong>{locationName}</strong>
+					<br />
+					{locationAddress}
+					<br />
+					<div style={{ display: 'flex', flexDirection: 'column', width: '100%', gap: '0px' }}>
+						{rooms && rooms.map(d => {
+							return (
+								<BuildingRoomList
+									buildingData={d}
+									shouldDisplayName={rooms.length > 1}
+								/>
+							)
+						})}
+					</div>
 				</div>
-			</div>
-		) : (
-			<div>
-				<div style={{ marginBottom: '10px' }}>
-					<strong style={{ marginTop: '0', color: "var(--gold)" }}>{name} {selectedRoom}</strong>
-				</div>
-				<div style={{ gap: '5px', display: 'flex', flexDirection: 'column' }}>
-					{selectedSchedule.length == 0 ? (
-						<div style={{ 
-							padding: '5px', 
-							textAlign: 'center', 
-							color: 'var(--gold)', 
-							fontStyle: 'italic' 
-						}}>
-							<p style={{ margin: 0 }}>No classes scheduled</p>
-						</div>
-					) : (
-						selectedSchedule.map((s: TimeBlock, index: number) => (
-							<ScheduleTimeBlock
-								key={index}
-								timeBlock={s}
-							/>
-						))
-					)}
-				</div>
-				<div style={{ display: 'flex', justifyContent: 'center' }}>
-					<button
-						style={{
-							marginTop: '10px',
-							padding: '8px 16px',
-							backgroundColor: 'var(--gold)',
-							color: 'black',
-							border: 'none',
-							borderRadius: '4px',
-							cursor: 'pointer',
-							fontWeight: '500'
-						}}
-						onClick={(e) => {
-							e.stopPropagation();
-							setSelectedSchedule([]);
-							setSelectedRoom("");
-							setWasRoomSelected(false);
-						}}>
-						Back
-					</button>
-				</div>
-			</div>
-		)
+			) : (
+				<Schedule 
+					locationName={locationName}
+				/>
+			)}
+		</MapContext.Provider>
 	);
 }

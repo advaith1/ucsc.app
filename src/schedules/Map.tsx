@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import { MapContainer, TileLayer, GeoJSON, Popup, useMapEvents } from "react-leaflet";
 import { Layer, LatLng } from "leaflet";
 import "leaflet/dist/leaflet.css";
-import "./Map.css";
-import buildingsData from "./temp4.json";
-import { BASE_API_URL } from "../constants";
+import "./styles/Map.css";
+import buildingsData from "./data/temp4.json";
 import { Feature, Geometry } from "geojson";
 import BuildingPopup from "./BuildingPopup";
 
@@ -74,8 +73,8 @@ export default function Map() {
 					}}
 				>
 					<BuildingPopup
-						name={selectedFeature.properties.BUILDINGNAME}
-						address={selectedFeature.properties.ADDRESS}
+						locationName={selectedFeature.properties.BUILDINGNAME}
+						locationAddress={selectedFeature.properties.ADDRESS}
 					/>
 				</Popup>
 			)}
