@@ -1,0 +1,12 @@
+.roomSelectorParent {
+	height: auto;
+	overflow: scroll;
+	color: var(--gold);
+}
+
+.roomListParent {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 0px;
+}

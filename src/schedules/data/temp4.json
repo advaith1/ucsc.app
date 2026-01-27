@@ -12286,7 +12286,7 @@
 			"type": "Feature",
 			"properties": {
 				"BUILDINGNAME": "50 Meter Pool",
-				"ADDRESS": "idk",
+				"ADDRESS": "451 East Field Service Road",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
@@ -12317,7 +12317,7 @@
 			"type": "Feature",
 			"properties": {
 				"BUILDINGNAME": "East Field",
-				"ADDRESS": "idk",
+				"ADDRESS": "451 East Field Service Road",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
@@ -12368,7 +12368,7 @@
 			"type": "Feature",
 			"properties": {
 				"BUILDINGNAME": "Lower East Field",
-				"ADDRESS": "idk",
+				"ADDRESS": "451 East Field Service Road",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
@@ -12399,7 +12399,7 @@
 			"type": "Feature",
 			"properties": {
 				"BUILDINGNAME": "East Sand Court",
-				"ADDRESS": "idk",
+				"ADDRESS": "451 East Field Service Road",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
@@ -12438,7 +12438,7 @@
 			"type": "Feature",
 			"properties": {
 				"BUILDINGNAME": "Kresge Garden",
-				"ADDRESS": "idk",
+				"ADDRESS": "510 Porter-Kresge Rd",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {
@@ -12469,7 +12469,7 @@
 			"type": "Feature",
 			"properties": {
 				"BUILDINGNAME": "West Tennis Courts",
-				"ADDRESS": "idk",
+				"ADDRESS": "510 Porter-Kresge Rd",
 				"CONSTRUCTIONYEAR": null
 			},
 			"geometry": {

@@ -1,0 +1,6 @@
+.scheduleParent {
+	height: auto;
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+}

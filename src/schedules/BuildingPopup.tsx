@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import GetRooms from "./FetchRooms";
 import { RoomsInBuilding, TimeBlock } from "../types";
 import BuildingRoomList from "./components/BuildingRoomList";
 import { MapContext } from "./MapContext";
 import Schedule from "./Schedule";
+import { Context } from "../Context";
+import './styles/BuildingPopup.css';
 
 /*
 Each location can have multiple "buildings" in it
@@ -15,6 +17,8 @@ they're both the same building, hence why selectedBuilding and locationName are 
 // and TA 2nd Stage
 
 export default function BuildingPopup({ locationName, locationAddress, term }: { locationName: string; locationAddress: string, term: number }) {
+	const ctx = useContext(Context);
+
 	const [fetchRooms, rooms, setRooms] = GetRooms() as [(building: string) => void, Array<RoomsInBuilding>, (a: any) => void];
 
 	const [selectedBuilding, setSelectedBuilding] = useState<string>("");
@@ -47,7 +51,6 @@ export default function BuildingPopup({ locationName, locationAddress, term }: {
 			.then(res => res.json())
 			.then(res => {
 				setSelectedSchedule(res);
-				console.log(selectedSchedule);
 			});
 	}, [selectedRoom, day, term]);
 
@@ -64,17 +67,19 @@ export default function BuildingPopup({ locationName, locationAddress, term }: {
 		},
 		day,
 		setDay
-	}
+	};
+
+	const maxHeight = ctx!.mobile ? '200px' : 'calc(50vh - 150px)';
 
 	return (
 		<MapContext.Provider value={contextValues}>
 			{!wasRoomSelected ? (
-				<div style={{ height: 'auto', maxHeight: 'calc(50vh - 150px)', overflow: 'scroll', color: 'var(--gold)' }}>
+				<div className="roomSelectorParent" style={{ maxHeight: maxHeight }}>
 					<strong>{locationName}</strong>
 					<br />
 					{locationAddress}
 					<br />
-					<div style={{ display: 'flex', flexDirection: 'column', width: '100%', gap: '0px' }}>
+					<div className="roomListParent">
 						{rooms.map(d => {
 							return (
 								<BuildingRoomList

@@ -1,5 +1,5 @@
 import {useState } from "react";
-import { MapContainer, TileLayer, GeoJSON, Popup, useMapEvents, ZoomControl } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, Popup, /* useMapEvents, */ ZoomControl } from "react-leaflet";
 import { Layer, LatLng } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./styles/Map.css";
@@ -49,15 +49,14 @@ function getAllTerms() {
 	return terms.filter(y => y <= 2260);
 }
 
-// Component to handle map clicks
-function MapClickHandler() {
-	useMapEvents({
-		click: (e) => {
-			console.log([e.latlng.lng, e.latlng.lat]);
-		}
-	});
-	return null;
-}
+// function MapClickHandler() {
+// 	useMapEvents({
+// 		click: (e) => {
+// 			console.log([e.latlng.lng, e.latlng.lat]);
+// 		}
+// 	});
+// 	return null;
+// }
 
 export default function Map() {
 	const [selectedFeature, setSelectedFeature] = useState<Feature<Geometry, BuildingProperties> | null>(null);
@@ -79,26 +78,11 @@ export default function Map() {
 
 	return (
 		<>
-			<div style={{
-				position: 'fixed',
-				top: '70px',
-				right: '20px',
-				zIndex: 1000,
-			}}>
+			<div className="mapParent">
 				<select
 					value={selectedTerm}
 					onChange={(e) => setSelectedTerm(Number(e.target.value))}
-					style={{
-						padding: '8px 12px',
-						backgroundColor: 'var(--card-bg)',
-						color: 'var(--gold)',
-						border: '1px solid rgba(255, 255, 255, 0.1)',
-						borderRadius: '8px',
-						fontSize: '14px',
-						fontWeight: '500',
-						cursor: 'pointer',
-						boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
-					}}
+					className="termSelector"
 				>
 					{getAllTerms().map(term => (
 						<option key={term} value={term}>{termToString(term)}</option>
@@ -113,7 +97,7 @@ export default function Map() {
 				minZoom={15}
 				maxZoom={30}
 				zoomControl={false}
-				style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 0 }}
+				className="mapContainerComponent"
 			>
 			<ZoomControl position="bottomright" />
 			<TileLayer
@@ -138,6 +122,11 @@ export default function Map() {
 					eventHandlers={{
 						remove: () => setSelectedFeature(null)
 					}}
+					autoPan={true}
+					autoPanPaddingTopLeft={[20, 100]}
+					autoPanPaddingBottomRight={[20, 20]}
+					keepInView={true}
+					maxHeight={window.innerHeight - 150}
 				>
 					<BuildingPopup
 						locationName={selectedFeature.properties.BUILDINGNAME}
@@ -146,7 +135,7 @@ export default function Map() {
 					/>
 				</Popup>
 			)}
-			<MapClickHandler />
+			{/* <MapClickHandler /> */}
 		</MapContainer>
 		</>
 	);
