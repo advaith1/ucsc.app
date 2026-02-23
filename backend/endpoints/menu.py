@@ -1,139 +1,159 @@
 from fastapi import APIRouter
 from enum import Enum
 import httpx
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, Tag, ResultSet
+from bs4.element import PageElement
+from typing import Iterator
 from datetime import datetime, timedelta
 import asyncio
-import httpx
+import httpx, requests
+import json
 
-http_client = httpx.AsyncClient()
 router = APIRouter()
 
-BASE_URL = 'https://nutrition.sa.ucsc.edu/'
-MEAL_URL = '&mealName='
+BASE_URL: str = 'https://nutrition.sa.ucsc.edu/'
+MEAL_URL: str = '&mealName='
 
-LONGMENU_URL = 'longmenu.aspx?naFlag=1&locationNum=' 
-SHORTMENU_URL = 'shortmenu.aspx?naFlag=1&locationNum='
+LONGMENU_URL: str = 'longmenu.aspx?naFlag=1&locationNum=' 
+SHORTMENU_URL: str = 'shortmenu.aspx?naFlag=1&locationNum='
 
-EMOJIS = { 'veggie': '🥦', 'vegan': '🌱', 'halal': '🍖', 'eggs': '🥚', 'beef': '🐮', 'milk': '🥛', 'fish': '🐟', 'alcohol': '🍷', 'gluten': '🍞', 'soy': '🫘', 'treenut': '🥥', 'sesame': '𓇢', 'pork': '🐷', 'shellfish': '🦐', 'nuts': '🥜', 'wheat': '🌾  '}
+EMOJIS: dict[str, str] = { 
+	'veggie': '🥦', 
+	'vegan': '🌱', 
+	'halal': '🍖', 
+	'eggs': '🥚', 
+	'beef': '🐮', 
+	'milk': '🥛', 
+	'fish': '🐟', 
+	'alcohol': '🍷', 
+	'gluten': '🍞', 
+	'soy': '🫘', 
+	'treenut': '🥥', 
+	'sesame': '𓇢', 
+	'pork': '🐷', 
+	'shellfish': '🦐', 
+	'nuts': '🥜', 
+	'wheat': '🌾'
+}
 
 class Location(Enum):
-    CowellStevenson = '05'
-    CrownMerrill = '20'
-    NineTen = '40'
-    PorterKresge = '25'
-    RachelCarsonOakes = '30'
+	CowellStevenson = '05'
+	CrownMerrill = '20'
+	NineTen = '40'
+	PorterKresge = '25'
+	RachelCarsonOakes = '30'
 
 LOCATION_MAP = {
-    'Cowell/Stevenson': Location.CowellStevenson,
-    'Crown/Merrill': Location.CrownMerrill,
-    'Nine/Ten': Location.NineTen,
-    'Porter/Kresge': Location.PorterKresge,
-    'Carson/Oakes': Location.RachelCarsonOakes
+	'Cowell/Stevenson': Location.CowellStevenson,
+	'Crown/Merrill': Location.CrownMerrill,
+	'Nine/Ten': Location.NineTen,
+	'Porter/Kresge': Location.PorterKresge,
+	'Carson/Oakes': Location.RachelCarsonOakes
 }
 
 class LocationRequest(Enum):
-    CowellStevenson = 'Cowell/Stevenson'
-    CrownMerrill = 'Crown/Merrill'
-    NineTen = 'Nine/Ten'
-    PorterKresge = 'Porter/Kresge'
-    RachelCarsonOakes = 'Carson/Oakes'
+	CowellStevenson = 'Cowell/Stevenson'
+	CrownMerrill = 'Crown/Merrill'
+	NineTen = 'Nine/Ten'
+	PorterKresge = 'Porter/Kresge'
+	RachelCarsonOakes = 'Carson/Oakes'
 
 
-@router.get('/all_menus')
-async def GetAllMenus(day_offset: int = 0):
-    start_time = datetime.now()
-    menus = await get_all_menus(http_client, day_offset)
-    print("Time taken to get all menus:", datetime.now() - start_time)
-    return menus
+@router.get('/menu')
+async def GetAllMenus(dayOffset: int = 0):
+	menuData: dict[str, dict] = {}
+	with open('cache/menus.json', 'r', encoding='utf-8') as f:
+		menuData = json.load(f)
 
-@router.get("/menu")
-async def get_menu(location: LocationRequest, day_offset: int = 0):
-    start_time = datetime.now()
-    shortmenu = await get_short_menu(http_client, LOCATION_MAP[location.value].value, day_offset)
-    print("Time taken to get short menu:", datetime.now() - start_time)
-    return shortmenu
+	return menuData[str(dayOffset)] if str(dayOffset) in menuData else {"error": "No menu available for this day"}
 
+# this endpoint isnt even called, getting rid of it for now
+# @router.get("/menu/{location}")
+# async def get_menu(location: str):
+# 	if location not in LOCATION_MAP: return {"error": "Invalid Location"}
 
-async def fetch_website_html(client: httpx.AsyncClient, url: str, locationNum: str, meal: str = '', date: str = '') -> str:
-    full_url = url + locationNum + ((MEAL_URL + meal) if meal != '' else '')
-    if date != '':
-        date_str = date.replace('/', '%2F')
-        full_url += f'&dtdate={date_str}'
+# 	# start_time = datetime.now()
+# 	shortmenu = await get_short_menu(LOCATION_MAP[location].value, 0)
+# 	# print("Time taken to get shor?t menu:", datetime.now() - start_time)
+# 	return shortmenu
 
-    cookies = {
-        'WebInaCartLocation': locationNum,
-        'WebInaCartDates': '',
-        'WebInaCartMeals': '',
-        'WebInaCartQtys': '',
-        'WebInaCartRecipes': ''
-    }
-
-    response = await client.get(full_url, cookies=cookies)
-    return response.text
 
 def calculate_date(day_offset: int) -> str:
-    date = datetime.now() + timedelta(days=day_offset)
-    date_str = date.strftime('%m/%d/%Y')
-    return date_str
+	date: datetime = datetime.now() + timedelta(days=day_offset)
+	return date.strftime('%m/%d/%Y')
+
 
 async def get_all_menus(client: httpx.AsyncClient, day_offset: int = 0):
-    tasks = [get_short_menu(client, LOCATION_MAP[location].value, day_offset) for location in LOCATION_MAP.keys()]
-    results = await asyncio.gather(*tasks)
-    return dict(zip(LOCATION_MAP.keys(), results))
+	tasks = [get_short_menu(client, LOCATION_MAP[location].value, day_offset) for location in LOCATION_MAP.keys()]
+	results = await asyncio.gather(*tasks)
+	return dict(zip(LOCATION_MAP.keys(), results))
 
-async def get_short_menu(client: httpx.AsyncClient, locationNum: str, day_offset: int = 0) -> str:
-    url = BASE_URL + SHORTMENU_URL
 
-    date_str = calculate_date(day_offset)
-    
-    # cached_menu = get_menu_cache(locationNum, date_str)
-    # print(f'Cached menu: {cached_menu}')
-    # if cached_menu is not None:
-        # return cached_menu
+async def get_short_menu(client: httpx.AsyncClient, locationNum: str, day_offset: int = 0) -> dict:
+	fullURL: str = BASE_URL + SHORTMENU_URL + locationNum + f'&dtdate={calculate_date(day_offset)}'
+	response = await client.get(fullURL, cookies={
+		'WebInaCartLocation': locationNum,
+		'WebInaCartDates': '',
+		'WebInaCartMeals': '',
+		'WebInaCartQtys': '',
+		'WebInaCartRecipes': ''
+	})
 
-    html = await fetch_website_html(client, url, locationNum, '', date_str)
-    soup = BeautifulSoup(html, 'lxml')
+	soup: BeautifulSoup = BeautifulSoup(response.text, 'lxml')
+	meals: ResultSet[Tag] = soup.select('body > table > table:nth-of-type(1) > tr > td > table')
+	menu: dict = {}
 
-    menu = {}
+	for meal in meals:
+		foodItems = {}
+		mealName = meal.find('div', {'class': 'shortmenumeals'})
 
-    meals = soup.select('body > table > table:nth-of-type(1) > tr > td > table')
+		if mealName is None: continue
+		mealName = mealName.text.strip()
 
-    for meal in meals:
-        food_items = {}
-        meal_name = meal.find('div', {'class': 'shortmenumeals'})
+		currentGroup: str = ''
+		foods: Iterator[PageElement] = meal.select('td > table > tr:nth-child(2) > td > table:nth-child(1)')[0].children
+		for food in foods:
+			if not isinstance(food, Tag): continue
+			
+			divider = food.find('div', class_='shortmenucats')
+			if divider is not None:
+				currentGroup = divider.text.replace('--', '').strip()
+				foodItems[currentGroup] = {}
+				continue
 
-        if meal_name is None:
-            continue
-        meal_name = meal_name.text.strip()
+			foodName = food.find('div', class_='shortmenurecipes')
+			if not foodName: continue
 
-        current_group = ''
+			foodName = foodName.text.strip()
 
-        for food in meal.select('td > table > tr:nth-child(2) > td > table:nth-child(1)')[0].children:
-            if not isinstance(food, Tag):
-                continue
-            divider = food.find('div', class_='shortmenucats')
-            if divider is not None:
-                current_group = divider.text.replace('--', '').strip()
-                food_items[current_group] = {}
-                continue
+			restrictions: list[str] = []
+			for restriction in food.select('img'):
+				restriction_name = str(restriction['src']).split('/')[-1].split('.')[0]
+				restrictions.append(EMOJIS[restriction_name] if restriction_name in EMOJIS else restriction_name)
 
-            food_name = food.find('div', class_='shortmenurecipes')
-            food_name = food_name.text.strip()
+			foodItems[currentGroup][foodName] = {
+				'name': foodName,
+				'restrictions': restrictions,
+			}
 
-            restrictions = []
-            for restriction in food.select('img'):
-                restriction_name = restriction['src'].split('/')[-1].split('.')[0]
-                restrictions.append(EMOJIS[restriction_name] if restriction_name in EMOJIS else restriction_name)
-                # print(restriction_name)
+		menu[mealName] = foodItems
 
-            food_items[current_group][food_name] = {
-                'name': food_name,
-                'restrictions': restrictions,
-            }
+	return menu
 
-        menu[meal_name] = food_items
+# dedicated function to cache menus. intended to be run via cron job.
+async def CacheMenus() -> None:
+	print("Caching menus...")
+	startTime: datetime = datetime.now()
 
-    # set_menu_cache(locationNum, date_str, menu)
-    # print(f'Set menu of {locationNum}, {date_str}: {menu['Breakfast']['Breakfast'][1]}')
-    return menu
+	async with httpx.AsyncClient() as client:
+		tasks: list = [get_all_menus(client, i) for i in range(8)]
+		results: list = await asyncio.gather(*tasks)
+		data: dict[int, dict] = dict(enumerate(results))
+	
+	with open('cache/menus.json', 'w', encoding='utf-8') as f:
+		json.dump(data, f)
+	
+	print("Finished caching menus. Time taken:", datetime.now() - startTime)
+
+if __name__ == "__main__":
+	asyncio.run(CacheMenus())

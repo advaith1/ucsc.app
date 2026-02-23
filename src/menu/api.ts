@@ -24,40 +24,40 @@ export type Meal = Record<string, FoodGroup>
 
 export type Menu = Record<string, Meal>
 
-export async function getMenu(location: string, day_offset: number = 0): Promise<Menu> {
-    const startTime = new Date();
-    const result = await fetch(`${BASE_API_URL}/menu?location=${location}&day_offset=${day_offset}`).then((response) => {
-        if (!response.ok) {
-            throw new Error('Failed to fetch menu: ' + response.statusText);
-        }
-        return response;
-    }).catch((error) => {
-        console.error('Error fetching menu: ' + error);
-    });
+// export async function getMenu(location: string, day_offset: number = 0): Promise<Menu> {
+//     const startTime = new Date();
+//     const result = await fetch(`${BASE_API_URL}/menu?location=${location}&day_offset=${day_offset}`).then((response) => {
+//         if (!response.ok) {
+//             throw new Error('Failed to fetch menu: ' + response.statusText);
+//         }
+//         return response;
+//     }).catch((error) => {
+//         console.error('Error fetching menu: ' + error);
+//     });
 
-    if (!result) {
-        return {};
-    }
+//     if (!result) {
+//         return {};
+//     }
 
     
-    const menu: Menu = await result.json();
+//     const menu: Menu = await result.json();
 
-    const checkpoint = new Date();
-    let timeDiff = checkpoint.getTime() - startTime.getTime();
-    // console.log('Seconds to get raw menu:', timeDiff / 1000);
-    // const menu: Menu = {}
-    // for (const [mealName, meal] of Object.entries(data)) {
-    //     if (meal && Object.values(meal).length > 0) {
-    //         menu[mealName] = meal;
-    //     } else {
-    //         // console.warn('Empty meal:', mealName + ' for location: ' + location);
-    //     }
-    // }
-    const endTime = new Date();
-    timeDiff = endTime.getTime() - startTime.getTime();
-    console.log('Seconds to fetch menu for location:', location, 'Time:', timeDiff / 1000);
-    return menu;
-}
+//     const checkpoint = new Date();
+//     let timeDiff = checkpoint.getTime() - startTime.getTime();
+//     // console.log('Seconds to get raw menu:', timeDiff / 1000);
+//     // const menu: Menu = {}
+//     // for (const [mealName, meal] of Object.entries(data)) {
+//     //     if (meal && Object.values(meal).length > 0) {
+//     //         menu[mealName] = meal;
+//     //     } else {
+//     //         // console.warn('Empty meal:', mealName + ' for location: ' + location);
+//     //     }
+//     // }
+//     const endTime = new Date();
+//     timeDiff = endTime.getTime() - startTime.getTime();
+//     console.log('Seconds to fetch menu for location:', location, 'Time:', timeDiff / 1000);
+//     return menu;
+// }
 
 // export async function getAllLocationMenus(day_offset: number = 0): Promise<Record<string, Menu>> {
 //     const startTime = new Date();
@@ -87,7 +87,7 @@ export async function getAllLocationMenus(day_offset: number = 0, signal?: Abort
     }
     console.log('Date string:', dateString);
 
-    const locationMenus: Record<string, Menu> = await fetch(BASE_API_URL + '/all_menus?day_offset=' + day_offset, { signal }).then(async (response) => {
+    const locationMenus: Record<string, Menu> = await fetch(BASE_API_URL + '/menu?dayOffset=' + day_offset, { signal }).then(async (response) => {
         if (!response.ok) {
             throw new Error('Failed to fetch menu: ' + response.statusText);
         }
