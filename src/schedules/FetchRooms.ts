@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import buildingLookup from "./data/buildingLookup.json";
 import { RoomsInBuilding } from "../types";
 import { BASE_API_URL } from "../constants";
@@ -8,7 +8,7 @@ export default function GetRooms() {
 	const [rooms, setRooms] = useState<Array<RoomsInBuilding>>([]);
 	const [loading, setLoading] = useState(false);
 
-	const fetchRooms = (name: string) => {
+	const fetchRooms = useCallback((name: string) => {
 		setLoading(true);
 		const pisaName: string | string[] = buildingLookup[name as keyof typeof buildingLookup];
 		const pisaNames: string[] = Array.isArray(pisaName) ? pisaName : [pisaName];
@@ -24,7 +24,7 @@ export default function GetRooms() {
 			setRooms(results);
 			setLoading(false);
 		});
-	};
+	}, []);
 
 	return [fetchRooms, rooms, setRooms, loading];
 }
