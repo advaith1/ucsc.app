@@ -24,10 +24,10 @@ api.add_middleware(
     allow_origins=[
     "http://localhost:5173",
     "http://localhost:8080",
-    "https://ucsc.app/",
+    "https://ucsc.app",
     ],
     allow_credentials=True,
-    allow_methods=["GET, POST"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
