@@ -78,8 +78,20 @@ function parseTime(timeStr: string): string {
 }
 
 function getFirstMeetingDate(startDateStr: string, daysStr: string): string {
-	const dayValues: Record<string, number> = { M: 1, T: 2, W: 3, R: 4, F: 5, S: 6, U: 0 };
-	const targetDays = new Set(daysStr.split("").map(d => dayValues[d]));
+	const dayValues: Record<string, number> = {
+		SU: 0,
+		MO: 1,
+		TU: 2,
+		WE: 3,
+		TH: 4,
+		FR: 5,
+		SA: 6
+	};
+
+	const byday = daysToBYDAY(daysStr);
+	const targetDays = new Set(
+		byday.split(",").map(d => dayValues[d]).filter(d => d !== undefined)
+	);
 
 	const year = parseInt(startDateStr.slice(0, 4), 10);
 	const month = parseInt(startDateStr.slice(4, 6), 10);
@@ -94,6 +106,7 @@ function getFirstMeetingDate(startDateStr: string, daysStr: string): string {
 	const y = currentDate.getFullYear();
 	const m = String(currentDate.getMonth() + 1).padStart(2, "0");
 	const d = String(currentDate.getDate()).padStart(2, "0");
+
 	return `${y}${m}${d}`;
 }
 

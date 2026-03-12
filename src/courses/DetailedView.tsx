@@ -441,40 +441,19 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 
 											<button
 												onClick={() => {
-													const ics =
-														generateIcsForSection(
-															detailsObj
-																.primary_section
-																.subject,
-															detailsObj
-																.primary_section
-																.catalog_nbr,
-															detailsObj
-																.primary_section
-																.title_long,
-															section.class_nbr,
-															section.meetings ||
-																[],
-															term,
-														);
-													const blob = new Blob(
-														[ics],
-														{
-															type: "text/calendar",
-														},
+													const meeting = section.meetings?.[0];
+													if (!meeting) return;
+
+													const link = generateGoogleCalendarLinkForMeeting(
+														detailsObj.primary_section.subject,
+														detailsObj.primary_section.catalog_nbr,
+														detailsObj.primary_section.title_long,
+														section.class_nbr,
+														meeting,
+														term,
 													);
-													const url =
-														URL.createObjectURL(
-															blob,
-														);
-													const a =
-														document.createElement(
-															"a",
-														);
-													a.href = url;
-													a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}-${section.class_nbr}.ics`;
-													a.click();
-													URL.revokeObjectURL(url);
+
+													window.open(link, "_blank");
 												}}
 												className="googlecalendarbutton"
 												style={{
