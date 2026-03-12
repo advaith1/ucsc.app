@@ -2,8 +2,8 @@ import React from "react";
 import "./styles/DetailedView.css";
 import { statusEmoji } from "./StatusEmoji";
 import ExternalLinkIcon from "/icons/external-link.svg";
-import GoogleCalendarIcon from '/icons/Google_Calendar_icon.png';
-import DownloadIcon from '/icons/downlaod2.png'
+import GoogleCalendarIcon from "/icons/Google_Calendar_icon.png";
+import DownloadIcon from "/icons/downlaod2.png";
 import BackIcon from "/icons/back-arrow.svg";
 import { generateIcs, generateIcsForSection } from "./generateIcs";
 import { generateGoogleCalendarLinkForMeeting } from "./generateIcs";
@@ -173,11 +173,7 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 						}}
 						className="googlecalendarbutton"
 					>
-						<img
-							src={GoogleCalendarIcon}
-							width="30"
-							height="30"
-						/>
+						<img src={GoogleCalendarIcon} width="30" height="30" />
 						Add to Google Calendar
 					</button>
 
@@ -240,7 +236,6 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 					</div>
 				</div>
 			)}
-
 
 			{detailsObj.primary_section.description && (
 				<div className="description classDetails">
@@ -309,13 +304,7 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 							if (!section.meetings) return null;
 
 							return (
-								<div
-									key={index}
-									className="section-card"
-									style={{
-										borderRadius: "8px",
-									}}
-								>
+								<div key={index} className="section-card">
 									{index > 0 && (
 										<hr
 											style={{
@@ -324,87 +313,188 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 											}}
 										/>
 									)}
-									<div style={{ marginBottom: "10px" }}>
-										<p style={{ margin: "-8px 0" }}>
-											{statusEmoji(section.enrl_status)}
-											Enrolled: {section.enrl_total}/
-											{section.capacity}
-										</p>
-									</div>
-									<div>
-										{section.meetings.map(
-											(meeting: Meeting, i: number) => (
-												<div
-													key={i}
-													style={{ margin: "8px 0" }}
-												>
-													<p
-														style={{
-															margin: "2px 0",
-														}}
-													>
-														<strong>
-															Day and Times:
-														</strong>{" "}
-														{meeting.days}{" "}
-														{meeting.start_time}-
-														{meeting.end_time}
-													</p>
-													<p
-														style={{
-															margin: "2px 0",
-														}}
-													>
-														<strong>
-															Location:
-														</strong>{" "}
-														{meeting.location}
-													</p>
-												</div>
-											),
-										)}
-										<button
-											onClick={() => {
-												const ics =
-													generateIcsForSection(
-														detailsObj
-															.primary_section
-															.subject,
-														detailsObj
-															.primary_section
-															.catalog_nbr,
-														detailsObj
-															.primary_section
-															.title_long,
-														section.class_nbr,
-														section.meetings || [],
-														term,
+
+									<div className="section-card2">
+										<div className="SectionInformation">
+											<div
+												style={{ marginBottom: "10px" }}
+											>
+												<p style={{ margin: "-8px 0" }}>
+													{statusEmoji(
+														section.enrl_status,
+													)}
+													Enrolled:{" "}
+													{section.enrl_total}/
+													{section.capacity}
+												</p>
+											</div>
+
+											<div>
+												{section.meetings.map(
+													(
+														meeting: Meeting,
+														i: number,
+													) => (
+														<div
+															key={i}
+															style={{
+																margin: "8px 0",
+															}}
+														>
+															<p
+																style={{
+																	margin: "2px 0",
+																}}
+															>
+																<strong>
+																	Day and
+																	Times:
+																</strong>{" "}
+																{meeting.days}{" "}
+																{
+																	meeting.start_time
+																}
+																-
+																{
+																	meeting.end_time
+																}
+															</p>
+															<p
+																style={{
+																	margin: "2px 0",
+																}}
+															>
+																<strong>
+																	Location:
+																</strong>{" "}
+																{
+																	meeting.location
+																}
+															</p>
+														</div>
+													),
+												)}
+											</div>
+										</div>
+
+										<div className="SectionCalendarButtons">
+											<button
+												onClick={() => {
+													const ics =
+														generateIcsForSection(
+															detailsObj
+																.primary_section
+																.subject,
+															detailsObj
+																.primary_section
+																.catalog_nbr,
+															detailsObj
+																.primary_section
+																.title_long,
+															section.class_nbr,
+															section.meetings ||
+																[],
+															term,
+														);
+													const blob = new Blob(
+														[ics],
+														{
+															type: "text/calendar",
+														},
 													);
-												const blob = new Blob([ics], {
-													type: "text/calendar",
-												});
-												const url =
-													URL.createObjectURL(blob);
-												const a =
-													document.createElement("a");
-												a.href = url;
-												a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}-${section.class_nbr}.ics`;
-												a.click();
-												URL.revokeObjectURL(url);
-											}}
-											style={{
-												marginTop: "8px",
-												padding: "6px 12px",
-												backgroundColor: "#007bff",
-												color: "white",
-												border: "none",
-												borderRadius: "4px",
-												cursor: "pointer",
-												fontSize: "0.9rem",
-											}}
-										>
-											Add to Calendar
-										</button>
+													const url =
+														URL.createObjectURL(
+															blob,
+														);
+													const a =
+														document.createElement(
+															"a",
+														);
+													a.href = url;
+													a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}-${section.class_nbr}.ics`;
+													a.click();
+													URL.revokeObjectURL(url);
+												}}
+												className="pisaButton"
+												style={{
+													marginBottom: "8px",
+													padding: "6px 12px",
+													fontSize: "15px",
+													// marginTop: "4px",
+													// backgroundColor: "#007bff",
+													// color: "white",
+													// border: "none",
+													// borderRadius: "4px",
+													// cursor: "pointer",
+													// fontSize: "0.9rem",
+												}}
+											>
+												<img
+													src={DownloadIcon}
+													alt="View in Pisa"
+													width="28"
+													height="28"
+													style={{ verticalAlign: "middle" }}
+												/>
+												Download Calendar .ics
+											</button>
+
+											<button
+												onClick={() => {
+													const ics =
+														generateIcsForSection(
+															detailsObj
+																.primary_section
+																.subject,
+															detailsObj
+																.primary_section
+																.catalog_nbr,
+															detailsObj
+																.primary_section
+																.title_long,
+															section.class_nbr,
+															section.meetings ||
+																[],
+															term,
+														);
+													const blob = new Blob(
+														[ics],
+														{
+															type: "text/calendar",
+														},
+													);
+													const url =
+														URL.createObjectURL(
+															blob,
+														);
+													const a =
+														document.createElement(
+															"a",
+														);
+													a.href = url;
+													a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}-${section.class_nbr}.ics`;
+													a.click();
+													URL.revokeObjectURL(url);
+												}}
+												className="googlecalendarbutton"
+												style={{
+													marginBottom: "8px",
+													padding: "6px 12px",
+													fontSize: "15px",
+												// 	marginTop: "8px",
+												// 	marginBottom: "8px",
+												// 	backgroundColor: "#007bff",
+												// 	color: "white",
+												// 	border: "none",
+													// borderRadius: "4px",
+												// 	cursor: "pointer",
+												// 	fontSize: "0.9rem",
+												}}
+											>
+												<img src={GoogleCalendarIcon} width="28" height="28" />
+												Add to Google Calendar
+											</button>
+										</div>
 									</div>
 								</div>
 							);
