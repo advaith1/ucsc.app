@@ -1,0 +1,15 @@
+.ThemeChangerButton {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+}
+
+@media (max-width: 320px) {
+	.ThemeChangerButton {
+		right: 60px;
+	}
+}

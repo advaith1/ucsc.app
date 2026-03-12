@@ -40,7 +40,9 @@
 
 @media (max-width: 320px) {
 	.filters {
+		/*border: 5px solid red;*/
 		grid-template-columns: repeat(1, 1fr);
+		max-width: 60%;
 	}
 
 	.dropdown {

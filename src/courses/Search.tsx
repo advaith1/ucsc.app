@@ -14,12 +14,15 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
 
 	return (
 		<div className="searchContainer">
-			<div style={{ alignItems: "center", display: "flex", paddingBottom: "5px" }}>
+			<div style={{
+				alignItems: "center",
+				display: "flex",
+			}}>
 				<svg
 					style={{
 						position: 'absolute',
-						top: '45%',
-						left: '22px',
+						top: '50%',
+						left: '12px',
 						transform: 'translateY(-50%)',
 						color: '#9aa0a6',
 					}}

@@ -9,7 +9,7 @@ import Filters from "./Filters.tsx";
 import { BASE_API_URL } from "../constants.ts";
 import { Loading } from "../components/loading/Loading.tsx";
 
-import './styles/Courses.css'
+import "./styles/Courses.css";
 
 interface Course {
 	status: string;
@@ -130,6 +130,7 @@ export default function Courses() {
 				style={{
 					flexDirection: isMobile ? "column" : "row",
 					justifyContent: "center",
+					// border: '5px solid green',
 				}}
 			>
 				<div
@@ -138,12 +139,14 @@ export default function Courses() {
 						width: isMobile ? "100%" : "30%",
 						display: isMobile && showDetails ? "none" : "flex",
 						padding: isMobile ? "10px 0" : "10px",
+						// border: '5px solid green',
 					}}
 				>
 					<div
 						className="search-wrapper"
 						style={{
-							width: isMobile ? "90%" : "100%",
+							// border: '5px solid green',
+							width: isMobile ? "80%" : "100%",
 							boxSizing: "border-box",
 							paddingRight: isMobile ? "0" : "0px",
 							maxWidth: "100%",
@@ -168,7 +171,10 @@ export default function Courses() {
 						}}
 					>
 						{isFirstLoad ? (
-							<h3 className="CourseIntroText">Search for a course to get started!</h3>
+							<>
+								<h3>Search to get started!</h3>
+								<h3>E.g. "CSE 130"</h3>
+							</>
 						) : !courses || courses.length === 0 ? (
 							<h3>No results found</h3>
 						) : (
