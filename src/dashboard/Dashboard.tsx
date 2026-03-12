@@ -9,37 +9,6 @@ export default function Dashboard() {
     const contextValues = useContext(Context);
     const navigate = useNavigate();
 
-    // const features = [
-    //     {
-    //         title: "Courses",
-    //         description: "Search and browse UCSC courses, check enrollment status, and get course details",
-    //         path: "/courses",
-    //         icon: "📚",
-    //         color: "#FF6B6B"
-    //     },
-    //     {
-    //         title: "Menu",
-    //         description: "Explore dining hall menus across campus for the next week",
-    //         path: "/menu",
-    //         icon: "🍽️",
-    //         color: "#4ECDC4"
-    //     },
-    //     {
-    //         title: "Schedule",
-    //         description: "View room availability and building schedules in real-time",
-    //         path: "/schedule",
-    //         icon: "📍",
-    //         color: "#FFE66D"
-    //     },
-    //     {
-    //         title: "News",
-    //         description: "Stay updated with UCSC news and announcements",
-    //         path: "/news",
-    //         icon: "📰",
-    //         color: "#95E1D3"
-    //     }
-    // ];
-
     return (
         <div className="dashboard-container">
             {contextValues?.mobile ? (<MobileTopBar />) : (<DesktopTopBar />)}
@@ -76,26 +45,6 @@ export default function Dashboard() {
                         {/* Ground */}
                         <ellipse cx="150" cy="395" rx="140" ry="20" fill="currentColor" opacity="0.1"/>
                     </svg>
-                </div>
-            </div>
-
-            <div className="features-section">
-                <div className="features-container">
-                    {/*<h2>Everything you need</h2>*/}
-                    {/*<div className="features-grid">
-                        {features.map((feature) => (
-                            <div
-                                key={feature.path}
-                                className="feature-card"
-                                onClick={() => navigate(feature.path)}
-                                style={{'--accent-color': feature.color} as React.CSSProperties}
-                            >
-                                <div className="feature-icon">{feature.icon}</div>
-                                <h3>{feature.title}</h3>
-                                <p>{feature.description}</p>
-                            </div>
-                        ))}
-                    </div>*/}
                 </div>
             </div>
         </div>
