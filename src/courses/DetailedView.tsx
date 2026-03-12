@@ -548,7 +548,7 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 
 													window.open(link, "_blank");
 												}}
-												className="googlecalendarbutton"
+												className="pisaButton"
 												style={{
 													marginBottom: "8px",
 													padding: "6px 12px",
