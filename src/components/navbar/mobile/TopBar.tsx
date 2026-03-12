@@ -22,6 +22,13 @@ export function TopBar() {
 
 				<ThemeToggle />
 
+				{ctx?.isDrawerOpen && (
+					<div
+						className="dimming"
+						onClick={() => ctx?.setDrawerOpen(false)}
+					/>
+				)}
+
 				<aside className={`drawer ${ctx?.isDrawerOpen ? "open" : ""}`}>
 					<nav className="drawer__nav">
 						<NavBarButtons
