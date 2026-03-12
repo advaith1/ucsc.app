@@ -1,4 +1,3 @@
-
 .daySelectorButton {
 	padding: 0px;
 	margin-top: 0px;
@@ -11,7 +10,7 @@
 
 
 .daySelectorParent {
-	display: flex; 
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 10px;

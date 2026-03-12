@@ -6,8 +6,8 @@ export interface ContextType {
 	setSelectedBuilding: (building: string) => void;
 	selectedRoom: string;
 	setSelectedRoom: (room: string) => void;
-	selectedSchedule: TimeBlock[];
-	onScheduleBackButtonPress: () => void;
+	selectedLiveClass: TimeBlock[];
+	onLiveClassBackButtonPress: () => void;
 	day: number;
 	setDay: (day: number | ((prevDay: number) => number)) => void;
 }

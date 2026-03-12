@@ -5,7 +5,7 @@ import { TopBar as DesktopTopBar } from "../components/navbar/desktop/TopBar";
 import Map from "./Map";
 
 
-export default function ScheduleMapPage() {
+export default function LiveClassesMapPage() {
 	const ctx = useContext(Context);
 
 	return (

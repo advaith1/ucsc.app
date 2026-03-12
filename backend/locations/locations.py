@@ -4,7 +4,7 @@ from fastapi import HTTPException
 from urllib.parse import unquote
 
 router = APIRouter()
-conn: sqlite3.Connection 
+conn: sqlite3.Connection
 cursor: sqlite3.Cursor
 knownBuildings: set[str]
 
@@ -18,11 +18,11 @@ def startup():
 
 	print(f'{len(knownBuildings)} buildings were found in the database.')
 
-@router.get('/schedule')
+@router.get('/liveclasses')
 async def getBuildings():
 	return list(knownBuildings)
 
-@router.get('/schedule/{building}')
+@router.get('/liveclasses/{building}')
 async def getRoomsForBuilding(building: str):
 	building = unquote(building)
 
@@ -32,14 +32,14 @@ async def getRoomsForBuilding(building: str):
 	cursor.execute('SELECT room FROM location WHERE building = ? AND room IS NOT NULL ORDER BY room;', (building,))
 	rows: list = cursor.fetchall()
 	return [x[0] for x in rows]
-	
 
-@router.get('/schedule/{term}/{building}/{room}/{day}')
-async def getSchedule(term: str, building: str, room: str|None, day: int = Path(..., ge=0, le=6)):
+
+@router.get('/liveclasses/{term}/{building}/{room}/{day}')
+async def getLiveClasses(term: str, building: str, room: str|None, day: int = Path(..., ge=0, le=6)):
 	building = unquote(building)
 	if building not in knownBuildings:
 		raise HTTPException(status_code=400, detail="Building not found")
-	
+
 	# because some buildings (like oakes acad in term 2092) have rooms in some terms, but not others
 	roomQuery: str = 'AND l.room = ?'
 	params: tuple = (building, room, day, term)
@@ -52,9 +52,9 @@ async def getSchedule(term: str, building: str, room: str|None, day: int = Path(
 		room = None
 		roomQuery = 'AND l.room IS NULL'
 		params = (building, day, term)
-	
+
 	cursor.execute(f'''
-		SELECT 
+		SELECT
 			c.name,
 			c.pisaLink,
 			c.instructor,
@@ -64,7 +64,7 @@ async def getSchedule(term: str, building: str, room: str|None, day: int = Path(
 		JOIN class c ON (c.term, c.id) = (ctb.term, ctb.classID)
 		JOIN timeBlock t ON t.blockID = ctb.blockID
 		JOIN location l ON l.locationID = c.locationID
-		WHERE 
+		WHERE
 			l.building = ?
 			{roomQuery}
 			AND t.day = ?

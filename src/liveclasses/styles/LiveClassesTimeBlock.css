@@ -1,4 +1,4 @@
-.schedule-time-block {
+.live-classes-time-block {
 	display: flex;
 	flex-direction: column;
 	gap: 0px;
@@ -9,7 +9,7 @@
 	overflow: hidden;
 }
 
-.schedule-time-block .stb-pisalink {
+.live-classes-time-block .stb-pisalink {
 	display: block;
 	text-decoration: none;
 	white-space: nowrap;
@@ -24,7 +24,7 @@
 	text-decoration: underline;
 }
 
-.schedule-time-block .stb-meta {
+.live-classes-time-block .stb-meta {
 	display: flex;
 	gap: 8px;
 	align-items: center;
@@ -32,12 +32,12 @@
 	font-size: 12px;
 }
 
-.schedule-time-block .stb-instructor {
+.live-classes-time-block .stb-instructor {
 	margin: 0;
 	font-size: 14px;
 }
 
-.schedule-time-block .stb-time {
+.live-classes-time-block .stb-time {
 	margin: 0;
 	padding: 0px 0px;
 	border-radius: 6px;

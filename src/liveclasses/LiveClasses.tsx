@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { MapContext } from "./MapContext";
 import { Context } from "../Context";
 import { TimeBlock } from "../types";
-import ScheduleTimeBlock from "./components/ScheduleTimeBlock";
+import LiveClassesTimeBlock from "./components/LiveClassesTimeBlock";
 import "./styles/Map.css";
-import "./styles/Schedule.css";
+import "./styles/LiveClasses.css";
 import DaySelector from "./components/DaySelector";
 
 
@@ -22,7 +22,7 @@ function NoClassesHere() {
 }
 
 
-export default function Schedule({ locationName }: { locationName: string }) {
+export default function LiveClasses({ locationName }: { locationName: string }) {
 	const ctx = useContext(MapContext);
 	const globalCtx = useContext(Context);
 
@@ -34,7 +34,7 @@ export default function Schedule({ locationName }: { locationName: string }) {
 	const title = ctx!.selectedRoom == "-1" ? ctx!.selectedBuilding : `${locationName} ${ctx!.selectedRoom}`;
 
 	return (
-		<div className="scheduleParent" style={{maxHeight: maxHeight }}>
+		<div className="liveclassesParent" style={{maxHeight: maxHeight }}>
 			<div style={{ marginBottom: '10px' }}>
 				<strong style={{ marginTop: '0', color: "var(--gold)" }}>
 					{title}
@@ -44,11 +44,11 @@ export default function Schedule({ locationName }: { locationName: string }) {
 			<DaySelector />
 
 			<div style={{ gap: '5px' }}>
-				{ctx!.selectedSchedule.length == 0 ? (
+				{ctx!.selectedLiveClass.length == 0 ? (
 					<NoClassesHere />
 				) : (
-					ctx!.selectedSchedule.map((s: TimeBlock, index: number) => (
-						<ScheduleTimeBlock
+					ctx!.selectedLiveClass.map((s: TimeBlock, index: number) => (
+						<LiveClassesTimeBlock
 							key={index}
 							timeBlock={s}
 						/>
@@ -60,7 +60,7 @@ export default function Schedule({ locationName }: { locationName: string }) {
 					className="mapGoldButton"
 					onClick={(e) => {
 						e.stopPropagation();
-						ctx!.onScheduleBackButtonPress();
+						ctx!.onLiveClassBackButtonPress();
 					}}>
 					Back
 				</button>
