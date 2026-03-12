@@ -3,11 +3,11 @@ import { TopBar as MobileTopBar } from "../components/navbar/mobile/TopBar.tsx";
 import { TopBar as DesktopTopBar } from "../components/navbar/desktop/TopBar.tsx";
 import Card from "./Card";
 import DetailedView from "./DetailedView";
-import Search from './Search.tsx';
-import './styles/Courses.css';
+import Search from "./Search.tsx";
+import "./styles/Courses.css";
 import Filters from "./Filters.tsx";
 import { BASE_API_URL } from "../constants.ts";
-import {Loading} from "../components/loading/Loading.tsx";
+import { Loading } from "../components/loading/Loading.tsx";
 
 interface Course {
 	status: string;
@@ -38,16 +38,16 @@ const useMediaQuery = (query: string) => {
 function parseInput(query: string) {
 	const results = {
 		dept: "",
-		catalogNum: ""
+		catalogNum: "",
 	};
 
 	if (query.length == 0) return results;
 
-	const deptExtractor = new RegExp('^([a-zA-Z]{3,4})');
+	const deptExtractor = new RegExp("^([a-zA-Z]{3,4})");
 	const deptResults = deptExtractor.exec(query);
 	if (deptResults) results["dept"] = deptResults[0].toUpperCase();
 
-	const catalogNumExtractor = new RegExp('([0-9]{1,3}[a-zA-Z]?)');
+	const catalogNumExtractor = new RegExp("([0-9]{1,3}[a-zA-Z]?)");
 	const cnumResults = catalogNumExtractor.exec(query);
 	if (cnumResults) results["catalogNum"] = cnumResults[0].toUpperCase();
 
@@ -59,11 +59,12 @@ export default function Courses() {
 	const [loading, setLoading] = useState(false);
 	const isMobile = useMediaQuery("(max-width: 768px)");
 	const [detailedData, setDetailedData] = useState<string | null>(null);
-	const [selectedClassModality, setSelectedClassModality] = useState<string>("");
+	const [selectedClassModality, setSelectedClassModality] =
+		useState<string>("");
 	const [selectedClassLink, setSelectedClassLink] = useState<string>("");
 
 	const [showDetails, setShowDetails] = useState(false);
-	const [isFirstLoad, setFirstLoad] = useState<boolean>(true)
+	const [isFirstLoad, setFirstLoad] = useState<boolean>(true);
 
 	const [term, setTerm] = useState<string>("");
 	const [ge, setGE] = useState<string>("");
@@ -72,7 +73,10 @@ export default function Courses() {
 
 	const abortControllerRef = useRef<AbortController | null>(null);
 
-	async function fetchCourses(inputData: {dept: string, catalogNum: string}) {
+	async function fetchCourses(inputData: {
+		dept: string;
+		catalogNum: string;
+	}) {
 		try {
 			abortControllerRef.current?.abort();
 			abortControllerRef.current = new AbortController();
@@ -81,12 +85,12 @@ export default function Courses() {
 
 			const response = await fetch(
 				`${BASE_API_URL}/courses?term=${term}&regStatus=all&department=${inputData.dept}&catalogNum=${inputData.catalogNum}&ge=${ge}&regStatus=${status}&meetingTimes=${time}`,
-				{ signal: abortControllerRef.current.signal }
+				{ signal: abortControllerRef.current.signal },
 			);
 			const data = await response.json();
 			setCourses(data);
 		} catch (error) {
-			if (error instanceof Error && error.name !== 'AbortError') {
+			if (error instanceof Error && error.name !== "AbortError") {
 				console.error("Failed to fetch courses:", error);
 			}
 		} finally {
@@ -95,12 +99,14 @@ export default function Courses() {
 	}
 
 	const getDetailedView = async (courseTerm: string, courseID: string) => {
-		const response = await fetch(`https://my.ucsc.edu/PSIGW/RESTListeningConnector/PSFT_CSPRD/SCX_CLASS_DETAIL.v1/${courseTerm}/${courseID}`);
+		const response = await fetch(
+			`https://my.ucsc.edu/PSIGW/RESTListeningConnector/PSFT_CSPRD/SCX_CLASS_DETAIL.v1/${courseTerm}/${courseID}`,
+		);
 		const data = await response.text();
 
 		setDetailedData(data);
 		if (isMobile) setShowDetails(true);
-	}
+	};
 
 	const onSearch = (query: string) => {
 		if (isFirstLoad) setFirstLoad(false);
@@ -108,83 +114,131 @@ export default function Courses() {
 		const inputData = parseInput(query);
 
 		fetchCourses(inputData);
-	}
+	};
 
-	const spacer = (<div style={{ height: '0px', margin: '30px 0' }}></div>)
+	const spacer = <div style={{ height: "0px", margin: "30px 0" }}></div>;
 
 	return (
 		<div className="courses-page">
 			<div className="topbar-container">
 				{isMobile ? <MobileTopBar /> : <DesktopTopBar />}
 			</div>
-			<div className="parent" style={{ flexDirection: isMobile ? 'column' : 'row', justifyContent: 'center' }}>
+			<div
+				className="parent"
+				style={{
+					flexDirection: isMobile ? "column" : "row",
+					justifyContent: "center",
+				}}
+			>
 				<div
 					className="contentLeft"
 					style={{
-						width: isMobile ? '100%' : '30%',
-						display: isMobile && showDetails ? 'none' : 'flex',
-						padding: isMobile ? '10px 0' : '10px'
+						width: isMobile ? "100%" : "30%",
+						display: isMobile && showDetails ? "none" : "flex",
+						padding: isMobile ? "10px 0" : "10px",
 					}}
 				>
-					<div className="search-wrapper" style={{
-						width: isMobile ? '90%' : '100%',
-						boxSizing: 'border-box',
-						paddingRight: isMobile ? '0' : '0px',
-						maxWidth: '100%',
-						marginTop: 60
-					}}>
-						<Search onSearch={onSearch}/>
-						<Filters isMobile={isMobile} selectedTerm={term} setTerm={setTerm} setGE={setGE} setTimes={setTimes} setStatus={setStatus} />
+					<div
+						className="search-wrapper"
+						style={{
+							width: isMobile ? "90%" : "100%",
+							boxSizing: "border-box",
+							paddingRight: isMobile ? "0" : "0px",
+							maxWidth: "100%",
+							marginTop: 60,
+						}}
+					>
+						<Search onSearch={onSearch} />
+						<Filters
+							isMobile={isMobile}
+							selectedTerm={term}
+							setTerm={setTerm}
+							setGE={setGE}
+							setTimes={setTimes}
+							setStatus={setStatus}
+						/>
 					</div>
 					{loading && <Loading />}
-					<div className="courseList" style={{
-						marginTop: isMobile ? '20px' : '30px',
-					}}>
-						{isFirstLoad ? <h3>Search for a course to get started!</h3> :
-						!courses || courses.length === 0 ? <h3>No results found</h3> :
-						courses.map((course: Course, index: number) => (
-							<div
-								style={{
-									// border: '5px solid green',
-									marginLeft: isMobile ? '20px' : '0px',
-									marginRight: isMobile ? '20px' : '0px',
-								}}>
-
-								<Card
-									key={index}
-									classStatus={course.status}
-									className={course.name}
-									instructor={course.instructor}
-									location={course.location}
-									time={course.time}
-									enrollment={course.enrolled}
-									summerSession={course.summer_session}
-									term={term}
-									classID={course.class_number}
-									onCardClick={(classTerm: string, classID: string) => {
-										setSelectedClassLink("https://pisa.ucsc.edu/class_search/" + course.link);
-										setSelectedClassModality(course.modality);
-										getDetailedView(classTerm, classID);
+					<div
+						className="courseList"
+						style={{
+							marginTop: isMobile ? "20px" : "30px",
+						}}
+					>
+						{isFirstLoad ? (
+							<h3>Search for a course to get started!</h3>
+						) : !courses || courses.length === 0 ? (
+							<h3>No results found</h3>
+						) : (
+							courses.map((course: Course, index: number) => (
+								<div
+									style={{
+										// border: '5px solid green',
+										marginLeft: isMobile ? "20px" : "0px",
+										marginRight: isMobile ? "20px" : "0px",
 									}}
-								/>
+								>
+									<Card
+										key={index}
+										classStatus={course.status}
+										className={course.name}
+										instructor={course.instructor}
+										location={course.location}
+										time={course.time}
+										enrollment={course.enrolled}
+										summerSession={course.summer_session}
+										term={term}
+										classID={course.class_number}
+										onCardClick={(
+											classTerm: string,
+											classID: string,
+										) => {
+											setSelectedClassLink(
+												"https://pisa.ucsc.edu/class_search/" +
+													course.link,
+											);
+											setSelectedClassModality(
+												course.modality,
+											);
+											getDetailedView(classTerm, classID);
+										}}
+									/>
 								</div>
 							))
-						}
+						)}
 					</div>
 				</div>
 				<div
 					className="contentRight"
 					style={{
-						display: (isMobile && !showDetails) ? 'none' : 'block',
+						display: isMobile && !showDetails ? "none" : "block",
 						// border: '5px solid green',
-						height: isMobile ? 'auto' : 'calc(100vh - 60px)',
-						minHeight: isMobile ? 'calc(100vh - 60px)' : 'auto',
+						height: isMobile ? "auto" : "calc(100vh - 60px)",
+						minHeight: isMobile ? "calc(100vh - 60px)" : "auto",
 					}}
 				>
 					{spacer}
-					{detailedData ? <DetailedView details={detailedData} modality={selectedClassModality} link={selectedClassLink} term={term} isMobile={isMobile} handleBack={() => {setShowDetails(false)}} /> :
-						<div style={{ width: '100%', height: 'calc(100% - 30px)', backgroundColor: 'var(--detailed-class-info-color)' }}></div>
-					}
+					{detailedData ? (
+						<DetailedView
+							details={detailedData}
+							modality={selectedClassModality}
+							link={selectedClassLink}
+							term={term}
+							isMobile={isMobile}
+							handleBack={() => {
+								setShowDetails(false);
+							}}
+						/>
+					) : (
+						<div
+							style={{
+								width: "100%",
+								height: "calc(100% - 30px)",
+								backgroundColor:
+									"var(--detailed-class-info-color)",
+							}}
+						></div>
+					)}
 				</div>
 			</div>
 		</div>

@@ -129,6 +129,9 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 				</div>
 
 				<div className="ClassTools">
+					{!isMobile &&
+<>
+
 					<button
 						onClick={() => {
 							const ics = generateIcs(details, term);
@@ -167,7 +170,7 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 								detailsObj.primary_section.class_nbr,
 								meeting,
 								term,
-								"Lecture"
+								"Lecture",
 							);
 
 							window.open(link, "_blank");
@@ -190,7 +193,9 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 							style={{ verticalAlign: "middle" }}
 						/>
 						View Source
-					</button>
+						</button>
+</>
+					}
 				</div>
 			</div>
 
@@ -435,25 +440,35 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 													alt="View in Pisa"
 													width="28"
 													height="28"
-													style={{ verticalAlign: "middle" }}
+													style={{
+														verticalAlign: "middle",
+													}}
 												/>
 												Download Calendar .ics
 											</button>
 
 											<button
 												onClick={() => {
-													const meeting = section.meetings?.[0];
+													const meeting =
+														section.meetings?.[0];
 													if (!meeting) return;
 
-													const link = generateGoogleCalendarLink(
-														detailsObj.primary_section.subject,
-														detailsObj.primary_section.catalog_nbr,
-														detailsObj.primary_section.title_long,
-														section.class_nbr,
-														meeting,
-														term,
-														"Section"
-													);
+													const link =
+														generateGoogleCalendarLink(
+															detailsObj
+																.primary_section
+																.subject,
+															detailsObj
+																.primary_section
+																.catalog_nbr,
+															detailsObj
+																.primary_section
+																.title_long,
+															section.class_nbr,
+															meeting,
+															term,
+															"Section",
+														);
 
 													window.open(link, "_blank");
 												}}
@@ -462,17 +477,21 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 													marginBottom: "8px",
 													padding: "6px 12px",
 													fontSize: "15px",
-												// 	marginTop: "8px",
-												// 	marginBottom: "8px",
-												// 	backgroundColor: "#007bff",
-												// 	color: "white",
-												// 	border: "none",
+													// 	marginTop: "8px",
+													// 	marginBottom: "8px",
+													// 	backgroundColor: "#007bff",
+													// 	color: "white",
+													// 	border: "none",
 													// borderRadius: "4px",
-												// 	cursor: "pointer",
-												// 	fontSize: "0.9rem",
+													// 	cursor: "pointer",
+													// 	fontSize: "0.9rem",
 												}}
 											>
-												<img src={GoogleCalendarIcon} width="28" height="28" />
+												<img
+													src={GoogleCalendarIcon}
+													width="28"
+													height="28"
+												/>
 												Add to Google Calendar
 											</button>
 										</div>
