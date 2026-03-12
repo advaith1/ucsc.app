@@ -300,7 +300,7 @@ export function generateGoogleCalendarLink(
 	const rrule = `RRULE:FREQ=WEEKLY;BYDAY=${byDay};UNTIL=${termDates.end}T235959`;
 
 	const instructorNames = meeting.instructors.map(i => i.name).join(", ");
-	const description = `Instructor: ${instructorNames}\nClass ID: ${classNbr}`;
+	const description = `Title: ${titleLong}\nInstructor: ${instructorNames}\nClass ID: ${classNbr}`;
 
 	const params = new URLSearchParams({
 		action: "TEMPLATE",
