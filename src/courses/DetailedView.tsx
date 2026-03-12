@@ -129,74 +129,150 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 				</div>
 
 				<div className="ClassTools">
-					{!isMobile &&
-<>
+					{!isMobile && (
+						<>
+							<button
+								onClick={() => {
+									const ics = generateIcs(details, term);
+									const blob = new Blob([ics], {
+										type: "text/calendar",
+									});
+									const url = URL.createObjectURL(blob);
+									const a = document.createElement("a");
+									a.href = url;
+									a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}.ics`;
+									a.click();
+									URL.revokeObjectURL(url);
+								}}
+								className="pisaButton"
+								title="Download calendar file"
+							>
+								<img
+									src={DownloadIcon}
+									alt="View in Pisa"
+									width="30"
+									height="30"
+									style={{ verticalAlign: "middle" }}
+								/>
+								Download Calendar .ics
+							</button>
 
-					<button
-						onClick={() => {
-							const ics = generateIcs(details, term);
-							const blob = new Blob([ics], {
-								type: "text/calendar",
-							});
-							const url = URL.createObjectURL(blob);
-							const a = document.createElement("a");
-							a.href = url;
-							a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}.ics`;
-							a.click();
-							URL.revokeObjectURL(url);
-						}}
-						className="pisaButton"
-						title="Download calendar file"
-					>
-						<img
-							src={DownloadIcon}
-							alt="View in Pisa"
-							width="30"
-							height="30"
-							style={{ verticalAlign: "middle" }}
-						/>
-						Download Calendar .ics
-					</button>
+							<button
+								onClick={() => {
+									const meeting = detailsObj.meetings?.[0];
+									if (!meeting) return;
 
-					<button
-						onClick={() => {
-							const meeting = detailsObj.meetings?.[0];
-							if (!meeting) return;
+									const link = generateGoogleCalendarLink(
+										detailsObj.primary_section.subject,
+										detailsObj.primary_section.catalog_nbr,
+										detailsObj.primary_section.title_long,
+										detailsObj.primary_section.class_nbr,
+										meeting,
+										term,
+										"Lecture",
+									);
 
-							const link = generateGoogleCalendarLink(
-								detailsObj.primary_section.subject,
-								detailsObj.primary_section.catalog_nbr,
-								detailsObj.primary_section.title_long,
-								detailsObj.primary_section.class_nbr,
-								meeting,
-								term,
-								"Lecture",
-							);
+									window.open(link, "_blank");
+								}}
+								className="pisaButton"
+							>
+								<img
+									src={GoogleCalendarIcon}
+									width="30"
+									height="30"
+								/>
+								Add to Google Calendar
+							</button>
 
-							window.open(link, "_blank");
-						}}
-						className="googlecalendarbutton"
-					>
-						<img src={GoogleCalendarIcon} width="30" height="30" />
-						Add to Google Calendar
-					</button>
-
-					<button
-						onClick={() => window.open(link, "_blank")}
-						className="pisaButton"
-					>
-						<img
-							src={ExternalLinkIcon}
-							alt="View in Pisa"
-							width="30"
-							height="30"
-							style={{ verticalAlign: "middle" }}
-						/>
-						View Source
-						</button>
-</>
-					}
+							<button
+								onClick={() => window.open(link, "_blank")}
+								className="pisaButton"
+							>
+								<img
+									src={ExternalLinkIcon}
+									alt="View in Pisa"
+									width="30"
+									height="30"
+									style={{ verticalAlign: "middle" }}
+								/>
+								View Source
+							</button>
+						</>
+					)}
 				</div>
+			</div>
+
+			<div className="ClassToolsMobile">
+				{isMobile &&
+					<>
+				<button
+					onClick={() => {
+						const ics = generateIcs(details, term);
+						const blob = new Blob([ics], {
+							type: "text/calendar",
+						});
+						const url = URL.createObjectURL(blob);
+						const a = document.createElement("a");
+						a.href = url;
+						a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}.ics`;
+						a.click();
+						URL.revokeObjectURL(url);
+					}}
+					className="pisaButton"
+					title="Download calendar file"
+				>
+					<img
+						src={DownloadIcon}
+						alt="View in Pisa"
+						width="30"
+						height="30"
+						style={{ verticalAlign: "middle" }}
+					/>
+					Download Calendar .ics
+				</button>
+
+				<button
+					onClick={() => {
+						const meeting = detailsObj.meetings?.[0];
+						if (!meeting) return;
+
+						const link = generateGoogleCalendarLink(
+							detailsObj.primary_section.subject,
+							detailsObj.primary_section.catalog_nbr,
+							detailsObj.primary_section.title_long,
+							detailsObj.primary_section.class_nbr,
+							meeting,
+							term,
+							"Lecture",
+						);
+
+						window.open(link, "_blank");
+					}}
+					className="pisaButton"
+				>
+					<img
+						src={GoogleCalendarIcon}
+						width="30"
+						height="30"
+					/>
+					Add to Google Calendar
+				</button>
+
+				<button
+					onClick={() => window.open(link, "_blank")}
+					className="pisaButton"
+				>
+					<img
+						src={ExternalLinkIcon}
+						alt="View in Pisa"
+						width="30"
+						height="30"
+						style={{ verticalAlign: "middle" }}
+					/>
+					View Source
+					</button>
+					</>
+				}
 			</div>
 
 			{detailsObj.primary_section && (

@@ -22,17 +22,6 @@
 	align-items: center;
 }
 
-.googlecalendarbutton {
-	padding: 8px 4px;
-	margin-left: 0.5rem;
-	background-color: var(--button-bg-color);
-	border-radius: 4px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	gap: 6px;
-}
-
 .section-card {
 	border-radius: 8px;
 	flex-wrap: nowrap;
@@ -52,13 +41,26 @@
 	display: flex;
 }
 
+.ClassToolsMobile {
+	/*border: 5px solid green;*/
+	display: flex;
+	font-size: '14px';
+	margin-top: 0.2rem;
+	margin-bottom: 0.8rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
 .SectionCalendarButtons {
 	display: grid;
 }
 
 .pisaButton {
 	padding: 8px 8px;
-	margin-left: 0.5rem;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+	margin-top: 0rem;
+	margin-bottom: 0rem;
 	/*color: chartreuse;*/
 	background-color: var(--button-bg-color);
 	border-radius: 4px;
