@@ -20,13 +20,13 @@ interface DetailedData {
 }
 
 const TERM_DATES: Record<string, { start: string; end: string }> = {
-	"2248": { start: "20240923", end: "20241213" }, // Fall 2024
-	"2250": { start: "20250106", end: "20250321" }, // Winter 2025
-	"2252": { start: "20250401", end: "20250607" }, // Spring 2025
-	"2254": { start: "20250707", end: "20250829" }, // Summer 2025
-	"2258": { start: "20250922", end: "20251212" }, // Fall 2025
-	"2260": { start: "20260105", end: "20260320" }, // Winter 2026
-	"2262": { start: "20260330", end: "20260612" }, // Spring 2026
+	"2248": { start: "20240923", end: "20241208" }, // Fall 2024
+	"2250": { start: "20250106", end: "20250316" }, // Winter 2025
+	"2252": { start: "20250401", end: "20250601" }, // Spring 2025
+	"2254": { start: "20250707", end: "20250823" }, // Summer 2025
+	"2258": { start: "20250922", end: "20251206" }, // Fall 2025
+	"2260": { start: "20260105", end: "20260314" }, // Winter 2026
+	"2262": { start: "20260330", end: "20260606" }, // Spring 2026
 };
 
 
@@ -105,7 +105,7 @@ function escapeIcsText(text: string): string {
 		.replace(/\n/g, "\\n");
 }
 
-// Generate ICS for a specific section with its meetings
+
 export function generateIcsForSection(
 	subject: string,
 	catalogNum: string,
@@ -259,4 +259,66 @@ END:VEVENT
 	icsContent += "END:VCALENDAR";
 
 	return icsContent;
+}
+
+export function generateGoogleCalendarLink(
+	title: string,
+	start: string,
+	end: string,
+	location: string,
+	description: string,
+	rrule?: string
+) {
+	const base = "https://calendar.google.com/calendar/render?action=TEMPLATE";
+
+	const params = new URLSearchParams({
+		text: title,
+		dates: `${start}/${end}`,
+		location,
+		details: description
+	});
+
+	if (rrule) {
+		params.append("recur", rrule);
+	}
+
+	return `${base}&${params.toString()}`;
+}
+
+export function generateGoogleCalendarLinkForMeeting(
+	subject: string,
+	catalogNum: string,
+	titleLong: string,
+	classNbr: string,
+	meeting: Meeting,
+	term: string
+) {
+	const termDates = TERM_DATES[term];
+	if (!termDates) return "";
+
+	const title = `${subject}-${catalogNum}: ${titleLong}`;
+
+	const startTime = parseTime(meeting.start_time);
+	const endTime = parseTime(meeting.end_time);
+	const firstMeetingDate = getFirstMeetingDate(termDates.start, meeting.days);
+
+	const start = `${firstMeetingDate}T${startTime}`;
+	const end = `${firstMeetingDate}T${endTime}`;
+
+	const byDay = daysToBYDAY(meeting.days);
+	const rrule = `RRULE:FREQ=WEEKLY;BYDAY=${byDay};UNTIL=${termDates.end}T235959`;
+
+	const instructorNames = meeting.instructors.map(i => i.name).join(", ");
+	const description = `Instructor: ${instructorNames}\nClass ID: ${classNbr}`;
+
+	const params = new URLSearchParams({
+		action: "TEMPLATE",
+		text: title,
+		dates: `${start}/${end}`,
+		location: meeting.location,
+		details: description,
+		recur: rrule
+	});
+
+	return `https://calendar.google.com/calendar/render?${params.toString()}`;
 }
