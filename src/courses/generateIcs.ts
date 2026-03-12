@@ -105,6 +105,86 @@ function escapeIcsText(text: string): string {
 		.replace(/\n/g, "\\n");
 }
 
+// Generate ICS for a specific section with its meetings
+export function generateIcsForSection(
+	subject: string,
+	catalogNum: string,
+	titleLong: string,
+	classNbr: string,
+	meetings: Meeting[],
+	term: string
+): string {
+	if (meetings.length === 0) {
+		return "";
+	}
+
+	const termDates = TERM_DATES[term];
+	const courseName = `${subject}-${catalogNum}`;
+	const courseTitle = titleLong;
+	const classId = classNbr;
+
+	let icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ucsc.app//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+`;
+
+	meetings.forEach((meeting: Meeting) => {
+		const startTime = parseTime(meeting.start_time);
+		const endTime = parseTime(meeting.end_time);
+		const byDay = daysToBYDAY(meeting.days);
+
+		let dtstart: string;
+		let dtend: string;
+		let rrule = "";
+
+		if (termDates) {
+			const firstMeetingDate = getFirstMeetingDate(termDates.start, meeting.days);
+			dtstart = `${firstMeetingDate}T${startTime}`;
+			dtend = `${firstMeetingDate}T${endTime}`;
+			rrule = `\nRRULE:FREQ=WEEKLY;BYDAY=${byDay};UNTIL=${termDates.end}T235959`;
+		} else {
+			dtstart = `${new Date().getFullYear()}0101T${startTime}`;
+			dtend = `${new Date().getFullYear()}0101T${endTime}`;
+		}
+
+		const instructorNames = meeting.instructors.map(i => i.name).join(", ");
+		const description = `Instructor: ${instructorNames}\nClass ID: ${classId}`;
+
+		icsContent += `BEGIN:VEVENT
+UID:${classId}-${meeting.days}@ucsc.app
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z
+DTSTART;TZID=America/Los_Angeles:${dtstart}
+DTEND;TZID=America/Los_Angeles:${dtend}${rrule}
+SUMMARY:${escapeIcsText(`${courseName}: ${courseTitle}`)}
+LOCATION:${escapeIcsText(meeting.location)}
+DESCRIPTION:${escapeIcsText(description)}
+END:VEVENT
+`;
+	});
+
+	icsContent += "END:VCALENDAR";
+
+	return icsContent;
+}
+
 export function generateIcs(detailsJson: string, term: string): string {
 	const detailsObj: DetailedData = JSON.parse(detailsJson);
 	const meetings = detailsObj.meetings || [];

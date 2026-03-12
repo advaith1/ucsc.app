@@ -3,7 +3,7 @@ import './styles/DetailedView.css';
 import {statusEmoji} from "./StatusEmoji";
 import ExternalLinkIcon from '/icons/external-link.svg';
 import BackIcon from '/icons/back-arrow.svg';
-import { generateIcs } from "./generateIcs";
+import { generateIcs, generateIcsForSection } from "./generateIcs";
 
 interface Instructor {
 	name: string;
@@ -186,6 +186,37 @@ const DetailedView: React.FC<DetailedViewProps> = ({ details, modality, link, te
                                             <p style={{ margin: '2px 0' }}><strong>Location:</strong> {meeting.location}</p>
                                         </div>
                                     ))}
+                                    <button
+                                        onClick={() => {
+                                            const ics = generateIcsForSection(
+                                                detailsObj.primary_section.subject,
+                                                detailsObj.primary_section.catalog_nbr,
+                                                detailsObj.primary_section.title_long,
+                                                section.class_nbr,
+                                                section.meetings || [],
+                                                term
+                                            );
+                                            const blob = new Blob([ics], { type: 'text/calendar' });
+                                            const url = URL.createObjectURL(blob);
+                                            const a = document.createElement('a');
+                                            a.href = url;
+                                            a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}-${section.class_nbr}.ics`;
+                                            a.click();
+                                            URL.revokeObjectURL(url);
+                                        }}
+                                        style={{
+                                            marginTop: '8px',
+                                            padding: '6px 12px',
+                                            backgroundColor: '#007bff',
+                                            color: 'white',
+                                            border: 'none',
+                                            borderRadius: '4px',
+                                            cursor: 'pointer',
+                                            fontSize: '0.9rem'
+                                        }}
+                                    >
+                                        Add to Calendar
+                                    </button>
                                 </div>
                             </div>
                         );
