@@ -6,7 +6,7 @@ import GoogleCalendarIcon from "/icons/Google_Calendar_icon.png";
 import DownloadIcon from "/icons/downlaod2.png";
 import BackIcon from "/icons/back-arrow.svg";
 import { generateIcs, generateIcsForSection } from "./generateIcs";
-import { generateGoogleCalendarLinkForMeeting } from "./generateIcs";
+import { generateGoogleCalendarLink } from "./generateIcs";
 
 interface Instructor {
 	name: string;
@@ -160,13 +160,14 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 							const meeting = detailsObj.meetings?.[0];
 							if (!meeting) return;
 
-							const link = generateGoogleCalendarLinkForMeeting(
+							const link = generateGoogleCalendarLink(
 								detailsObj.primary_section.subject,
 								detailsObj.primary_section.catalog_nbr,
 								detailsObj.primary_section.title_long,
 								detailsObj.primary_section.class_nbr,
 								meeting,
 								term,
+								"Lecture"
 							);
 
 							window.open(link, "_blank");
@@ -444,13 +445,14 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 													const meeting = section.meetings?.[0];
 													if (!meeting) return;
 
-													const link = generateGoogleCalendarLinkForMeeting(
+													const link = generateGoogleCalendarLink(
 														detailsObj.primary_section.subject,
 														detailsObj.primary_section.catalog_nbr,
 														detailsObj.primary_section.title_long,
 														section.class_nbr,
 														meeting,
 														term,
+														"Section"
 													);
 
 													window.open(link, "_blank");

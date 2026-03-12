@@ -274,42 +274,20 @@ END:VEVENT
 	return icsContent;
 }
 
+
 export function generateGoogleCalendarLink(
-	title: string,
-	start: string,
-	end: string,
-	location: string,
-	description: string,
-	rrule?: string
-) {
-	const base = "https://calendar.google.com/calendar/render?action=TEMPLATE";
-
-	const params = new URLSearchParams({
-		text: title,
-		dates: `${start}/${end}`,
-		location,
-		details: description
-	});
-
-	if (rrule) {
-		params.append("recur", rrule);
-	}
-
-	return `${base}&${params.toString()}`;
-}
-
-export function generateGoogleCalendarLinkForMeeting(
 	subject: string,
 	catalogNum: string,
 	titleLong: string,
 	classNbr: string,
 	meeting: Meeting,
-	term: string
+	term: string,
+	sectionOrLecture: string
 ) {
 	const termDates = TERM_DATES[term];
 	if (!termDates) return "";
 
-	const title = `${subject}-${catalogNum}: ${titleLong}`;
+	const title = `${subject} ${catalogNum} - ${sectionOrLecture}`;
 
 	const startTime = parseTime(meeting.start_time);
 	const endTime = parseTime(meeting.end_time);
