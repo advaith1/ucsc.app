@@ -8,6 +8,7 @@ import { Context } from './Context.tsx';
 
 import Courses from './courses/Courses.tsx';
 import { useEffect, useState } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 
 import LiveClassesMapPage from './liveclasses/LiveClassesMapPage.tsx';
 
@@ -47,18 +48,20 @@ function App() {
 	}
 
 	return (
-		<Context.Provider value={contextValues}>
-			<BrowserRouter>
-				{/* <SubdomainRouter /> */}
-				<Routes>
-					<Route path='/' element={<Dashboard />} />
-					<Route path='/news' element={<RssFeed />} />
-					<Route path='/courses' element={<Courses />} />
-					<Route path='/menu' element={<MenuPage />} />
-					<Route path='/liveclasses' element={<LiveClassesMapPage />} />
-				</Routes>
-			</BrowserRouter>
-		</Context.Provider>
+		<HelmetProvider>
+			<Context.Provider value={contextValues}>
+				<BrowserRouter>
+					{/* <SubdomainRouter /> */}
+					<Routes>
+						<Route path='/' element={<Dashboard />} />
+						<Route path='/news' element={<RssFeed />} />
+						<Route path='/courses' element={<Courses />} />
+						<Route path='/menu' element={<MenuPage />} />
+						<Route path='/liveclasses' element={<LiveClassesMapPage />} />
+					</Routes>
+				</BrowserRouter>
+			</Context.Provider>
+		</HelmetProvider>
 	);
 }
 

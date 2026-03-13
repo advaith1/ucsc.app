@@ -9,6 +9,7 @@ import './Menu.css'
 import '../components/loading/Loading.css';
 import {Error, Loading} from "../components/loading/Loading";
 import {useContext, useEffect, useState} from "react";
+import { usePageMeta } from "../hooks/usePageMeta.tsx";
 
 const dayOffsetCount = 7; // Number of days to fetch menus for
 
@@ -17,6 +18,15 @@ export default function MenuPage() {
     const [menuData, setMenuData] = useState<Record<number, Record<string, Menu>>>({});
     const [loading, setLoading] = useState(true);
     const [error] = useState(false);
+
+    usePageMeta({
+        title: 'Dining & Menu',
+        description: 'Explore UC Santa Cruz dining options and meal menus. Check what\'s available at all campus dining locations.',
+        keywords: 'UCSC dining, campus menu, dining options, food services, UC Santa Cruz',
+        ogUrl: 'https://ucsc.app/menu',
+        canonical: 'https://ucsc.app/menu',
+    });
+
     useEffect(() => {
         const abortController = new AbortController();
         

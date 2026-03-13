@@ -8,6 +8,7 @@ import "./styles/Courses.css";
 import Filters from "./Filters.tsx";
 import { BASE_API_URL } from "../constants.ts";
 import { Loading } from "../components/loading/Loading.tsx";
+import { usePageMeta } from "../hooks/usePageMeta.tsx";
 
 import "./styles/Courses.css";
 
@@ -74,6 +75,14 @@ export default function Courses() {
 	const [time, setTimes] = useState<string>("");
 
 	const abortControllerRef = useRef<AbortController | null>(null);
+
+	usePageMeta({
+		title: 'Courses',
+		description: 'Search and register for UC Santa Cruz courses. Find classes by department, catalog number, time, and more.',
+		keywords: 'UCSC courses, course search, course registration, UC Santa Cruz classes',
+		ogUrl: 'https://ucsc.app/courses',
+		canonical: 'https://ucsc.app/courses',
+	});
 
 	async function fetchCourses(inputData: {
 		dept: string;

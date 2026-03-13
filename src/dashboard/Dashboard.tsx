@@ -2,12 +2,21 @@ import {TopBar as MobileTopBar} from "../components/navbar/mobile/TopBar";
 import {TopBar as DesktopTopBar} from "../components/navbar/desktop/TopBar";
 import {useContext} from "react";
 import { Context } from "../Context";
+import { usePageMeta } from "../hooks/usePageMeta.tsx";
 // import { useNavigate } from "react-router";
 import './Dashboard.css';
 
 export default function Dashboard() {
     const contextValues = useContext(Context);
     // const navigate = useNavigate();
+
+    usePageMeta({
+        title: 'Home',
+        description: 'Your all-in-one student platform for UC Santa Cruz. Discover courses, explore dining options, view campus schedules, and stay updated with campus news.',
+        keywords: 'UCSC, courses, dining, schedule, campus news, UC Santa Cruz',
+        ogUrl: 'https://ucsc.app/',
+        canonical: 'https://ucsc.app/',
+    });
 
     return (
         <div className="dashboard-container">

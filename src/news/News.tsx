@@ -8,6 +8,7 @@ import { Context } from "../Context";
 import NewsSidebar from "./NewsSidebar";
 import NewsFilter from "./NewsFilter";
 import { Loading } from "../components/loading/Loading";
+import { usePageMeta } from "../hooks/usePageMeta.tsx";
 import "./News.css";
 
 type FeedItem = {
@@ -33,6 +34,14 @@ const FEEDS = [
 
 export default function RssFeed() {
 	const ctx = useContext(Context);
+
+	usePageMeta({
+		title: 'Campus News',
+		description: 'Stay updated with UC Santa Cruz campus news. Browse articles about campus life, events, research, and student experience.',
+		keywords: 'UCSC news, campus news, UC Santa Cruz updates, student experience',
+		ogUrl: 'https://ucsc.app/news',
+		canonical: 'https://ucsc.app/news',
+	});
 
 	const [selectedFeeds, setSelectedFeeds] = useState<string[]>(() => {
 		const storedFeeds = localStorage.getItem("selectedFeeds");
