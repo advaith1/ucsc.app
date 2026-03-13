@@ -1,0 +1,18 @@
+# UCSC.app robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://ucsc.app/sitemap.xml
+
+# Crawl delay (optional - in seconds)
+Crawl-delay: 1
