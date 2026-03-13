@@ -13,7 +13,7 @@ export default function NavBarButtons({onClick}: NavBarButtonProps) {
 	return (
 		Object.entries(topBarButtons).map(([name, path]) => (
 			<Link
-				key={Math.random() * 1000} // replace later
+				key={path}
 				to={path.replace(/ /g, '')}
 				style={{
 					textDecoration: 'none',

@@ -1,0 +1,22 @@
+{
+  "name": "UCSC.app - UC Santa Cruz Student Platform",
+  "short_name": "UCSC.app",
+  "description": "Your all-in-one student platform for UC Santa Cruz. Discover courses, explore dining options, view campus schedules, and stay updated with campus news.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#003c6c",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "utilities"],
+  "lang": "en-US",
+  "scope": "/",
+  "screenshots": []
+}
