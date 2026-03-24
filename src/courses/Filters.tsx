@@ -1,14 +1,12 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState, useContext} from "react";
 import {BASE_API_URL} from "../constants";
-// import {data, data} from "react-router";
+import { CourseContext } from "./Courses";
 
 import './styles/Filters.css';
 
 interface FilterProps {
     isMobile?: boolean,
 
-    selectedTerm: string,
-    setTerm: (term: string) => void,
     setGE: (ge: string) => void,
     setStatus: (status: string) => void,
     setTimes: (times: string) => void,
@@ -19,15 +17,12 @@ async function getTermOptions() {
 
     let data = await response.json();
 
-    data = data.map((term: Record<string, string>) => {
+    return data.map((term: Record<string, string>) => {
         return {
             label: term.label.replace('Quarter', '').trim(),
             value: term.value
         }
-    });
-
-    const latestQuarters = data.slice(0, 8); // Get only the latest 8 quarters
-    return latestQuarters;
+    }).slice(0, 8); // Get only the latest 8 quarters
 }
 
 const fallbackTerms = [
@@ -38,18 +33,19 @@ const fallbackTerms = [
 
 ];
 
-export default function Filters({ selectedTerm, setTerm, setGE, setStatus, setTimes }: FilterProps) {
-
+export default function Filters({ setGE, setStatus, setTimes }: FilterProps) {
     const [termOptions, setTermOptions] = useState<Array<Record<string, string>>>(fallbackTerms);
+	const courseCtx = useContext(CourseContext);
 
     useEffect(() => {
         (async () => {
             const options = await getTermOptions();
             setTermOptions(options);
-            setTerm(options[0].value);
+			console.log(options)
+            courseCtx!.setTerm(options[0].value);
         })();
 
-    }, [ setTerm ]);
+    }, [courseCtx!.setTerm]);
 
     return (
 		<div className="filters">
@@ -60,9 +56,9 @@ export default function Filters({ selectedTerm, setTerm, setGE, setStatus, setTi
                 id="quarter"
                 className="dropdown"
                 style={{ width: 'calc(30% - 3px)' }}
-                value={selectedTerm}
+                value={courseCtx!.term}
                 onChange={(e) => {
-                    setTerm(e.target.value);
+                    courseCtx!.setTerm(e.target.value);
                 }}
             >
                 {termOptions.map((termOption: Record<string, string>, idx: number) => (

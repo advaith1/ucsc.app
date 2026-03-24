@@ -70,9 +70,9 @@ export default function Dashboard() {
 
 						<button
 							className="hero-cta"
-							onClick={() => navigate("/liveclasses")}
+							onClick={() => navigate("/schedule")}
 						>
-							<Link to="/liveclasses">(New!) Live Classes →</Link>
+							<Link to="/schedule">(New!) Class Map →</Link>
 						</button>
 					</div>
 				</div>

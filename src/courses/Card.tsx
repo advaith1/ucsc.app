@@ -20,49 +20,44 @@ import { Icon } from "../components/Icon";
 import { statusEmoji } from "./StatusEmoji";
 import { useContext } from "react";
 import { Context } from "../Context";
+import { Course } from "../types";
 
 interface CardProps {
-    classStatus: string,
-    className: string,
-    instructor: string,
-    location: string,
-    time: string,
-    enrollment: string,
-    summerSession: string | null,
+    course: Course
 
     // used in callback
     term: string,
-    classID: string,
+    // classID: string,
     onCardClick: (term: string, classID: string) => void
 }
 
-const Card: React.FC<CardProps> = ({ classStatus, className, instructor, location, time, enrollment, summerSession, term, classID, onCardClick }) => {
+const Card: React.FC<CardProps> = ({ course, term, onCardClick }) => {
     const ctx = useContext(Context);
 	
 	return (
-        <article className="cardParent" onClick={() => { onCardClick(term, classID) }}>
+        <article className="cardParent" onClick={() => { console.log(course); onCardClick(term, course.class_number) }}>
             <div className="card">
                 <div className="classInfo">
                     <div style={{display: "flex", width: "100%"}}>
                         <p style={{ margin: '-2px 0', textAlign: "left", width: "100%", overflowWrap: "break-word" }}>
-                            <span style={{ fontWeight: '600' }}>{statusEmoji(classStatus)} {className}</span>
+                            <span style={{ fontWeight: '600' }}>{statusEmoji(course.status)} {course.name}</span>
                         </p>
                     </div>
                     {ctx!.theme === 'dark' ? (
                         <>
-                            <Icon svg={SinglePersonIconDarkMode} data={instructor} />
-                            <Icon svg={MapIconDarkMode} data={location} />
-                            {time && <Icon svg={ClockIconDarkMode} data={time} />}
-                            <Icon svg={MultiplePeopleIconDarkMode} data={enrollment} />
-                            {summerSession && <Icon svg={SunIconDarkMode} data={summerSession} />}
+                            <Icon svg={SinglePersonIconDarkMode} data={course.instructor} />
+                            <Icon svg={MapIconDarkMode} data={course.location} />
+                            {course.time && <Icon svg={ClockIconDarkMode} data={course.time} />}
+                            <Icon svg={MultiplePeopleIconDarkMode} data={course.enrolled} />
+                            {course.summerSession && <Icon svg={SunIconDarkMode} data={course.summerSession} />}
                         </>
                     ) : (
                         <>
-                            <Icon svg={SinglePersonIconLightMode} data={instructor} />
-                            <Icon svg={MapIconLightMode} data={location} />
-                            {time && <Icon svg={ClockIconLightMode} data={time} />}
-                            <Icon svg={MultiplePeopleIconLightMode} data={enrollment} />
-                            {summerSession && <Icon svg={SunIconLightMode} data={summerSession} />}
+                            <Icon svg={SinglePersonIconLightMode} data={course.instructor} />
+                            <Icon svg={MapIconLightMode} data={course.location} />
+                            {course.time && <Icon svg={ClockIconLightMode} data={course.time} />}
+                            <Icon svg={MultiplePeopleIconLightMode} data={course.enrolled} />
+                            {course.summerSession && <Icon svg={SunIconLightMode} data={course.summerSession} />}
                         </>
                     )}
                 </div>

@@ -1,81 +1,49 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext, createContext } from "react";
 import { TopBar as MobileTopBar } from "../components/navbar/mobile/TopBar.tsx";
 import { TopBar as DesktopTopBar } from "../components/navbar/desktop/TopBar.tsx";
-import Card from "./Card";
 import DetailedView from "./DetailedView";
-import Search from "./Search.tsx";
-import "./styles/Courses.css";
-import Filters from "./Filters.tsx";
-import { BASE_API_URL } from "../constants.ts";
-import { Loading } from "../components/loading/Loading.tsx";
+import CourseSearchPanel from "./CourseSearchPanel.tsx";
 import { usePageMeta } from "../hooks/usePageMeta.tsx";
 import { generateCourseSchema } from "../utils/schema";
-
+import { Context } from "../Context.tsx";
+import { Course } from "../types";
+import { DetailedClassInfo } from "../types";
 import "./styles/Courses.css";
 
-interface Course {
-	status: string;
-	link: string;
-	name: string;
-	class_number: string;
-	enrolled: string;
-	instructor: string;
-	location: string;
-	modality: string;
-	summer_session: string | null;
-	time: string;
+interface CourseContextType {
+	getDetailedView: (courseTerm: string, courseID: string) => void,
+	setSelectedClassModality: (m: string) => void,
+	setSelectedClassLink: (l: string) => void,
+	term: string,
+	setTerm: (t: string) => void
 }
 
-const useMediaQuery = (query: string) => {
-	const [matches, setMatches] = useState(window.matchMedia(query).matches);
+export const CourseContext = createContext<CourseContextType | null>(null);
 
-	useEffect(() => {
-		const media = window.matchMedia(query);
-		const listener = () => setMatches(media.matches);
-		media.addEventListener("change", listener);
-		return () => media.removeEventListener("change", listener);
-	}, [query]);
-
-	return matches;
-};
-
-function parseInput(query: string) {
-	const results = {
-		dept: "",
-		catalogNum: "",
-	};
-
-	if (query.length == 0) return results;
-
-	const deptExtractor = new RegExp("^([a-zA-Z]{3,4})");
-	const deptResults = deptExtractor.exec(query);
-	if (deptResults) results["dept"] = deptResults[0].toUpperCase();
-
-	const catalogNumExtractor = new RegExp("([0-9]{1,3}[a-zA-Z]?)");
-	const cnumResults = catalogNumExtractor.exec(query);
-	if (cnumResults) results["catalogNum"] = cnumResults[0].toUpperCase();
-
-	return results;
-}
 
 export default function Courses() {
-	const [courses, setCourses] = useState<Course[]>([]);
-	const [loading, setLoading] = useState(false);
-	const isMobile = useMediaQuery("(max-width: 768px)");
-	const [detailedData, setDetailedData] = useState<string | null>(null);
-	const [selectedClassModality, setSelectedClassModality] =
-		useState<string>("");
+	const ctx = useContext(Context);
+	const courseCtx = useContext(CourseContext);
+
+
+	// const [courses, setCourses] = useState<Course[]>([]);
+	// const [loading, setLoading] = useState(false);
+	// const isMobile = useMediaQuery("(max-width: 768px)");
+	const [detailedData, setDetailedData] = useState<DetailedClassInfo>({} as unknown as DetailedClassInfo);
+	const [selectedClassModality, setSelectedClassModality] = useState<string>("");
 	const [selectedClassLink, setSelectedClassLink] = useState<string>("");
 
 	const [showDetails, setShowDetails] = useState(false);
 	const [isFirstLoad, setFirstLoad] = useState<boolean>(true);
-
+	const [selectedCourse, setSelectedCourse] = useState<Course>();
 	const [term, setTerm] = useState<string>("");
-	const [ge, setGE] = useState<string>("");
-	const [status, setStatus] = useState<string>("all");
-	const [time, setTimes] = useState<string>("");
 
-	const abortControllerRef = useRef<AbortController | null>(null);
+
+	// const [ge, setGE] = useState<string>("");
+	// const [status, setStatus] = useState<string>("all");
+	// const [time, setTimes] = useState<string>("");
+
+	// const abortControllerRef = useRef<AbortController | null>(null);
 
 	const courseSchema = generateCourseSchema(
 		'Find UCSC Courses',
@@ -91,188 +59,66 @@ export default function Courses() {
 		schema: courseSchema,
 	});
 
-	async function fetchCourses(inputData: {
-		dept: string;
-		catalogNum: string;
-	}) {
-		try {
-			abortControllerRef.current?.abort();
-			abortControllerRef.current = new AbortController();
-
-			setLoading(true);
-
-			const params = new URLSearchParams({
-				term,
-				regStatus: status,
-				department: inputData.dept,
-				catalogNum: inputData.catalogNum,
-				ge,
-				meetingTimes: time,
-			});
-			const response = await fetch(
-				`${BASE_API_URL}/courses?${params}`,
-				{ signal: abortControllerRef.current.signal },
-			);
-			const data = await response.json();
-			setCourses(data);
-		} catch (error) {
-			if (error instanceof Error && error.name !== "AbortError") {
-				// Handle fetch error silently
-			}
-		} finally {
-			setLoading(false);
-		}
-	}
-
 	const getDetailedView = async (courseTerm: string, courseID: string) => {
 		const response = await fetch(
 			`https://my.ucsc.edu/PSIGW/RESTListeningConnector/PSFT_CSPRD/SCX_CLASS_DETAIL.v1/${courseTerm}/${courseID}`,
 		);
-		const data = await response.text();
-
+		const data = await response.json();
 		setDetailedData(data);
-		if (isMobile) setShowDetails(true);
+		if (ctx!.mobile) setShowDetails(true);
 	};
 
-	const onSearch = (query: string) => {
-		if (isFirstLoad) setFirstLoad(false);
-
-		const inputData = parseInput(query);
-
-		fetchCourses(inputData);
-	};
 
 	const spacer = <div style={{ height: "0px", margin: "30px 0" }}></div>;
 
+	const courseCtxValues = {
+		getDetailedView,
+		setSelectedClassModality,
+		setSelectedClassLink,
+		term,
+		setTerm
+	}
+
+	const detailedViewStyle = ctx!.mobile ? {
+		flex: undefined,
+		position: "absolute" as const,
+		width: "100%",
+		display: showDetails ? "block" : "none"
+	} : {
+		flex: 15,
+		position: "static" as const,
+		width: "auto",
+		display: "block"
+	}
+
 	return (
-		<main className="courses-page">
+		<CourseContext.Provider value={courseCtxValues}>
 			<div className="topbar-container">
-				{isMobile ? <MobileTopBar /> : <DesktopTopBar />}
+				{ctx!.mobile ? <MobileTopBar /> : <DesktopTopBar />}
 			</div>
-			<main
-				className="parent"
-				style={{
-					flexDirection: isMobile ? "column" : "row",
-					justifyContent: "center",
-					// border: '5px solid green',
-				}}
-			>
-				<section
-					className="contentLeft"
-					style={{
-						width: isMobile ? "100%" : "30%",
-						display: isMobile && showDetails ? "none" : "flex",
-						padding: isMobile ? "10px 0" : "10px",
-						// border: '5px solid green',
-					}}
-				>
-					<div
-						className="search-wrapper"
-						style={{
-							// border: '5px solid green',
-							width: isMobile ? "80%" : "100%",
-							boxSizing: "border-box",
-							paddingRight: isMobile ? "0" : "0px",
-							maxWidth: "100%",
-							marginTop: 60,
-						}}
-					>
-						<Search onSearch={onSearch} />
-						<Filters
-							isMobile={isMobile}
-							selectedTerm={term}
-							setTerm={setTerm}
-							setGE={setGE}
-							setTimes={setTimes}
-							setStatus={setStatus}
-						/>
-					</div>
-					{loading && <Loading />}
-					<div
-						className="courseList"
-						style={{
-							marginTop: isMobile ? "20px" : "30px",
-						}}
-					>
-						{isFirstLoad ? (
-							<>
-								<p>Search to get started!</p>
-								<p>E.g. "CSE 130"</p>
-							</>
-						) : !courses || courses.length === 0 ? (
-							<p>No results found</p>
-						) : (
-							courses.map((course: Course, index: number) => (
-								<div
-									style={{
-										// border: '5px solid green',
-										marginLeft: isMobile ? "20px" : "0px",
-										marginRight: isMobile ? "20px" : "0px",
-									}}
-								>
-									<Card
-										key={index}
-										classStatus={course.status}
-										className={course.name}
-										instructor={course.instructor}
-										location={course.location}
-										time={course.time}
-										enrollment={course.enrolled}
-										summerSession={course.summer_session}
-										term={term}
-										classID={course.class_number}
-										onCardClick={(
-											classTerm: string,
-											classID: string,
-										) => {
-											setSelectedClassLink(
-												"https://pisa.ucsc.edu/class_search/" +
-													course.link,
-											);
-											setSelectedClassModality(
-												course.modality,
-											);
-											getDetailedView(classTerm, classID);
-										}}
-									/>
-								</div>
-							))
-						)}
-					</div>
-				</section>
+
+			<div className="coursesParent">
 				<div
-					className="contentRight"
+					className="searchPanelParent"
 					style={{
-						display: isMobile && !showDetails ? "none" : "block",
-						// border: '5px solid green',
-						height: isMobile ? "auto" : "calc(100vh - 60px)",
-						minHeight: isMobile ? "calc(100vh - 60px)" : "auto",
-					}}
-				>
-					{spacer}
-					{detailedData ? (
-						<DetailedView
-							details={detailedData}
-							modality={selectedClassModality}
-							link={selectedClassLink}
-							term={term}
-							isMobile={isMobile}
-							handleBack={() => {
-								setShowDetails(false);
-							}}
-						/>
-					) : (
-						<div
-							style={{
-								width: "100%",
-								height: "calc(100% - 30px)",
-								backgroundColor:
-									"var(--detailed-class-info-color)",
-							}}
-						></div>
-					)}
+						flex: ctx!.mobile ? 1 : 7,
+						display: ctx!.mobile && showDetails ? "none" : "block"
+					}}>
+					<CourseSearchPanel />
 				</div>
-			</main>
-		</main>
-	);
+
+				<div
+					className="detailedViewParent"
+					style={detailedViewStyle}>
+					<DetailedView
+						details={detailedData}
+						modality={selectedClassModality}
+						link={selectedClassLink}
+						term={term}
+						handleBack={() => setShowDetails(false)}
+					/>
+				</div>
+			</div>
+		</CourseContext.Provider>
+	)
 }

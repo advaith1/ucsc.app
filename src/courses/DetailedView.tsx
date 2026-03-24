@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./styles/DetailedView.css";
 import { statusEmoji } from "./StatusEmoji";
 import ExternalLinkIcon from "/icons/external-link.svg";
@@ -7,43 +7,44 @@ import DownloadIcon from "/icons/downlaod2.png";
 import BackIcon from "/icons/back-arrow.svg";
 import { generateIcs, generateIcsForSection } from "./generateIcs";
 import { generateGoogleCalendarLink } from "./generateIcs";
+import { DetailedClassInfo } from "../types";
+import { Context } from "../Context";
 
-interface Instructor {
-	name: string;
-}
+// interface Instructor {
+// 	name: string;
+// }
 
-interface Meeting {
-	days: string;
-	start_time: string;
-	end_time: string;
-	location: string;
-	instructors: Instructor[];
-}
+// interface Meeting {
+// 	days: string;
+// 	start_time: string;
+// 	end_time: string;
+// 	location: string;
+// 	instructors: Instructor[];
+// }
 
-interface Section {
-	subject: string;
-	catalog_nbr: string;
-	title_long: string;
-	enrl_status: string;
-	enrl_total: number;
-	capacity: number;
-	waitlist_total: number;
-	waitlist_capacity: number;
-	credits: string;
-	gened?: string;
-	class_nbr: string;
-	acad_career: string;
-	description?: string;
-	requirements?: string;
-	meetings?: Meeting[];
-}
+// interface Section {
+// 	subject: string;
+// 	catalog_nbr: string;
+// 	title_long: string;
+// 	enrl_status: string;
+// 	enrl_total: number;
+// 	capacity: number;
+// 	waitlist_total: number;
+// 	waitlist_capacity: number;
+// 	credits: string;
+// 	gened?: string;
+// 	class_nbr: string;
+// 	acad_career: string;
+// 	description?: string;
+// 	requirements?: string;
+// 	meetings?: Meeting[];
+// }
 
 interface DetailedViewProps {
-	details: string;
+	details: DetailedClassInfo;
 	modality: string;
 	link: string;
 	term: string;
-	isMobile?: boolean;
 	handleBack: () => void;
 }
 
@@ -65,40 +66,42 @@ function classDetailsGridEntry(title: string, content: string) {
 	);
 }
 
-const DetailedView: React.FC<DetailedViewProps> = ({
-	details,
-	modality,
-	link,
-	term,
-	isMobile,
-	handleBack,
-}) => {
-	const detailsObj = JSON.parse(details);
+// function downloadICSFile(details: DetailedClassInfo, term: string) {
+// 	const ics = generateIcs(details, term);
+// 	const blob = new Blob([ics], {
+// 		type: "text/calendar",
+// 	});
+// 	const url = URL.createObjectURL(blob);
+// 	const a = document.createElement("a");
+// 	a.href = url;
+// 	a.download = `${details.primary_section.subject}-${details.primary_section.catalog_nbr}.ics`;
+// 	a.click();
+// 	URL.revokeObjectURL(url);
+// }
+
+const DetailedView: React.FC<DetailedViewProps> = ({ details, modality, link, term, handleBack }) => {
+	// const details = JSON.parse(details);
+	// console.log(details)
+	const ctx = useContext(Context);
+	if (Object.keys(details).length === 0 || Object.values(details).some(v => v === null)) return (<></>);
 	const spacer = <div style={{ height: "0px", margin: "20px 0" }}></div>;
 
-	const containerStyle = isMobile
-		? {
-				maxHeight: "100vh",
-				overflowY: "auto" as const,
-				width: "100%",
-				padding: "0 0px",
-				margin: "0px 0px",
-				// border: "5px solid green",
-			}
-		: {};
+	const containerStyle = ctx!.mobile ? {
+		maxHeight: "100vh",
+		overflowY: "auto" as const,
+		width: "100%",
+		padding: "0 0px",
+		margin: "0px 0px",
+	} : {};
 
-	const classDetailsGridStyle = isMobile
-		? {
-				gridTemplateColumns: "repeat(2, 1fr)",
-			}
-		: {};
+	const classDetailsGridStyle = ctx!.mobile ? { gridTemplateColumns: "repeat(2, 1fr)" } : {};
 
 	return (
 		<div className="detailsParent" style={containerStyle}>
 			{spacer}
 
 			<div className="titleAndButtonParent">
-				{isMobile && (
+				{ctx!.mobile && (
 					<button
 						onClick={handleBack}
 						className="pisaButton"
@@ -115,103 +118,18 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 				)}
 				<div>
 					<h3
-						style={
-							isMobile
-								? {
-										fontSize: "1.2rem",
-										paddingLeft: "8px",
-										paddingRight: "8px",
-									}
-								: {}
+						style={ctx!.mobile ? {
+							fontSize: "1.2rem",
+							paddingLeft: "8px",
+							paddingRight: "8px",
+						} : {}
 						}
 					>
-						{detailsObj.primary_section.subject}-
-						{detailsObj.primary_section.catalog_nbr}:{" "}
-						{detailsObj.primary_section.title_long}
+						{details.primary_section.subject}-{details.primary_section.catalog_nbr}:{" "}{details.primary_section.title_long}
 					</h3>
 				</div>
 
-				<div className="ClassTools">
-					{!isMobile && (
-						<>
-							<button
-								onClick={() => {
-									const ics = generateIcs(details, term);
-									const blob = new Blob([ics], {
-										type: "text/calendar",
-									});
-									const url = URL.createObjectURL(blob);
-									const a = document.createElement("a");
-									a.href = url;
-									a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}.ics`;
-									a.click();
-									URL.revokeObjectURL(url);
-								}}
-								className="pisaButton"
-								title="Download calendar file"
-							>
-								<img
-									src={DownloadIcon}
-									alt="Download calendar icon"
-									width="30"
-									height="30"
-									style={{ verticalAlign: "middle" }}
-								/>
-								Download Calendar .ics
-							</button>
-
-							<button
-								onClick={() => {
-									const meeting = detailsObj.meetings?.[0];
-									if (!meeting) return;
-
-									const link = generateGoogleCalendarLink(
-										detailsObj.primary_section.subject,
-										detailsObj.primary_section.catalog_nbr,
-										detailsObj.primary_section.title_long,
-										detailsObj.primary_section.class_nbr,
-										meeting,
-										term,
-										"Lecture",
-									);
-
-									window.open(link, "_blank");
-								}}
-								className="pisaButton"
-							>
-								<img
-									src={GoogleCalendarIcon}
-									alt="Add to Google Calendar icon"
-									width="30"
-									height="30"
-								/>
-								Add to Google Calendar
-							</button>
-
-							<button
-								onClick={() => window.open(link, "_blank")}
-								className="pisaButton"
-							>
-								<img
-									src={ExternalLinkIcon}
-									alt="Open source page in new window"
-									width="30"
-									height="30"
-									style={{ verticalAlign: "middle" }}
-								/>
-								View Source
-							</button>
-						</>
-					)}
-				</div>
-			</div>
-
-
-
-
-
-			{isMobile && (
-				<div className="ClassToolsMobile">
+				<div className={ctx!.mobile ? "ClassToolsMobile" : "ClassTools"}>
 					<button
 						onClick={() => {
 							const ics = generateIcs(details, term);
@@ -221,7 +139,7 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 							const url = URL.createObjectURL(blob);
 							const a = document.createElement("a");
 							a.href = url;
-							a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}.ics`;
+							a.download = `${details.primary_section.subject}-${details.primary_section.catalog_nbr}.ics`;
 							a.click();
 							URL.revokeObjectURL(url);
 						}}
@@ -231,8 +149,8 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 						<img
 							src={DownloadIcon}
 							alt="Download calendar icon"
-							width="25"
-							height="25"
+							width="30"
+							height="30"
 							style={{ verticalAlign: "middle" }}
 						/>
 						Download Calendar .ics
@@ -240,14 +158,14 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 
 					<button
 						onClick={() => {
-							const meeting = detailsObj.meetings?.[0];
+							const meeting = details.meetings?.[0];
 							if (!meeting) return;
 
 							const link = generateGoogleCalendarLink(
-								detailsObj.primary_section.subject,
-								detailsObj.primary_section.catalog_nbr,
-								detailsObj.primary_section.title_long,
-								detailsObj.primary_section.class_nbr,
+								details.primary_section.subject,
+								details.primary_section.catalog_nbr,
+								details.primary_section.title_long,
+								details.primary_section.class_nbr,
 								meeting,
 								term,
 								"Lecture",
@@ -257,7 +175,12 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 						}}
 						className="pisaButton"
 					>
-						<img src={GoogleCalendarIcon} alt="Add to Google Calendar icon" width="25" height="25" />
+						<img
+							src={GoogleCalendarIcon}
+							alt="Add to Google Calendar icon"
+							width="30"
+							height="30"
+						/>
 						Add to Google Calendar
 					</button>
 
@@ -268,85 +191,84 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 						<img
 							src={ExternalLinkIcon}
 							alt="Open source page in new window"
-							width="25"
-							height="25"
+							width="30"
+							height="30"
 							style={{ verticalAlign: "middle" }}
 						/>
 						View Source
 					</button>
 				</div>
-			)}
+			</div>
 
 
 
 
-
-			{detailsObj.primary_section && (
+			{details.primary_section && (
 				<div className="classDetails">
 					<h3 className="heading">Class Details</h3>
 					<div className="classDetailsGridWrapper">
-					<div
-						className="classDetailsGrid"
-						style={classDetailsGridStyle}
-					>
-						{classDetailsGridEntry(
-							"Status",
-							detailsObj.primary_section.enrl_status,
-						)}
-						{classDetailsGridEntry(
-							"Enrolled",
-							detailsObj.primary_section.enrl_total +
+						<div
+							className="classDetailsGrid"
+							style={classDetailsGridStyle}
+						>
+							{classDetailsGridEntry(
+								"Status",
+								details.primary_section.enrl_status,
+							)}
+							{classDetailsGridEntry(
+								"Enrolled",
+								details.primary_section.enrl_total +
 								" / " +
-								detailsObj.primary_section.capacity,
-						)}
-						{classDetailsGridEntry(
-							"Waitlist",
-							detailsObj.primary_section.waitlist_total +
+								details.primary_section.capacity,
+							)}
+							{classDetailsGridEntry(
+								"Waitlist",
+								details.primary_section.waitlist_total +
 								" / " +
-								detailsObj.primary_section.waitlist_capacity,
-						)}
-						{classDetailsGridEntry(
-							"Credits",
-							detailsObj.primary_section.credits,
-						)}
-						{classDetailsGridEntry(
-							"GenEd",
-							detailsObj.primary_section.gened || "None",
-						)}
-						{classDetailsGridEntry("Modality", modality)}
-						{classDetailsGridEntry(
-							"Class ID",
-							detailsObj.primary_section.class_nbr,
-						)}
-						{classDetailsGridEntry(
-							"Career",
-							detailsObj.primary_section.acad_career,
-						)}
+								details.primary_section.waitlist_capacity,
+							)}
+							{classDetailsGridEntry(
+								"Credits",
+								details.primary_section.credits,
+							)}
+							{classDetailsGridEntry(
+								"GenEd",
+								details.primary_section.gened || "None",
+							)}
+							{classDetailsGridEntry("Modality", modality)}
+							{classDetailsGridEntry(
+								"Class ID",
+								details.primary_section.class_nbr,
+							)}
+							{classDetailsGridEntry(
+								"Career",
+								details.primary_section.acad_career,
+							)}
 						</div>
 					</div>
 				</div>
 			)}
 
-			{detailsObj.primary_section.description && (
+			{details.primary_section.description && (
 				<div className="description classDetails">
 					<h3 className="heading">Description</h3>
-					<p>{detailsObj.primary_section.description || "None"}</p>
+					<p>{details.primary_section.description || "None"}</p>
 				</div>
 			)}
 			<div className="enrollmentReq classDetails">
 				<h3 className="heading">Requirements</h3>
-				<p>{detailsObj.primary_section.requirements || "None"}</p>
+				<p>{details.primary_section.requirements || "None"}</p>
 			</div>
-			{detailsObj.notes && (
+			{details.notes && (
 				<div className="notes classDetails">
 					<h3 className="heading">Notes</h3>
-					<p>{detailsObj.notes}</p>
+					<p>{details.notes}</p>
 				</div>
 			)}
-			{detailsObj.meetings && (
+			{details.meetings && (
 				<div className="meetings classDetails">
 					<h3 className="heading">Meeting Times</h3>
-					{detailsObj.meetings.map(
+					{details.meetings.map(
 						(meeting: Meeting, index: number) => {
 							return (
 								<div
@@ -372,7 +294,7 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 												<span key={i}>
 													{instructor.name}
 													{i <
-													meeting.instructors.length -
+														meeting.instructors.length -
 														1
 														? ", "
 														: ""}
@@ -386,10 +308,10 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 					)}
 				</div>
 			)}
-			{detailsObj.secondary_sections && (
+			{details.secondary_sections && (
 				<div className="sections classDetails">
 					<h3 className="heading">Sections</h3>
-					{detailsObj.secondary_sections.map(
+					{details.secondary_sections.map(
 						(section: Section, index: number) => {
 							if (!section.meetings) return null;
 
@@ -472,18 +394,18 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 												onClick={() => {
 													const ics =
 														generateIcsForSection(
-															detailsObj
+															details
 																.primary_section
 																.subject,
-															detailsObj
+															details
 																.primary_section
 																.catalog_nbr,
-															detailsObj
+															details
 																.primary_section
 																.title_long,
 															section.class_nbr,
 															section.meetings ||
-																[],
+															[],
 															term,
 														);
 													const blob = new Blob(
@@ -501,7 +423,7 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 															"a",
 														);
 													a.href = url;
-													a.download = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}-${section.class_nbr}.ics`;
+													a.download = `${details.primary_section.subject}-${details.primary_section.catalog_nbr}-${section.class_nbr}.ics`;
 													a.click();
 													URL.revokeObjectURL(url);
 												}}
@@ -539,13 +461,13 @@ const DetailedView: React.FC<DetailedViewProps> = ({
 
 													const link =
 														generateGoogleCalendarLink(
-															detailsObj
+															details
 																.primary_section
 																.subject,
-															detailsObj
+															details
 																.primary_section
 																.catalog_nbr,
-															detailsObj
+															details
 																.primary_section
 																.title_long,
 															section.class_nbr,

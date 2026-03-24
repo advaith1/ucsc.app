@@ -13,13 +13,16 @@
 }
 
 .filters {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	width: 97.5%;
-	gap: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+    max-width: 95%;
+    margin: 10px auto;
+    gap: 4px;
 }
-
 
 @media (max-width: 460px) {
 	.filters {
