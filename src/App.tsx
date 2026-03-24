@@ -48,45 +48,21 @@ function App() {
 	}
 
 	return (
-		<Context.Provider value={contextValues}>
-			<BrowserRouter>
-				{/* <SubdomainRouter /> */}
-				<Routes>
-					<Route path='/' element={<Dashboard />} />
-					<Route path='/news' element={<RssFeed />} />
-					<Route path='/courses' element={<Courses />} />
-					<Route path='/menu' element={<MenuPage />} />
-					<Route path='/schedule' element={<ScheduleMapPage />} />
-				</Routes>
-			</BrowserRouter>
-		</Context.Provider>
+		<HelmetProvider>
+			<Context.Provider value={contextValues}>
+				<BrowserRouter>
+					{/* <SubdomainRouter /> */}
+					<Routes>
+						<Route path='/' element={<Dashboard />} />
+						<Route path='/news' element={<RssFeed />} />
+						<Route path='/courses' element={<Courses />} />
+						<Route path='/menu' element={<MenuPage />} />
+						<Route path='/schedule' element={<ScheduleMapPage />} />
+					</Routes>
+				</BrowserRouter>
+			</Context.Provider>
+		</HelmetProvider>
 	);
 }
-
-// function SubdomainRouter() {
-//   const host = window.location.hostname;
-
-//   // const router 
-//   const subdomain = host.split('.')[0];
-//   console.log('Subdomain:', subdomain, 'Host:', host);
-//   // const navigate = useNavigate();
-//   // useEffect(() => {
-//   //   if (subdomain === 'ucsc.info') {
-//   //     navigate(`/`);
-//   //   } else {
-//   //     navigate(`/${subdomain}`);
-//   //   }
-//   // }, [subdomain, navigate]);
-//   if (subdomain === 'news') return <RssFeed />;
-//   if (subdomain === 'peak') return <Peak />;
-//   if (subdomain === 'courses') return <Courses />;
-//   if (subdomain === 'menu') return <MenuPage />;
-//   if (subdomain === 'insights') return <AIComponent />;
-//   if (subdomain === 'dashboard') return <Dashboard />;
-
-//   // Default to the main dashboard if no subdomain is matched
-
-//   return <Dashboard />;
-// }
 
 export default App;
