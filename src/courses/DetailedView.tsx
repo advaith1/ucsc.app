@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import "./styles/DetailedView.css";
-import { statusEmoji } from "./StatusEmoji";
 import ExternalLinkIcon from "/icons/external-link.svg";
 import GoogleCalendarIcon from "/icons/Google_Calendar_icon.png";
 import DownloadIcon from "/icons/downlaod2.png";
@@ -9,36 +8,10 @@ import { generateIcs, generateIcsForSection } from "./generateIcs";
 import { generateGoogleCalendarLink } from "./generateIcs";
 import { DetailedClassInfo } from "../types";
 import { Context } from "../Context";
+import ClassDetails from "./components/ClassDetails";
+import ClassMeetings from "./components/ClassMeetings";
+import ClassSections from "./components/ClassSections";
 
-// interface Instructor {
-// 	name: string;
-// }
-
-// interface Meeting {
-// 	days: string;
-// 	start_time: string;
-// 	end_time: string;
-// 	location: string;
-// 	instructors: Instructor[];
-// }
-
-// interface Section {
-// 	subject: string;
-// 	catalog_nbr: string;
-// 	title_long: string;
-// 	enrl_status: string;
-// 	enrl_total: number;
-// 	capacity: number;
-// 	waitlist_total: number;
-// 	waitlist_capacity: number;
-// 	credits: string;
-// 	gened?: string;
-// 	class_nbr: string;
-// 	acad_career: string;
-// 	description?: string;
-// 	requirements?: string;
-// 	meetings?: Meeting[];
-// }
 
 interface DetailedViewProps {
 	details: DetailedClassInfo;
@@ -48,40 +21,18 @@ interface DetailedViewProps {
 	handleBack: () => void;
 }
 
-function classDetailsGridEntry(title: string, content: string) {
+function ClassInfoBlock({ title, value }: { title: string, value: string | string[] }) {
+	if (!value) return (<></>);
+
 	return (
-		<div style={{ display: "flex", flexDirection: "column" }}>
-			<span
-				style={{
-					fontWeight: "500",
-					// border: '5px solid green',
-					color: "#6c757d",
-					fontSize: "0.9rem",
-				}}
-			>
-				{title}
-			</span>
-			<span style={{ fontSize: "1.1rem" }}>{content}</span>
+		<div className="description classDetails">
+			<h3 className="heading">{title}</h3>
+			<p>{value}</p>
 		</div>
-	);
+	)
 }
 
-// function downloadICSFile(details: DetailedClassInfo, term: string) {
-// 	const ics = generateIcs(details, term);
-// 	const blob = new Blob([ics], {
-// 		type: "text/calendar",
-// 	});
-// 	const url = URL.createObjectURL(blob);
-// 	const a = document.createElement("a");
-// 	a.href = url;
-// 	a.download = `${details.primary_section.subject}-${details.primary_section.catalog_nbr}.ics`;
-// 	a.click();
-// 	URL.revokeObjectURL(url);
-// }
-
-const DetailedView: React.FC<DetailedViewProps> = ({ details, modality, link, term, handleBack }) => {
-	// const details = JSON.parse(details);
-	// console.log(details)
+export default function DetailedView({ details, link, term, handleBack }: DetailedViewProps) {
 	const ctx = useContext(Context);
 	if (Object.keys(details).length === 0 || Object.values(details).some(v => v === null)) return (<></>);
 	const spacer = <div style={{ height: "0px", margin: "20px 0" }}></div>;
@@ -93,8 +44,6 @@ const DetailedView: React.FC<DetailedViewProps> = ({ details, modality, link, te
 		padding: "0 0px",
 		margin: "0px 0px",
 	} : {};
-
-	const classDetailsGridStyle = ctx!.mobile ? { gridTemplateColumns: "repeat(2, 1fr)" } : {};
 
 	return (
 		<div className="detailsParent" style={containerStyle}>
@@ -203,317 +152,17 @@ const DetailedView: React.FC<DetailedViewProps> = ({ details, modality, link, te
 
 
 
-			{details.primary_section && (
-				<div className="classDetails">
-					<h3 className="heading">Class Details</h3>
-					<div className="classDetailsGridWrapper">
-						<div
-							className="classDetailsGrid"
-							style={classDetailsGridStyle}
-						>
-							{classDetailsGridEntry(
-								"Status",
-								details.primary_section.enrl_status,
-							)}
-							{classDetailsGridEntry(
-								"Enrolled",
-								details.primary_section.enrl_total +
-								" / " +
-								details.primary_section.capacity,
-							)}
-							{classDetailsGridEntry(
-								"Waitlist",
-								details.primary_section.waitlist_total +
-								" / " +
-								details.primary_section.waitlist_capacity,
-							)}
-							{classDetailsGridEntry(
-								"Credits",
-								details.primary_section.credits,
-							)}
-							{classDetailsGridEntry(
-								"GenEd",
-								details.primary_section.gened || "None",
-							)}
-							{classDetailsGridEntry("Modality", modality)}
-							{classDetailsGridEntry(
-								"Class ID",
-								details.primary_section.class_nbr,
-							)}
-							{classDetailsGridEntry(
-								"Career",
-								details.primary_section.acad_career,
-							)}
-						</div>
-					</div>
-				</div>
-			)}
+			<ClassDetails />
 
-			{details.primary_section.description && (
-				<div className="description classDetails">
-					<h3 className="heading">Description</h3>
-					<p>{details.primary_section.description || "None"}</p>
-				</div>
-			)}
-			<div className="enrollmentReq classDetails">
-				<h3 className="heading">Requirements</h3>
-				<p>{details.primary_section.requirements || "None"}</p>
-			</div>
-			{details.notes && (
-				<div className="notes classDetails">
-					<h3 className="heading">Notes</h3>
-					<p>{details.notes}</p>
-				</div>
-			)}
-			{details.meetings && (
-				<div className="meetings classDetails">
-					<h3 className="heading">Meeting Times</h3>
-					{details.meetings.map(
-						(meeting: Meeting, index: number) => {
-							return (
-								<div
-									key={index}
-									style={{ marginBottom: "15px" }}
-								>
-									<p>
-										<strong>Day and Times:</strong>{" "}
-										{meeting.days} {meeting.start_time}-
-										{meeting.end_time}
-									</p>
-									<p>
-										<strong>Location:</strong>{" "}
-										{meeting.location}
-									</p>
-									<p>
-										<strong>Instructor(s):</strong>{" "}
-										{meeting.instructors.map(
-											(
-												instructor: Instructor,
-												i: number,
-											) => (
-												<span key={i}>
-													{instructor.name}
-													{i <
-														meeting.instructors.length -
-														1
-														? ", "
-														: ""}
-												</span>
-											),
-										)}
-									</p>
-								</div>
-							);
-						},
-					)}
-				</div>
-			)}
-			{details.secondary_sections && (
-				<div className="sections classDetails">
-					<h3 className="heading">Sections</h3>
-					{details.secondary_sections.map(
-						(section: Section, index: number) => {
-							if (!section.meetings) return null;
+			<ClassInfoBlock title="Description"  value={details.primary_section.description} />
+			<ClassInfoBlock title="Requirements" value={details.primary_section.requirements} />
+			<ClassInfoBlock title="Notes"        value={details.notes} />
 
-							return (
-								<div key={index} className="section-card">
-									{index > 0 && (
-										<hr
-											style={{
-												margin: "0 0 15px 0",
-												borderTop: "1px solid #dee2e6",
-											}}
-										/>
-									)}
+			<ClassMeetings />
 
-									<div className="section-card2">
-										<div className="SectionInformation">
-											<div
-												style={{ marginBottom: "10px" }}
-											>
-												<p style={{ margin: "-8px 0" }}>
-													{statusEmoji(
-														section.enrl_status,
-													)}
-													Enrolled:{" "}
-													{section.enrl_total}/
-													{section.capacity}
-												</p>
-											</div>
-
-											<div>
-												{section.meetings.map(
-													(
-														meeting: Meeting,
-														i: number,
-													) => (
-														<div
-															key={i}
-															style={{
-																margin: "8px 0",
-															}}
-														>
-															<p
-																style={{
-																	margin: "2px 0",
-																}}
-															>
-																<strong>
-																	Day and
-																	Times:
-																</strong>{" "}
-																{meeting.days}{" "}
-																{
-																	meeting.start_time
-																}
-																-
-																{
-																	meeting.end_time
-																}
-															</p>
-															<p
-																style={{
-																	margin: "2px 0",
-																}}
-															>
-																<strong>
-																	Location:
-																</strong>{" "}
-																{
-																	meeting.location
-																}
-															</p>
-														</div>
-													),
-												)}
-											</div>
-										</div>
-
-										<div className="SectionCalendarButtons">
-											<button
-												onClick={() => {
-													const ics =
-														generateIcsForSection(
-															details
-																.primary_section
-																.subject,
-															details
-																.primary_section
-																.catalog_nbr,
-															details
-																.primary_section
-																.title_long,
-															section.class_nbr,
-															section.meetings ||
-															[],
-															term,
-														);
-													const blob = new Blob(
-														[ics],
-														{
-															type: "text/calendar",
-														},
-													);
-													const url =
-														URL.createObjectURL(
-															blob,
-														);
-													const a =
-														document.createElement(
-															"a",
-														);
-													a.href = url;
-													a.download = `${details.primary_section.subject}-${details.primary_section.catalog_nbr}-${section.class_nbr}.ics`;
-													a.click();
-													URL.revokeObjectURL(url);
-												}}
-												className="pisaButton"
-												style={{
-													marginBottom: "8px",
-													padding: "6px 12px",
-													fontSize: "15px",
-													// marginTop: "4px",
-													// backgroundColor: "#007bff",
-													// color: "white",
-													// border: "none",
-													// borderRadius: "4px",
-													// cursor: "pointer",
-													// fontSize: "0.9rem",
-												}}
-											>
-												<img
-													src={DownloadIcon}
-													alt="Download calendar icon"
-													width="28"
-													height="28"
-													style={{
-														verticalAlign: "middle",
-													}}
-												/>
-												Download Calendar .ics
-											</button>
-
-											<button
-												onClick={() => {
-													const meeting =
-														section.meetings?.[0];
-													if (!meeting) return;
-
-													const link =
-														generateGoogleCalendarLink(
-															details
-																.primary_section
-																.subject,
-															details
-																.primary_section
-																.catalog_nbr,
-															details
-																.primary_section
-																.title_long,
-															section.class_nbr,
-															meeting,
-															term,
-															"Section",
-														);
-
-													window.open(link, "_blank");
-												}}
-												className="pisaButton"
-												style={{
-													marginBottom: "8px",
-													padding: "6px 12px",
-													fontSize: "15px",
-													// 	marginTop: "8px",
-													// 	marginBottom: "8px",
-													// 	backgroundColor: "#007bff",
-													// 	color: "white",
-													// 	border: "none",
-													// borderRadius: "4px",
-													// 	cursor: "pointer",
-													// 	fontSize: "0.9rem",
-												}}
-											>
-												<img
-													src={GoogleCalendarIcon}
-													alt="Add to Google Calendar icon"
-													width="28"
-													height="28"
-												/>
-												Add to Google Calendar
-											</button>
-										</div>
-									</div>
-								</div>
-							);
-						},
-					)}
-					{spacer}
-				</div>
-			)}
-
+			<ClassSections />
+			
 			{spacer}
-		</div>
+		</div> 
 	);
 };
-
-export default DetailedView;

@@ -15,7 +15,9 @@ interface CourseContextType {
 	setSelectedClassModality: (m: string) => void,
 	setSelectedClassLink: (l: string) => void,
 	term: string,
-	setTerm: (t: string) => void
+	setTerm: (t: string) => void,
+	details: DetailedClassInfo,
+	modality: string
 }
 
 export const CourseContext = createContext<CourseContextType | null>(null);
@@ -23,7 +25,7 @@ export const CourseContext = createContext<CourseContextType | null>(null);
 
 export default function Courses() {
 	const ctx = useContext(Context);
-	const courseCtx = useContext(CourseContext);
+	// const courseCtx = useContext(CourseContext);
 
 
 	// const [courses, setCourses] = useState<Course[]>([]);
@@ -69,14 +71,14 @@ export default function Courses() {
 	};
 
 
-	const spacer = <div style={{ height: "0px", margin: "30px 0" }}></div>;
-
 	const courseCtxValues = {
 		getDetailedView,
 		setSelectedClassModality,
 		setSelectedClassLink,
 		term,
-		setTerm
+		setTerm,
+		details: detailedData,
+		modality: selectedClassModality
 	}
 
 	const detailedViewStyle = ctx!.mobile ? {

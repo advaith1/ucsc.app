@@ -80,14 +80,10 @@ export default function CourseSearchPanel() {
 	return (
 		<>
 			<Search onSearch={onSearch} />
-			<Filters
-				// selectedTerm={term}
-				// setTerm={setTerm}
-				{...{ setGE, setStatus, setTimes }}
-			/>
+			<Filters {...{ setGE, setStatus, setTimes }}/>
 			{loading && <Loading />}
 
-			{!courses || courses.length == 0 ? (<p> no results</p>) :
+			{courses.length == 0 ? (<p> no results</p>) :
 				courses.map((course: Course, index: number) => (
 					<div
 						style={{

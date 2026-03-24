@@ -23,45 +23,58 @@ export type Course = {
 
 // all the bullshit below is for the detailed class API response
 export interface DetailedClassInfo {
-  primary_section: PrimarySection
-  meetings: Meeting[]
-  notes: string[]
+	primary_section: PrimarySection
+	meetings: Meeting[]
+	secondary_sections: SecondarySection[]
+	notes: string[]
 }
 
 export interface PrimarySection {
-  strm: string
-  session_code: string
-  class_nbr: string
-  component: string
-  acad_career: string
-  subject: string
-  class_section: string
-  start_date: string
-  end_date: string
-  capacity: string
-  enrl_total: string
-  waitlist_capacity: string
-  waitlist_total: string
-  enrl_status: string
-  credits: string
-  grading: string
-  title: string
-  title_long: string
-  description: string
-  gened: string
-  requirements: string
-  catalog_nbr: string
+	strm: string
+	session_code: string
+	class_nbr: string
+	component: string
+	acad_career: string
+	subject: string
+	class_section: string
+	start_date: string
+	end_date: string
+	capacity: string
+	enrl_total: string
+	waitlist_capacity: string
+	waitlist_total: string
+	enrl_status: string
+	credits: string
+	grading: string
+	title: string
+	title_long: string
+	description: string
+	gened: string
+	requirements: string
+	catalog_nbr: string
 }
 
 export interface Meeting {
-  days: string
-  start_time: string
-  end_time: string
-  location: string
-  instructors: Instructor[]
+	days: string
+	start_time: string
+	end_time: string
+	location: string
+	instructors: Instructor[]
 }
 
 export interface Instructor {
-  cruzid: string
-  name: string
+	cruzid: string
+	name: string
+}
+
+export interface SecondarySection {
+	meetings: Meeting[]
+	class_section: string
+	component: string
+	class_nbr: string
+	enrl_total: string
+	capacity: string
+	waitlist_total: string
+	waitlist_capacity: string
+	enrl_status: string
 }
