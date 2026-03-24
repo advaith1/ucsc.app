@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import "./styles/DetailedView.css";
 import BackIcon from "/icons/back-arrow.svg";
-import { DetailedClassInfo } from "../types";
 import { Context } from "../Context";
+import { CourseContext } from "./Courses";
 import ClassDetails from "./components/ClassDetails";
 import ClassMeetings from "./components/ClassMeetings";
 import ClassSections from "./components/ClassSections";
@@ -10,10 +10,6 @@ import Buttons from "./components/Buttons";
 
 
 interface DetailedViewProps {
-	details: DetailedClassInfo;
-	modality: string;
-	link: string;
-	term: string;
 	handleBack: () => void;
 }
 
@@ -28,8 +24,11 @@ function ClassInfoBlock({ title, value }: { title: string, value: string | strin
 	)
 }
 
-export default function DetailedView({ details, link, term, handleBack }: DetailedViewProps) {
+export default function DetailedView({ handleBack }: DetailedViewProps) {
 	const ctx = useContext(Context);
+	const courseCtx = useContext(CourseContext);
+	const { details } = courseCtx!;
+
 	if (Object.keys(details).length === 0 || Object.values(details).some(v => v === null)) return (<></>);
 	const spacer = <div style={{ height: "0px", margin: "20px 0" }}></div>;
 
@@ -62,89 +61,15 @@ export default function DetailedView({ details, link, term, handleBack }: Detail
 					</button>
 				)}
 				<h2
-					style={{ margin: "0px", marginBottom: "10px" }}
+					style={{ margin: "0px", marginBottom: "10px", marginTop: "10px" }}
 				>
 					{details.primary_section.subject}-{details.primary_section.catalog_nbr}:{" "}{details.primary_section.title_long}
 				</h2>
 
 				<div className={"ClassTools"}>
 					<Buttons />
-
-					{/* <button
-						style={{fontSize: '14px'}}
-						onClick={() => {
-							const ics = generateIcs(details, term);
-							const blob = new Blob([ics], {
-								type: "text/calendar",
-							});
-							const url = URL.createObjectURL(blob);
-							const a = document.createElement("a");
-							a.href = url;
-							a.download = `${details.primary_section.subject}-${details.primary_section.catalog_nbr}.ics`;
-							a.click();
-							URL.revokeObjectURL(url);
-						}}
-						className="pisaButton"
-						title="Download calendar file"
-					>
-						<img
-							src={DownloadIcon}
-							alt="Download calendar icon"
-							width="20"
-							height="20"
-							style={{ verticalAlign: "middle" }}
-						/>
-						Download .ics
-					</button>
-
-					<button
-						style={{fontSize: '14px'}}
-						onClick={() => {
-							const meeting = details.meetings?.[0];
-							if (!meeting) return;
-
-							const link = generateGoogleCalendarLink(
-								details.primary_section.subject,
-								details.primary_section.catalog_nbr,
-								details.primary_section.title_long,
-								details.primary_section.class_nbr,
-								meeting,
-								term,
-								"Lecture",
-							);
-
-							window.open(link, "_blank");
-						}}
-						className="pisaButton"
-					>
-						<img
-							src={GoogleCalendarIcon}
-							alt="Add to Google Calendar icon"
-							width="20"
-							height="20"
-						/>
-						Google Calendar
-					</button>
-
-					<button
-						style={{fontSize: '14px'}}
-						onClick={() => window.open(link, "_blank")}
-						className="pisaButton"
-					>
-						<img
-							src={ExternalLinkIcon}
-							alt="Open source page in new window"
-							width="20"
-							height="20"
-							style={{ verticalAlign: "middle" }}
-						/>
-						View Source
-					</button> */}
 				</div>
 			</div>
-
-
-
 
 
 			<ClassDetails />

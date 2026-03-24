@@ -12,6 +12,7 @@ import "./styles/Courses.css";
 interface CourseContextType {
 	getDetailedView: (courseTerm: string, courseID: string) => void,
 	setSelectedClassModality: (m: string) => void,
+	link: string,
 	setSelectedClassLink: (l: string) => void,
 	term: string,
 	setTerm: (t: string) => void,
@@ -74,6 +75,7 @@ export default function Courses() {
 	const courseCtxValues = {
 		getDetailedView,
 		setSelectedClassModality,
+		link: selectedClassLink,
 		setSelectedClassLink,
 		term,
 		setTerm,
@@ -113,10 +115,6 @@ export default function Courses() {
 					className="detailedViewParent"
 					style={detailedViewStyle}>
 					<DetailedView
-						details={detailedData}
-						modality={selectedClassModality}
-						link={selectedClassLink}
-						term={term}
 						handleBack={() => setShowDetails(false)}
 					/>
 				</div>

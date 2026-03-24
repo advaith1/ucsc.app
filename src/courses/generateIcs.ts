@@ -1,23 +1,4 @@
-interface Meeting {
-	days: string;
-	start_time: string;
-	end_time: string;
-	location: string;
-	instructors: Array<{ name: string }>;
-}
-
-interface Section {
-	subject: string;
-	catalog_nbr: string;
-	title_long: string;
-	class_nbr: string;
-	meetings?: Meeting[];
-}
-
-interface DetailedData {
-	primary_section: Section;
-	meetings?: Meeting[];
-}
+import { DetailedClassInfo, Meeting } from "../types";
 
 const TERM_DATES: Record<string, { start: string; end: string }> = {
 	"2248": { start: "20240923", end: "20241208" }, // Fall 2024
@@ -198,18 +179,17 @@ END:VEVENT
 	return icsContent;
 }
 
-export function generateIcs(detailsJson: string, term: string): string {
-	const detailsObj: DetailedData = JSON.parse(detailsJson);
-	const meetings = detailsObj.meetings || [];
+export function generateIcs(details: DetailedClassInfo, term: string): string {
+	const meetings = details.meetings || [];
 
 	if (meetings.length === 0) {
 		return ""; // No meetings to export
 	}
 
 	const termDates = TERM_DATES[term];
-	const courseName = `${detailsObj.primary_section.subject}-${detailsObj.primary_section.catalog_nbr}`;
-	const courseTitle = detailsObj.primary_section.title_long;
-	const classId = detailsObj.primary_section.class_nbr;
+	const courseName = `${details.primary_section.subject}-${details.primary_section.catalog_nbr}`;
+	const courseTitle = details.primary_section.title_long;
+	const classId = details.primary_section.class_nbr;
 
 	let icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
