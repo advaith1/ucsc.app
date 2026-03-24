@@ -1,7 +1,7 @@
 import { TimeBlock } from "../../types"
-import "../styles/LiveClassesTimeBlock.css"
+import "../styles/ScheduleTimeBlock.css"
 
-interface LiveClassesTimeBlockProps {
+interface ScheduleTimeBlockProps {
 	timeBlock: TimeBlock
 }
 
@@ -13,15 +13,15 @@ function formatTime(time: string) {
 
 /*
 0: class name
-1: pisa link
+1: pisa link 
 2: professor name
 3: start time
 4: end time
 */
 
-export default function LiveClassesTimeBlock({ timeBlock }: LiveClassesTimeBlockProps) {
+export default function ScheduleTimeBlock({ timeBlock }: ScheduleTimeBlockProps) {
 	return (
-		<div className="live-classes-time-block">
+		<div className="schedule-time-block">
 			<a
 				className="stb-pisalink"
 				href={`https://pisa.ucsc.edu/class_search/${timeBlock[1]}`}

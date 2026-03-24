@@ -5,7 +5,7 @@ import { MapContext } from "./MapContext";
 import { Context } from "../Context";
 import GetRooms from "./FetchRooms";
 import BuildingRoomList from "./components/BuildingRoomList";
-import LiveClasses from "./LiveClasses";
+import Schedule from "./Schedule";
 import './styles/BuildingPopup.css';
 
 /*
@@ -25,7 +25,7 @@ export default function BuildingPopup({ locationName, locationAddress, term }: {
 
 	const [selectedBuilding, setSelectedBuilding] = useState<string>("");
 	const [selectedRoom, setSelectedRoom] = useState<string>("");
-	const [selectedLiveClass, setSelectedLiveClass] = useState<Array<TimeBlock>>([]);
+	const [selectedSchedule, setSelectedSchedule] = useState<Array<TimeBlock>>([]);
 	const [day, setDay] = useState<number>((new Date().getDay() + 6) % 7); // Monday=0, Tuesday=1, etc
 
 	// just checking if selected schedule length > 1 is not enough to determine if a room was selected
@@ -37,7 +37,7 @@ export default function BuildingPopup({ locationName, locationAddress, term }: {
 	useEffect(() => {
 		setRooms([]);
 		setSelectedRoom("");
-		setSelectedLiveClass([]);
+		setSelectedSchedule([]);
 		setWasRoomSelected(false);
 		fetchRooms(locationName);
 	}, [locationName, locationAddress, fetchRooms, setRooms]);
@@ -49,10 +49,10 @@ export default function BuildingPopup({ locationName, locationAddress, term }: {
 
 		setWasRoomSelected(true);
 		const uriEncoded = encodeURIComponent(selectedBuilding as string).replace(/%2F/g, '%252F');
-		fetch(`${BASE_API_URL}/liveclasses/${term}/${uriEncoded}/${selectedRoom}/${day}`)
+		fetch(`${BASE_API_URL}/schedule/${term}/${uriEncoded}/${selectedRoom}/${day}`)
 			.then(res => res.json())
 			.then(res => {
-				setSelectedLiveClass(res);
+				setSelectedSchedule(res);
 			});
 	}, [selectedRoom, day, term, selectedBuilding]);
 
@@ -61,9 +61,9 @@ export default function BuildingPopup({ locationName, locationAddress, term }: {
 		setSelectedBuilding,
 		selectedRoom,
 		setSelectedRoom,
-		selectedLiveClass,
-		onLiveClassBackButtonPress: () => {
-			setSelectedLiveClass([]);
+		selectedSchedule,
+		onScheduleBackButtonPress: () => {
+			setSelectedSchedule([]);
 			setSelectedRoom("");
 			setWasRoomSelected(false);
 		},
@@ -93,7 +93,7 @@ export default function BuildingPopup({ locationName, locationAddress, term }: {
 					</div>
 				</div>
 			) : (
-				<LiveClasses
+				<Schedule
 					locationName={locationName}
 				/>
 			)}

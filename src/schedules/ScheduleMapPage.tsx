@@ -7,7 +7,7 @@ import { generateCourseSchema } from "../utils/schema";
 import Map from "./Map";
 
 
-export default function LiveClassesMapPage() {
+export default function ScheduleMapPage() {
 	const ctx = useContext(Context);
 
 	const liveClassSchema = generateCourseSchema(

@@ -15,7 +15,7 @@ export default function GetRooms() {
 
 		Promise.all(
 			pisaNames.map((n: string) =>
-				fetch(`${BASE_API_URL}/liveclasses/${encodeURIComponent(n).replace(/%2F/g, '%252F')}`)
+				fetch(`${BASE_API_URL}/schedule/${encodeURIComponent(n).replace(/%2F/g, '%252F')}`)
 					.then(res => res.json())
 					.then(data => ({ name: n, data }))
 			)
