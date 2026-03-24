@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useContext, createContext } from "react";
+import { useState, useEffect, useContext, createContext } from "react";
 import { TopBar as MobileTopBar } from "../components/navbar/mobile/TopBar.tsx";
 import { TopBar as DesktopTopBar } from "../components/navbar/desktop/TopBar.tsx";
 import DetailedView from "./DetailedView";
@@ -6,7 +6,6 @@ import CourseSearchPanel from "./CourseSearchPanel.tsx";
 import { usePageMeta } from "../hooks/usePageMeta.tsx";
 import { generateCourseSchema } from "../utils/schema";
 import { Context } from "../Context.tsx";
-import { Course } from "../types";
 import { DetailedClassInfo } from "../types";
 import "./styles/Courses.css";
 
@@ -25,27 +24,15 @@ export const CourseContext = createContext<CourseContextType | null>(null);
 
 export default function Courses() {
 	const ctx = useContext(Context);
-	// const courseCtx = useContext(CourseContext);
 
-
-	// const [courses, setCourses] = useState<Course[]>([]);
-	// const [loading, setLoading] = useState(false);
-	// const isMobile = useMediaQuery("(max-width: 768px)");
 	const [detailedData, setDetailedData] = useState<DetailedClassInfo>({} as unknown as DetailedClassInfo);
 	const [selectedClassModality, setSelectedClassModality] = useState<string>("");
 	const [selectedClassLink, setSelectedClassLink] = useState<string>("");
 
 	const [showDetails, setShowDetails] = useState(false);
-	const [isFirstLoad, setFirstLoad] = useState<boolean>(true);
-	const [selectedCourse, setSelectedCourse] = useState<Course>();
+	// const [isFirstLoad, setFirstLoad] = useState<boolean>(true);
+	// const [selectedCourse, setSelectedCourse] = useState<Course>();
 	const [term, setTerm] = useState<string>("");
-
-
-	// const [ge, setGE] = useState<string>("");
-	// const [status, setStatus] = useState<string>("all");
-	// const [time, setTimes] = useState<string>("");
-
-	// const abortControllerRef = useRef<AbortController | null>(null);
 
 	const courseSchema = generateCourseSchema(
 		'Find UCSC Courses',
@@ -69,6 +56,19 @@ export default function Courses() {
 		setDetailedData(data);
 		if (ctx!.mobile) setShowDetails(true);
 	};
+
+	// hitting back in browser or android universal back will work the same as the back button
+	useEffect(() => {
+		if (showDetails) {
+			window.history.pushState({ showDetails: true }, '');
+			const handlePopState = () => setShowDetails(false);
+			window.addEventListener('popstate', handlePopState);
+
+			return () => {
+				window.removeEventListener('popstate', handlePopState);
+			};
+		}
+	}, [showDetails]);
 
 
 	const courseCtxValues = {

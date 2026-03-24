@@ -22,14 +22,14 @@ export type Course = {
 }
 
 // all the bullshit below is for the detailed class API response
-export interface DetailedClassInfo {
+export type DetailedClassInfo = {
 	primary_section: PrimarySection
 	meetings: Meeting[]
 	secondary_sections: SecondarySection[]
 	notes: string[]
 }
 
-export interface PrimarySection {
+export type PrimarySection = {
 	strm: string
 	session_code: string
 	class_nbr: string
@@ -54,7 +54,7 @@ export interface PrimarySection {
 	catalog_nbr: string
 }
 
-export interface Meeting {
+export type Meeting = {
 	days: string
 	start_time: string
 	end_time: string
@@ -62,12 +62,12 @@ export interface Meeting {
 	instructors: Instructor[]
 }
 
-export interface Instructor {
+export type Instructor = {
 	cruzid: string
 	name: string
 }
 
-export interface SecondarySection {
+export type SecondarySection = {
 	meetings: Meeting[]
 	class_section: string
 	component: string
