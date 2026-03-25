@@ -1,27 +1,31 @@
 .coursesParent {
 	display: flex;
 	gap: 20px;
-	height: calc(100vh - 60px);
+	height: 100vh;
 	overflow: hidden;
-	/* box-sizing: border-box;
-	margin-left: 10px;
-	margin-right: 10px; */
 }
 
 .searchPanelParent {
 	position: relative;
-	top: 50px;
+	top: 70px;
 	overflow-y: scroll;
-	height: calc(100vh - 60px);
+	height: 100vh;
 	min-width: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 }
 
 .detailedViewParent {
-	overflow-y: scroll;
-	/* margin-left: 10px;
-	margin-right: 10px; */
-	height: calc(100vh - 60px);
-	min-width: 0;
+    overflow-y: scroll;
+    height: 100vh;
+    min-width: 0;
+	padding-right: 40px;
+	padding-left: 0px;
+	position: relative;
+	top: 30px;
 }
 
 .dropdown {
@@ -38,12 +42,5 @@
 }
 
 .CourseIntroText {
-	/*border: 5px solid green;*/
 	overflow-wrap: break-word;
 }
-
-/* @media (max-width: 320px) {
-	.parent {
-		overflow-x: hidden;
-	}
-} */

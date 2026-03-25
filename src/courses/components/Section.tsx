@@ -8,8 +8,7 @@ import { statusEmoji } from "../StatusEmoji";
 
 export default function Section({ section }: { section: SecondarySection }) {
 	const courseCtx = useContext(CourseContext);
-	if (!courseCtx!.details.secondary_sections) return (<></>)
-	
+	if (!courseCtx!.details.secondary_sections) return (<></>);
 	const text = `${statusEmoji(section.enrl_status)} Enrolled: ${section.enrl_total}/${section.capacity}`;
 
 	return (

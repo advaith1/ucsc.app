@@ -86,10 +86,10 @@ export default function CourseSearchPanel() {
 			{courses.length == 0 ? (<p> no results</p>) :
 				courses.map((course: Course, index: number) => (
 					<div
-						style={{
-							marginLeft: "20px",
-							marginRight: "20px",
-						}}
+						// style={{
+						// 	marginLeft: "7px",
+						// 	marginRight: "7px",
+						// }}
 					>
 						<Card
 							key={index}

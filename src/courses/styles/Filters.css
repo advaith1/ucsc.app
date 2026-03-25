@@ -16,11 +16,11 @@
     position: relative;
     display: flex;
     justify-content: center;
+	align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
     flex: 1;
-    max-width: 95%;
-    margin: 10px auto;
+	margin-top: 10px;
     gap: 4px;
 }
 

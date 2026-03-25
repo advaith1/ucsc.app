@@ -5,9 +5,9 @@
     align-items: center;
     max-width: inherit;
     padding: 0px 0px 0px 0px;
-    margin: 10px auto;
+    /* margin: 10px auto; */
 	width: 100%;
-	max-width: 95%;
+	/* max-width: 95%; */
 }
 
 .searchBox {

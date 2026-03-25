@@ -87,12 +87,11 @@ export default function Courses() {
 		flex: undefined,
 		position: "absolute" as const,
 		width: "100%",
-		display: showDetails ? "block" : "none"
+		visibility: showDetails ? ("visible" as const) : ("hidden" as const),
 	} : {
 		flex: 15,
-		position: "static" as const,
+		position: "relative" as const,
 		width: "auto",
-		display: "block"
 	}
 
 	return (
