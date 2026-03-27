@@ -80,30 +80,23 @@ export default function CourseSearchPanel() {
 	return (
 		<>
 			<Search onSearch={onSearch} />
-			<Filters {...{ setGE, setStatus, setTimes }}/>
+			<Filters {...{ setGE, setStatus, setTimes }} />
 			{loading && <Loading />}
 
 			{courses.length == 0 ? (<p> no results</p>) :
 				courses.map((course: Course, index: number) => (
-					<div
-						// style={{
-						// 	marginLeft: "7px",
-						// 	marginRight: "7px",
-						// }}
-					>
-						<Card
-							key={index}
-							course={course}
-							term={courseCtx!.term}
-							onCardClick={(classTerm: string, classID: string) => {
-								console.log(classTerm, classID)
-								
-								courseCtx!.setSelectedClassLink("https://pisa.ucsc.edu/class_search/" + course.link);
-								courseCtx!.setSelectedClassModality(course.modality);
-								courseCtx!.getDetailedView(classTerm, classID);
-							}}
-						/>
-					</div>
+					<Card
+						key={index}
+						course={course}
+						term={courseCtx!.term}
+						onCardClick={(classTerm: string, classID: string) => {
+							console.log(classTerm, classID)
+
+							courseCtx!.setSelectedClassLink("https://pisa.ucsc.edu/class_search/" + course.link);
+							courseCtx!.setSelectedClassModality(course.modality);
+							courseCtx!.getDetailedView(classTerm, classID);
+						}}
+					/>
 				))
 			}
 

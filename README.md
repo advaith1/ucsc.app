@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# UCSC.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Born out of a Cruzhacks 2025 project, UCSC.app is a responsive, full-stack application for students that aggregates campus dining menus, news feeds, course information, events, and location data to help UCSC students navigate campus life efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Class search
+  - Add classes to your calendar with one click
+- Dining Hall Menus
+- News Feed
+- Schedule Map
+	- Interactive campus map that shows what classes take place in a building
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
+- Node.js and pnpm
+- Python 3.8+ and uv
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Frontend Setup
+
+1. Navigate to the project root and install dependencies:
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Start the development server:
+```bash
+pnpm run dev
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Build for production:
+```bash
+pnpm build
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Backend Setup
+
+1. Navigate to the backend directory:
+```bash
+cd backend
+```
+
+2. Create a Python virtual environment:
+```bash
+uv sync
+```
+
+4. Run the development server:
+```bash
+uv run uvicorn server:api --reload --host 0.0.0.0
+```
+
+## Project Structure
+
+```
+ucsc.app/
+├── src/                # Frontend React application
+│   ├── components/       # Reusable UI components for all pages
+│   ├── courses/          # Course search and display
+│   ├── dashboard/        # Dashboard page
+│   ├── menu/             # Dining menu pages
+│   ├── news/             # News feed pages
+│   ├── schedules/        # Schedule and map pages
+│   ├── utils/            # Utility functions (schema, etc.)
+│   └── hooks/            # Custom React hooks
+└─ backend/             # FastAPI backend
+   ├── endpoints/         # API route handlers
+   ├── locations/         # Location and building data
+   └── cache/             # Cached data
 ```
