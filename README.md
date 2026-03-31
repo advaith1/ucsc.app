@@ -46,7 +46,7 @@ cd backend
 uv sync
 ```
 
-4. Run the development server:
+3. Run the development server:
 ```bash
 uv run uvicorn server:api --reload --host 0.0.0.0
 ```
